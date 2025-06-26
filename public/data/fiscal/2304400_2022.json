@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "2304400",
+    "municipio_nome": "Fortaleza",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 3231355144.00841,
+    "receita_tributaria": 654545203.3064777,
+    "receita_transferencias": 1905451936.3204887,
+    "despesa_pessoal": 1301090912.1513689,
+    "despesa_investimento": 512160362.811876,
+    "resultado_primario": 746745864.6637216
+  },
+  "rgf": {
+    "municipio_codigo": "2304400",
+    "municipio_nome": "Fortaleza",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 1301090912.1513689,
+    "receita_corrente_liquida": 3231355144.00841,
+    "percentual_pessoal_rcl": 40.26455942374073,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 2248600070.106586,
+    "status_fiscal": "regular"
+  },
+  "indicators": {
+    "investimento_percentual": 15.849708248922298,
+    "dependencia_transferencias": 58.96758020713335,
+    "autonomia_financeira": 41.03241979286665,
+    "eficiencia_gasto_pessoal": 40.26455942374073,
+    "capacidade_investimento": 13.735440576259272,
+    "classificacao_fiscal": "excelente"
+  },
+  "simulated": true
+}

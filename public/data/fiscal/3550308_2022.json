@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "3550308",
+    "municipio_nome": "São Paulo",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 3427371518.512594,
+    "receita_tributaria": 909296466.3071911,
+    "receita_transferencias": 2598454734.443546,
+    "despesa_pessoal": 1869301754.5680723,
+    "despesa_investimento": 870642359.6462464,
+    "resultado_primario": 767807086.5364184
+  },
+  "rgf": {
+    "municipio_codigo": "3550308",
+    "municipio_nome": "São Paulo",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 1869301754.5680723,
+    "receita_corrente_liquida": 3427371518.512594,
+    "percentual_pessoal_rcl": 54.540388880260906,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 989373464.4069197,
+    "status_fiscal": "critico"
+  },
+  "indicators": {
+    "investimento_percentual": 25.40262574230898,
+    "dependencia_transferencias": 75.81479627779656,
+    "autonomia_financeira": 24.18520372220344,
+    "eficiencia_gasto_pessoal": 54.540388880260906,
+    "capacidade_investimento": 0,
+    "classificacao_fiscal": "regular"
+  },
+  "simulated": true
+}

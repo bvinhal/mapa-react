@@ -1,0 +1,28 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+public/data/electoral/2024_prefeito.json
+public/data/electoral/2024_municipal/votacao_candidato_munzona_2024_GO.csv
+public/data/fiscal/municipios_goias_completo.json
+public/data/geo/

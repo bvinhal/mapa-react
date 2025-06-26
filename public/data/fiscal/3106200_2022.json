@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "3106200",
+    "municipio_nome": "Belo Horizonte",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 2329835741.5276284,
+    "receita_tributaria": 1562521355.4763536,
+    "receita_transferencias": 700721619.4615128,
+    "despesa_pessoal": 1145032540.750971,
+    "despesa_investimento": 761798232.4490448,
+    "resultado_primario": 356412201.7378502
+  },
+  "rgf": {
+    "municipio_codigo": "3106200",
+    "municipio_nome": "Belo Horizonte",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 1145032540.750971,
+    "receita_corrente_liquida": 2329835741.5276284,
+    "percentual_pessoal_rcl": 49.14649219005437,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 1993778428.5539258,
+    "status_fiscal": "atencao"
+  },
+  "indicators": {
+    "investimento_percentual": 32.69750819212467,
+    "dependencia_transferencias": 30.076009521686842,
+    "autonomia_financeira": 69.92399047831316,
+    "eficiencia_gasto_pessoal": 49.14649219005437,
+    "capacidade_investimento": 4.853507809945633,
+    "classificacao_fiscal": "excelente"
+  },
+  "simulated": true
+}

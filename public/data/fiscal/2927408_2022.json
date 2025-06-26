@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "2927408",
+    "municipio_nome": "Salvador",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 2081651442.3240013,
+    "receita_tributaria": 121302308.89792871,
+    "receita_transferencias": 940045152.0453573,
+    "despesa_pessoal": 1422990803.570269,
+    "despesa_investimento": 279137122.87581134,
+    "resultado_primario": -640780465.5027944
+  },
+  "rgf": {
+    "municipio_codigo": "2927408",
+    "municipio_nome": "Salvador",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 1422990803.570269,
+    "receita_corrente_liquida": 2081651442.3240013,
+    "percentual_pessoal_rcl": 68.35874511160289,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 831876014.5186898,
+    "status_fiscal": "critico"
+  },
+  "indicators": {
+    "investimento_percentual": 13.409407415689945,
+    "dependencia_transferencias": 45.158624202516364,
+    "autonomia_financeira": 54.841375797483636,
+    "eficiencia_gasto_pessoal": 68.35874511160289,
+    "capacidade_investimento": 0,
+    "classificacao_fiscal": "regular"
+  },
+  "simulated": true
+}

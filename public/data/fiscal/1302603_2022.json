@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "1302603",
+    "municipio_nome": "Manaus",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 2404195375.325077,
+    "receita_tributaria": 138821644.34091252,
+    "receita_transferencias": 1867397849.5590603,
+    "despesa_pessoal": 413446618.41219187,
+    "despesa_investimento": 980914707.7861843,
+    "resultado_primario": 611858167.7015967
+  },
+  "rgf": {
+    "municipio_codigo": "1302603",
+    "municipio_nome": "Manaus",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 413446618.41219187,
+    "receita_corrente_liquida": 2404195375.325077,
+    "percentual_pessoal_rcl": 17.196881029533166,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 985513725.9752723,
+    "status_fiscal": "regular"
+  },
+  "indicators": {
+    "investimento_percentual": 40.80012455949228,
+    "dependencia_transferencias": 77.67246658589737,
+    "autonomia_financeira": 22.327533414102632,
+    "eficiencia_gasto_pessoal": 17.196881029533166,
+    "capacidade_investimento": 36.803118970466834,
+    "classificacao_fiscal": "excelente"
+  },
+  "simulated": true
+}

@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "5208707",
+    "municipio_nome": "Goiânia",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 2224451837.2587743,
+    "receita_tributaria": 1830076834.0854611,
+    "receita_transferencias": 2405750173.298629,
+    "despesa_pessoal": 359984636.7577675,
+    "despesa_investimento": 701573894.021763,
+    "resultado_primario": 3174268476.6045594
+  },
+  "rgf": {
+    "municipio_codigo": "5208707",
+    "municipio_nome": "Goiânia",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 359984636.7577675,
+    "receita_corrente_liquida": 2224451837.2587743,
+    "percentual_pessoal_rcl": 16.18307174505437,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 2527778351.2057357,
+    "status_fiscal": "regular"
+  },
+  "indicators": {
+    "investimento_percentual": 31.539181126363385,
+    "dependencia_transferencias": 108.15024776006258,
+    "autonomia_financeira": -8.150247760062584,
+    "eficiencia_gasto_pessoal": 16.18307174505437,
+    "capacidade_investimento": 37.81692825494563,
+    "classificacao_fiscal": "bom"
+  },
+  "simulated": true
+}

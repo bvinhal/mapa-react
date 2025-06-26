@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "1501402",
+    "municipio_nome": "Belém",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 3347669905.3667107,
+    "receita_tributaria": 1886904330.9648914,
+    "receita_transferencias": 1786343462.1668727,
+    "despesa_pessoal": 1762481420.6134279,
+    "despesa_investimento": 522773465.4881976,
+    "resultado_primario": 1387992907.030139
+  },
+  "rgf": {
+    "municipio_codigo": "1501402",
+    "municipio_nome": "Belém",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 1762481420.6134279,
+    "receita_corrente_liquida": 3347669905.3667107,
+    "percentual_pessoal_rcl": 52.64800504338739,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 2789581153.293528,
+    "status_fiscal": "alerta"
+  },
+  "indicators": {
+    "investimento_percentual": 15.616039820716193,
+    "dependencia_transferencias": 53.36080057663849,
+    "autonomia_financeira": 46.63919942336151,
+    "eficiencia_gasto_pessoal": 52.64800504338739,
+    "capacidade_investimento": 1.3519949566126073,
+    "classificacao_fiscal": "bom"
+  },
+  "simulated": true
+}

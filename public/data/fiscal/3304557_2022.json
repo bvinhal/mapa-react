@@ -1,0 +1,36 @@
+{
+  "rreo": {
+    "municipio_codigo": "3304557",
+    "municipio_nome": "Rio de Janeiro",
+    "ano": 2022,
+    "periodo": 6,
+    "receita_corrente_liquida": 1282864800.4554243,
+    "receita_tributaria": 1477206847.4854496,
+    "receita_transferencias": 592755498.7542403,
+    "despesa_pessoal": 787756530.5878346,
+    "despesa_investimento": 604714141.3410045,
+    "resultado_primario": 677491674.3108506
+  },
+  "rgf": {
+    "municipio_codigo": "3304557",
+    "municipio_nome": "Rio de Janeiro",
+    "ano": 2022,
+    "periodo": 2,
+    "despesa_total_pessoal": 787756530.5878346,
+    "receita_corrente_liquida": 1282864800.4554243,
+    "percentual_pessoal_rcl": 61.40604452691948,
+    "limite_legal_pessoal": 54.0,
+    "limite_prudencial_pessoal": 51.3,
+    "divida_consolidada_liquida": 2815125833.166356,
+    "status_fiscal": "critico"
+  },
+  "indicators": {
+    "investimento_percentual": 47.13779200476368,
+    "dependencia_transferencias": 46.20560939420964,
+    "autonomia_financeira": 53.79439060579036,
+    "eficiencia_gasto_pessoal": 61.40604452691948,
+    "capacidade_investimento": 0,
+    "classificacao_fiscal": "regular"
+  },
+  "simulated": true
+}

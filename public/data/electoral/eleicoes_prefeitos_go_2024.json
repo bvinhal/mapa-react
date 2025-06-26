@@ -1,0 +1,7242 @@
+[
+  {
+    "codigo_municipio": "92010",
+    "nome_municipio": "ABADIÂNIA",
+    "nome_candidato": "DR ITAMAR",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 6270,
+    "percentual": 61.95,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92010",
+    "nome_municipio": "ABADIÂNIA",
+    "nome_candidato": "CAPITÃO ALESSANDRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3851,
+    "percentual": 38.05,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92029",
+    "nome_municipio": "BONFINÓPOLIS",
+    "nome_candidato": "LUCAS  DO GALDINO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3435,
+    "percentual": 52.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92029",
+    "nome_municipio": "BONFINÓPOLIS",
+    "nome_candidato": "DIENES DA FARMACIA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3171,
+    "percentual": 48.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92037",
+    "nome_municipio": "ÁGUA LIMPA",
+    "nome_candidato": "ZÉ CARLOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1662,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "WARLEY GOUVEIA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 6829,
+    "percentual": 38.91,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "MATEUS HENRIQUE",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 6076,
+    "percentual": 34.62,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "DOUTOR KAUENIO",
+    "partido": "DC",
+    "partido_ideologia": "direita",
+    "votos": 1666,
+    "percentual": 9.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "SIRLEI BORGES",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1344,
+    "percentual": 7.66,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "MATHEUS RAMOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1138,
+    "percentual": 6.48,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "ALESSANDRA GUIMARÃES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 284,
+    "percentual": 1.62,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "EDMILSON DIB",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 143,
+    "percentual": 0.81,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92053",
+    "nome_municipio": "ALEXÂNIA",
+    "nome_candidato": "SANDRO PINTOR",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 72,
+    "percentual": 0.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92061",
+    "nome_municipio": "CAMPOS VERDES",
+    "nome_candidato": "DR ROGERIO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2448,
+    "percentual": 64.18,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92061",
+    "nome_municipio": "CAMPOS VERDES",
+    "nome_candidato": "WALLAS CORREIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1366,
+    "percentual": 35.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92096",
+    "nome_municipio": "ALOÂNDIA",
+    "nome_candidato": "RENATO BATISTA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1533,
+    "percentual": 83.09,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92096",
+    "nome_municipio": "ALOÂNDIA",
+    "nome_candidato": "THASSIO FALEIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 312,
+    "percentual": 16.91,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92100",
+    "nome_municipio": "CEZARINA",
+    "nome_candidato": "VALTENIR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4149,
+    "percentual": 66.46,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92100",
+    "nome_municipio": "CEZARINA",
+    "nome_candidato": "VALDOMIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2094,
+    "percentual": 33.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92118",
+    "nome_municipio": "ALTO PARAÍSO DE GOIÁS",
+    "nome_candidato": "MARCUS RINCO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2819,
+    "percentual": 51.38,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92118",
+    "nome_municipio": "ALTO PARAÍSO DE GOIÁS",
+    "nome_candidato": "PROFESSORA NISLENE",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 1369,
+    "percentual": 24.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92118",
+    "nome_municipio": "ALTO PARAÍSO DE GOIÁS",
+    "nome_candidato": "HUGO BITES",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 576,
+    "percentual": 10.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92118",
+    "nome_municipio": "ALTO PARAÍSO DE GOIÁS",
+    "nome_candidato": "MARTINHO MENDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 547,
+    "percentual": 9.97,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92118",
+    "nome_municipio": "ALTO PARAÍSO DE GOIÁS",
+    "nome_candidato": "DR VINHOLIS",
+    "partido": "MOBILIZA",
+    "partido_ideologia": "centro",
+    "votos": 176,
+    "percentual": 3.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92126",
+    "nome_municipio": "COLINAS DO SUL",
+    "nome_candidato": "ONOFRE",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1900,
+    "percentual": 55.52,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92126",
+    "nome_municipio": "COLINAS DO SUL",
+    "nome_candidato": "IRAN LAGO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1463,
+    "percentual": 42.75,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92126",
+    "nome_municipio": "COLINAS DO SUL",
+    "nome_candidato": "PROFESSORA DIANILEY",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 59,
+    "percentual": 1.72,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92150",
+    "nome_municipio": "ALVORADA DO NORTE",
+    "nome_candidato": "DAVID MOREIRA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 3868,
+    "percentual": 77.73,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92150",
+    "nome_municipio": "ALVORADA DO NORTE",
+    "nome_candidato": "IDELVAN",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1108,
+    "percentual": 22.27,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92169",
+    "nome_municipio": "MORRO AGUDO DE GOIÁS",
+    "nome_candidato": "DENY LELES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1819,
+    "percentual": 67.07,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92169",
+    "nome_municipio": "MORRO AGUDO DE GOIÁS",
+    "nome_candidato": "MARIUZA DO BRANCO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 893,
+    "percentual": 32.93,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92177",
+    "nome_municipio": "AMORINÓPOLIS",
+    "nome_candidato": "GUSTAVO DO ESTRELAO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1956,
+    "percentual": 56.76,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92177",
+    "nome_municipio": "AMORINÓPOLIS",
+    "nome_candidato": "PATRICIA SILVA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1490,
+    "percentual": 43.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92207",
+    "nome_municipio": "EDEALINA",
+    "nome_candidato": "CRISTINA LEANDRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2432,
+    "percentual": 70.92,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92207",
+    "nome_municipio": "EDEALINA",
+    "nome_candidato": "DANILLO GOMES",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 997,
+    "percentual": 29.08,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 39536,
+    "percentual": 10.48,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 35705,
+    "percentual": 9.47,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 35080,
+    "percentual": 9.3,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 32039,
+    "percentual": 8.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 31647,
+    "percentual": 8.39,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "MARCIO CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 29305,
+    "percentual": 7.77,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 26205,
+    "percentual": 6.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 24495,
+    "percentual": 6.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 24482,
+    "percentual": 6.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 24422,
+    "percentual": 6.48,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 22657,
+    "percentual": 6.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "ANTONIO GOMIDE",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 22291,
+    "percentual": 5.91,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "EERIZANIA FREITAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7804,
+    "percentual": 2.07,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "EERIZANIA FREITAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7322,
+    "percentual": 1.94,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "EERIZANIA FREITAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6161,
+    "percentual": 1.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "HÉLIO DA APAE",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1764,
+    "percentual": 0.47,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "HÉLIO DA APAE",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1672,
+    "percentual": 0.44,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "JOSÉ DE LIMA",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 1522,
+    "percentual": 0.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "HÉLIO DA APAE",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1459,
+    "percentual": 0.39,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "JOSÉ DE LIMA",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 846,
+    "percentual": 0.22,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92215",
+    "nome_municipio": "ANÁPOLIS",
+    "nome_candidato": "JOSÉ DE LIMA",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 715,
+    "percentual": 0.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92223",
+    "nome_municipio": "FAINA",
+    "nome_candidato": "CREONIR DO LEILÃO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3208,
+    "percentual": 55.32,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92223",
+    "nome_municipio": "FAINA",
+    "nome_candidato": "TEMIL",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2275,
+    "percentual": 39.23,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92223",
+    "nome_municipio": "FAINA",
+    "nome_candidato": "AURELIANO QUEIROZ",
+    "partido": "MOBILIZA",
+    "partido_ideologia": "centro",
+    "votos": 316,
+    "percentual": 5.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92231",
+    "nome_municipio": "ANHANGÜERA",
+    "nome_candidato": "MARCELO PAIVA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 896,
+    "percentual": 58.22,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92231",
+    "nome_municipio": "ANHANGÜERA",
+    "nome_candidato": "CHICO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 643,
+    "percentual": 41.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "PAULINHO DO BARREIRÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7157,
+    "percentual": 61.14,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "DR LOURIVAL",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3454,
+    "percentual": 29.51,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "DRA CLEDIA LOPES",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 430,
+    "percentual": 3.67,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "WASTTER",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 259,
+    "percentual": 2.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "PAULO SERGIO DO PIT DOG",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 198,
+    "percentual": 1.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "DANILO MENESES",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 160,
+    "percentual": 1.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92258",
+    "nome_municipio": "ANICUNS",
+    "nome_candidato": "GETULIO KENEDY",
+    "partido": "MOBILIZA",
+    "partido_ideologia": "centro",
+    "votos": 47,
+    "percentual": 0.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92266",
+    "nome_municipio": "GOUVELÂNDIA",
+    "nome_candidato": "FAUSTO CAIADO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1776,
+    "percentual": 51.85,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92266",
+    "nome_municipio": "GOUVELÂNDIA",
+    "nome_candidato": "CLAUDIO HENRIQUE",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1649,
+    "percentual": 48.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 46676,
+    "percentual": 10.69,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 44917,
+    "percentual": 10.29,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 40637,
+    "percentual": 9.31,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 38432,
+    "percentual": 8.8,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 37280,
+    "percentual": 8.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 35665,
+    "percentual": 8.17,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "LEANDRO VILELA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 34081,
+    "percentual": 7.81,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 33226,
+    "percentual": 7.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 29524,
+    "percentual": 6.76,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 27120,
+    "percentual": 6.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 26437,
+    "percentual": 6.06,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "PROFESSOR ALCIDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 22119,
+    "percentual": 5.07,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "WILLIAN PANDA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 7544,
+    "percentual": 1.73,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "WILLIAN PANDA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 6723,
+    "percentual": 1.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92274",
+    "nome_municipio": "APARECIDA DE GOIÂNIA",
+    "nome_candidato": "WILLIAN PANDA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 6176,
+    "percentual": 1.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92282",
+    "nome_municipio": "ITAGUARI",
+    "nome_candidato": "MARCÃO DO SIRI",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2869,
+    "percentual": 62.33,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92282",
+    "nome_municipio": "ITAGUARI",
+    "nome_candidato": "RODRIGO DO DEMAR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1734,
+    "percentual": 37.67,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92290",
+    "nome_municipio": "APORÉ",
+    "nome_candidato": "LEONARDO CARVALHO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1470,
+    "percentual": 50.24,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92290",
+    "nome_municipio": "APORÉ",
+    "nome_candidato": "IVAN DO MERCADO",
+    "partido": "PRTB",
+    "partido_ideologia": "centro",
+    "votos": 1456,
+    "percentual": 49.76,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92312",
+    "nome_municipio": "ARAÇU",
+    "nome_candidato": "MILTON",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2375,
+    "percentual": 64.07,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92312",
+    "nome_municipio": "ARAÇU",
+    "nome_candidato": "JOELTON BERNARDO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1332,
+    "percentual": 35.93,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92320",
+    "nome_municipio": "MATRINCHÃ",
+    "nome_candidato": "IVÂNIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2891,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92339",
+    "nome_municipio": "ARAGARÇAS",
+    "nome_candidato": "DELEGADO RICARDO GALVÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5634,
+    "percentual": 51.11,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92339",
+    "nome_municipio": "ARAGARÇAS",
+    "nome_candidato": "PLINIO LEÃO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 5053,
+    "percentual": 45.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92339",
+    "nome_municipio": "ARAGARÇAS",
+    "nome_candidato": "MARA NEI",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 337,
+    "percentual": 3.06,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92347",
+    "nome_municipio": "MIMOSO DE GOIÁS",
+    "nome_candidato": "RAFAEL BRUNO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1727,
+    "percentual": 56.44,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92347",
+    "nome_municipio": "MIMOSO DE GOIÁS",
+    "nome_candidato": "PEDRO LUCAS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1097,
+    "percentual": 35.85,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92347",
+    "nome_municipio": "MIMOSO DE GOIÁS",
+    "nome_candidato": "KELLYCE MOURÃO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 236,
+    "percentual": 7.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92355",
+    "nome_municipio": "ARAGOIÂNIA",
+    "nome_candidato": "WALDIR DA FOKUS",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 4954,
+    "percentual": 60.56,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92355",
+    "nome_municipio": "ARAGOIÂNIA",
+    "nome_candidato": "ZE GARCIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2866,
+    "percentual": 35.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92355",
+    "nome_municipio": "ARAGOIÂNIA",
+    "nome_candidato": "NAUGINEL",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 282,
+    "percentual": 3.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92355",
+    "nome_municipio": "ARAGOIÂNIA",
+    "nome_candidato": "JOÃO BATISTA",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 78,
+    "percentual": 0.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92363",
+    "nome_municipio": "MONTIVIDIU",
+    "nome_candidato": "EDSON BUENO",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 4243,
+    "percentual": 51.68,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92363",
+    "nome_municipio": "MONTIVIDIU",
+    "nome_candidato": "RENATO CÂMARA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3616,
+    "percentual": 44.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92363",
+    "nome_municipio": "MONTIVIDIU",
+    "nome_candidato": "ELIANE DA SAUDE",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 351,
+    "percentual": 4.28,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92444",
+    "nome_municipio": "NOVO PLANALTO",
+    "nome_candidato": "EUDES ARAÚJO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2835,
+    "percentual": 79.95,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92444",
+    "nome_municipio": "NOVO PLANALTO",
+    "nome_candidato": "FABRICIO SAMPAIO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 711,
+    "percentual": 20.05,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92460",
+    "nome_municipio": "PALESTINA DE GOIÁS",
+    "nome_candidato": "ALTENIAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1837,
+    "percentual": 57.6,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92460",
+    "nome_municipio": "PALESTINA DE GOIÁS",
+    "nome_candidato": "TULIO CAIRO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1352,
+    "percentual": 42.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92495",
+    "nome_municipio": "ARUANÃ",
+    "nome_candidato": "ARLIRIO BOI",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3304,
+    "percentual": 59.93,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92495",
+    "nome_municipio": "ARUANÃ",
+    "nome_candidato": "LAECIO PINHEIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2209,
+    "percentual": 40.07,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92517",
+    "nome_municipio": "AURILÂNDIA",
+    "nome_candidato": "CIDA FURTADO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2466,
+    "percentual": 90.46,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92517",
+    "nome_municipio": "AURILÂNDIA",
+    "nome_candidato": "JONAS FILHO",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 260,
+    "percentual": 9.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92550",
+    "nome_municipio": "AVELINÓPOLIS",
+    "nome_candidato": "DR ANTONIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2104,
+    "percentual": 50.53,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92550",
+    "nome_municipio": "AVELINÓPOLIS",
+    "nome_candidato": "ADRIANINHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2060,
+    "percentual": 49.47,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92568",
+    "nome_municipio": "SANTA FÉ DE GOIÁS",
+    "nome_candidato": "DR VICTOR",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1946,
+    "percentual": 53.02,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92568",
+    "nome_municipio": "SANTA FÉ DE GOIÁS",
+    "nome_candidato": "TOIM PINTOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1724,
+    "percentual": 46.98,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92614",
+    "nome_municipio": "BALIZA",
+    "nome_candidato": "NEGUINHO DA AREIA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1617,
+    "percentual": 54.83,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92614",
+    "nome_municipio": "BALIZA",
+    "nome_candidato": "MARCOS DA VERDURA",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 1094,
+    "percentual": 37.1,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92614",
+    "nome_municipio": "BALIZA",
+    "nome_candidato": "DANIELE MAIA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 238,
+    "percentual": 8.07,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92622",
+    "nome_municipio": "SÃO JOÃO DA PARAÚNA",
+    "nome_candidato": "JUNINHO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1185,
+    "percentual": 61.02,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92622",
+    "nome_municipio": "SÃO JOÃO DA PARAÚNA",
+    "nome_candidato": "EBIN DO NAIDE",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 757,
+    "percentual": 38.98,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92630",
+    "nome_municipio": "BARRO ALTO",
+    "nome_candidato": "PROFESSOR ALVARO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 5042,
+    "percentual": 58.03,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92630",
+    "nome_municipio": "BARRO ALTO",
+    "nome_candidato": "ROBERTINHO LUCENA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3569,
+    "percentual": 41.08,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92630",
+    "nome_municipio": "BARRO ALTO",
+    "nome_candidato": "EDSON CAETANO MAIA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 77,
+    "percentual": 0.89,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92649",
+    "nome_municipio": "SÃO LUIZ DO NORTE",
+    "nome_candidato": "ELIEUDES MORAES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3715,
+    "percentual": 85.46,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92649",
+    "nome_municipio": "SÃO LUIZ DO NORTE",
+    "nome_candidato": "ZÉ BÉTIO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 632,
+    "percentual": 14.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92657",
+    "nome_municipio": "BELA VISTA DE GOIÁS",
+    "nome_candidato": "EURÍPEDES DO CARMO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 8350,
+    "percentual": 46.09,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92657",
+    "nome_municipio": "BELA VISTA DE GOIÁS",
+    "nome_candidato": "DIONE DO CARÁ",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 7117,
+    "percentual": 39.29,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92657",
+    "nome_municipio": "BELA VISTA DE GOIÁS",
+    "nome_candidato": "JULIANO MOREIRA",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2223,
+    "percentual": 12.27,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92657",
+    "nome_municipio": "BELA VISTA DE GOIÁS",
+    "nome_candidato": "MARCOS TELES",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 309,
+    "percentual": 1.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92657",
+    "nome_municipio": "BELA VISTA DE GOIÁS",
+    "nome_candidato": "DÊNIS IMÓVEIS",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 117,
+    "percentual": 0.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92665",
+    "nome_municipio": "SÃO MIGUEL DO PASSA QUATRO",
+    "nome_candidato": "GILMAR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2825,
+    "percentual": 77.91,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92665",
+    "nome_municipio": "SÃO MIGUEL DO PASSA QUATRO",
+    "nome_candidato": "ZÉ GOTINHA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 801,
+    "percentual": 22.09,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92673",
+    "nome_municipio": "BOM JARDIM DE GOIÁS",
+    "nome_candidato": "EDIO NAVARINI",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 3513,
+    "percentual": 53.7,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92673",
+    "nome_municipio": "BOM JARDIM DE GOIÁS",
+    "nome_candidato": "WILLIAN GREGÓRIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3029,
+    "percentual": 46.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92690",
+    "nome_municipio": "BOM JESUS DE GOIÁS",
+    "nome_candidato": "DANIEL JÚNIOR",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 10772,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92703",
+    "nome_municipio": "SENADOR CANEDO",
+    "nome_candidato": "FERNANDO PELLOZO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 29025,
+    "percentual": 41.98,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92703",
+    "nome_municipio": "SENADOR CANEDO",
+    "nome_candidato": "DOUTORA CRISTIANE PINA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 16818,
+    "percentual": 24.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92703",
+    "nome_municipio": "SENADOR CANEDO",
+    "nome_candidato": "IZAURA CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 15501,
+    "percentual": 22.42,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92703",
+    "nome_municipio": "SENADOR CANEDO",
+    "nome_candidato": "DIVINO LEMES",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 4077,
+    "percentual": 5.9,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92703",
+    "nome_municipio": "SENADOR CANEDO",
+    "nome_candidato": "WELMA LIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3711,
+    "percentual": 5.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92711",
+    "nome_municipio": "BRAZABRANTES",
+    "nome_candidato": "MARCIO TUCA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1911,
+    "percentual": 59.55,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92711",
+    "nome_municipio": "BRAZABRANTES",
+    "nome_candidato": "ROSANA DO ZEÍLE",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1298,
+    "percentual": 40.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92720",
+    "nome_municipio": "SIMOLÂNDIA",
+    "nome_candidato": "DONA DETE",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2663,
+    "percentual": 54.63,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92720",
+    "nome_municipio": "SIMOLÂNDIA",
+    "nome_candidato": "WANDER TERRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2212,
+    "percentual": 45.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92754",
+    "nome_municipio": "BRITÂNIA",
+    "nome_candidato": "DISTERRO SANTOS",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2239,
+    "percentual": 49.35,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92754",
+    "nome_municipio": "BRITÂNIA",
+    "nome_candidato": "WAGNER  MARCHESI",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1782,
+    "percentual": 39.28,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92754",
+    "nome_municipio": "BRITÂNIA",
+    "nome_candidato": "CLEUZA ASSUNÇÃO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 516,
+    "percentual": 11.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92762",
+    "nome_municipio": "TERESINA DE GOIÁS",
+    "nome_candidato": "MANO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1553,
+    "percentual": 53.15,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92762",
+    "nome_municipio": "TERESINA DE GOIÁS",
+    "nome_candidato": "JACKSAN MAGALHAES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1369,
+    "percentual": 46.85,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92770",
+    "nome_municipio": "BURITI ALEGRE",
+    "nome_candidato": "GARIBALDO NETO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3234,
+    "percentual": 49.62,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92770",
+    "nome_municipio": "BURITI ALEGRE",
+    "nome_candidato": "CLAYTON CARVALHO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2428,
+    "percentual": 37.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92770",
+    "nome_municipio": "BURITI ALEGRE",
+    "nome_candidato": "JOÃO ALFREDO",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 856,
+    "percentual": 13.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92789",
+    "nome_municipio": "TROMBAS",
+    "nome_candidato": "PREGO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2005,
+    "percentual": 76.53,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92789",
+    "nome_municipio": "TROMBAS",
+    "nome_candidato": "CATARINO",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 615,
+    "percentual": 23.47,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92797",
+    "nome_municipio": "CABECEIRAS",
+    "nome_candidato": "JACO ROTTA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3520,
+    "percentual": 53.23,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92797",
+    "nome_municipio": "CABECEIRAS",
+    "nome_candidato": "MANOEL TEIXEIRA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2849,
+    "percentual": 43.08,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92797",
+    "nome_municipio": "CABECEIRAS",
+    "nome_candidato": "MONTEIRO",
+    "partido": "DC",
+    "partido_ideologia": "direita",
+    "votos": 244,
+    "percentual": 3.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92800",
+    "nome_municipio": "TURVELÂNDIA",
+    "nome_candidato": "OSÉLIA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2641,
+    "percentual": 74.92,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92800",
+    "nome_municipio": "TURVELÂNDIA",
+    "nome_candidato": "MATHEUS BORGES",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 826,
+    "percentual": 23.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92800",
+    "nome_municipio": "TURVELÂNDIA",
+    "nome_candidato": "ZÉ ROMÃO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 58,
+    "percentual": 1.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92819",
+    "nome_municipio": "CACHOEIRA ALTA",
+    "nome_candidato": "MARCELO PAULA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3818,
+    "percentual": 65.32,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92819",
+    "nome_municipio": "CACHOEIRA ALTA",
+    "nome_candidato": "OCTAVIO FREITAS",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2027,
+    "percentual": 34.68,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92827",
+    "nome_municipio": "RIO QUENTE",
+    "nome_candidato": "ANA PAULA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2257,
+    "percentual": 59.99,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92827",
+    "nome_municipio": "RIO QUENTE",
+    "nome_candidato": "ÊNIO DO BIDON",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1505,
+    "percentual": 40.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92835",
+    "nome_municipio": "CACHOEIRA DE GOIÁS",
+    "nome_candidato": "MAICOM PEREIRA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 958,
+    "percentual": 50.58,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92835",
+    "nome_municipio": "CACHOEIRA DE GOIÁS",
+    "nome_candidato": "BELMIRO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 936,
+    "percentual": 49.42,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92851",
+    "nome_municipio": "CAÇU",
+    "nome_candidato": "KELSON VILARINHO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4483,
+    "percentual": 53.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92851",
+    "nome_municipio": "CAÇU",
+    "nome_candidato": "WALTER JÚNIOR",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3528,
+    "percentual": 41.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92851",
+    "nome_municipio": "CAÇU",
+    "nome_candidato": "IVAIR GUIMARÃES",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 314,
+    "percentual": 3.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92851",
+    "nome_municipio": "CAÇU",
+    "nome_candidato": "REIBER DA SILVA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 133,
+    "percentual": 1.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92860",
+    "nome_municipio": "GUARINOS",
+    "nome_candidato": "JJUNIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1814,
+    "percentual": 59.03,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92860",
+    "nome_municipio": "GUARINOS",
+    "nome_candidato": "MIILHER NEVES",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 1259,
+    "percentual": 40.97,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92878",
+    "nome_municipio": "CAIAPÔNIA",
+    "nome_candidato": "ARGEMIRO RODRIGUES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7033,
+    "percentual": 69.92,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92878",
+    "nome_municipio": "CAIAPÔNIA",
+    "nome_candidato": "SANDRA LOBATO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2551,
+    "percentual": 25.36,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92878",
+    "nome_municipio": "CAIAPÔNIA",
+    "nome_candidato": "ADÃO NAZIR FILHO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 475,
+    "percentual": 4.72,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92886",
+    "nome_municipio": "COCALZINHO DE GOIÁS",
+    "nome_candidato": "ALESSANDRO BARCELOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 9282,
+    "percentual": 68.16,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92886",
+    "nome_municipio": "COCALZINHO DE GOIÁS",
+    "nome_candidato": "BISCOITO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 4336,
+    "percentual": 31.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92894",
+    "nome_municipio": "CALDAS NOVAS",
+    "nome_candidato": "KLEBER MARRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 28675,
+    "percentual": 60.3,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92894",
+    "nome_municipio": "CALDAS NOVAS",
+    "nome_candidato": "MAGAL",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 17502,
+    "percentual": 36.81,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92894",
+    "nome_municipio": "CALDAS NOVAS",
+    "nome_candidato": "ARLINDO CEARÁ",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 913,
+    "percentual": 1.92,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92894",
+    "nome_municipio": "CALDAS NOVAS",
+    "nome_candidato": "FRAN",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 463,
+    "percentual": 0.97,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92908",
+    "nome_municipio": "SANTO ANTÔNIO DE GOIÁS",
+    "nome_candidato": "KLEBER FREITAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3139,
+    "percentual": 47.59,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92908",
+    "nome_municipio": "SANTO ANTÔNIO DE GOIÁS",
+    "nome_candidato": "FREDERICO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2796,
+    "percentual": 42.39,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92908",
+    "nome_municipio": "SANTO ANTÔNIO DE GOIÁS",
+    "nome_candidato": "LIVIA LOPES ",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 477,
+    "percentual": 7.23,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92908",
+    "nome_municipio": "SANTO ANTÔNIO DE GOIÁS",
+    "nome_candidato": "GLEDSON",
+    "partido": "AVANTE",
+    "partido_ideologia": "centro",
+    "votos": 184,
+    "percentual": 2.79,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92916",
+    "nome_municipio": "CAMPESTRE DE GOIÁS",
+    "nome_candidato": "ESMERALDO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 2271,
+    "percentual": 64.12,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92916",
+    "nome_municipio": "CAMPESTRE DE GOIÁS",
+    "nome_candidato": "WELLINGTON GAGUINHO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1271,
+    "percentual": 35.88,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92924",
+    "nome_municipio": "CHAPADÃO DO CÉU",
+    "nome_candidato": "VINICIUS TERIN",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 6491,
+    "percentual": 95.75,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92924",
+    "nome_municipio": "CHAPADÃO DO CÉU",
+    "nome_candidato": "PIRES",
+    "partido": "PV",
+    "partido_ideologia": "centro",
+    "votos": 288,
+    "percentual": 4.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92932",
+    "nome_municipio": "CAMPINORTE",
+    "nome_candidato": "CLEOMAR CONTADOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6468,
+    "percentual": 87.79,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92932",
+    "nome_municipio": "CAMPINORTE",
+    "nome_candidato": "FATINHA DA SOBERANA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 900,
+    "percentual": 12.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92940",
+    "nome_municipio": "ALTO HORIZONTE",
+    "nome_candidato": "DIOGO RODRIGUES",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2970,
+    "percentual": 53.39,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92940",
+    "nome_municipio": "ALTO HORIZONTE",
+    "nome_candidato": "FÁBIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2324,
+    "percentual": 41.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92940",
+    "nome_municipio": "ALTO HORIZONTE",
+    "nome_candidato": "ROSEMEIRE PACHECO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 269,
+    "percentual": 4.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92959",
+    "nome_municipio": "CAMPO ALEGRE DE GOIÁS",
+    "nome_candidato": "DOUGLAS SERTÓRIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2603,
+    "percentual": 52.43,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92959",
+    "nome_municipio": "CAMPO ALEGRE DE GOIÁS",
+    "nome_candidato": "EULER GUIMARÃES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2362,
+    "percentual": 47.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92967",
+    "nome_municipio": "CASTELÂNDIA",
+    "nome_candidato": "MEINHA",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2026,
+    "percentual": 52.79,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92967",
+    "nome_municipio": "CASTELÂNDIA",
+    "nome_candidato": "CHICÃO DIAS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1812,
+    "percentual": 47.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92975",
+    "nome_municipio": "CAMPOS BELOS",
+    "nome_candidato": "PABLO GEOVANNI",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7798,
+    "percentual": 67.5,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92975",
+    "nome_municipio": "CAMPOS BELOS",
+    "nome_candidato": "DR WALTER",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3754,
+    "percentual": 32.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "92983",
+    "nome_municipio": "JESÚPOLIS",
+    "nome_candidato": "ADRIANO PEIXOTO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2059,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92991",
+    "nome_municipio": "CARMO DO RIO VERDE",
+    "nome_candidato": "GERALDO REIS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3731,
+    "percentual": 61.7,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "92991",
+    "nome_municipio": "CARMO DO RIO VERDE",
+    "nome_candidato": "DELSON",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2316,
+    "percentual": 38.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93009",
+    "nome_municipio": "APARECIDA DO RIO DOCE",
+    "nome_candidato": "BODÃO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2594,
+    "percentual": 90.35,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93009",
+    "nome_municipio": "APARECIDA DO RIO DOCE",
+    "nome_candidato": "MAJOR DAVI PIRES",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 277,
+    "percentual": 9.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93017",
+    "nome_municipio": "CATALÃO",
+    "nome_candidato": "VELOMAR RIOS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 31730,
+    "percentual": 59.56,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93017",
+    "nome_municipio": "CATALÃO",
+    "nome_candidato": "RENATO RIBEIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 11089,
+    "percentual": 20.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93017",
+    "nome_municipio": "CATALÃO",
+    "nome_candidato": "ELDER GALDINO",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 9121,
+    "percentual": 17.12,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93017",
+    "nome_municipio": "CATALÃO",
+    "nome_candidato": "MARIA MOURA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 1332,
+    "percentual": 2.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93025",
+    "nome_municipio": "CIDADE OCIDENTAL",
+    "nome_candidato": "LULINHA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 21444,
+    "percentual": 63.87,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93025",
+    "nome_municipio": "CIDADE OCIDENTAL",
+    "nome_candidato": "ANTÔNIO LIMA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 12133,
+    "percentual": 36.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93033",
+    "nome_municipio": "CATURAÍ",
+    "nome_candidato": "ALEXANDRE MOURA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2952,
+    "percentual": 65.01,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93033",
+    "nome_municipio": "CATURAÍ",
+    "nome_candidato": "MURILO VALIM",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 1589,
+    "percentual": 34.99,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93041",
+    "nome_municipio": "PROFESSOR JAMIL",
+    "nome_candidato": "NEY NOVAES",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 1601,
+    "percentual": 51.51,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93041",
+    "nome_municipio": "PROFESSOR JAMIL",
+    "nome_candidato": "ELIVONE",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1507,
+    "percentual": 48.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93050",
+    "nome_municipio": "CAVALCANTE",
+    "nome_candidato": "VILMAR KALUNGA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 3331,
+    "percentual": 53.79,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93050",
+    "nome_municipio": "CAVALCANTE",
+    "nome_candidato": "PARADÃO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2862,
+    "percentual": 46.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93068",
+    "nome_municipio": "PEROLÂNDIA",
+    "nome_candidato": "GRETE ELISA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2235,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93076",
+    "nome_municipio": "CERES",
+    "nome_candidato": "EDMARIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4716,
+    "percentual": 35.4,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93076",
+    "nome_municipio": "CERES",
+    "nome_candidato": "RAFA MELO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 4680,
+    "percentual": 35.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93076",
+    "nome_municipio": "CERES",
+    "nome_candidato": "REILLER SEABRA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 3108,
+    "percentual": 23.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93076",
+    "nome_municipio": "CERES",
+    "nome_candidato": "CLEITON MATEUS",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 817,
+    "percentual": 6.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93084",
+    "nome_municipio": "NOVA IGUAÇU DE GOIÁS",
+    "nome_candidato": "ZÉ DO ANDRÉ",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1707,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93092",
+    "nome_municipio": "DIVINÓPOLIS DE GOIÁS",
+    "nome_candidato": "ISTEINER ABREU",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2671,
+    "percentual": 58.64,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93092",
+    "nome_municipio": "DIVINÓPOLIS DE GOIÁS",
+    "nome_candidato": "NITO DO UNIÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1828,
+    "percentual": 40.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93092",
+    "nome_municipio": "DIVINÓPOLIS DE GOIÁS",
+    "nome_candidato": "XANDY",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 56,
+    "percentual": 1.23,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93106",
+    "nome_municipio": "BURITI DE GOIÁS",
+    "nome_candidato": "DRA. ÁTILA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2322,
+    "percentual": 75.96,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93106",
+    "nome_municipio": "BURITI DE GOIÁS",
+    "nome_candidato": "EDMAR",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 735,
+    "percentual": 24.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93122",
+    "nome_municipio": "CALDAZINHA",
+    "nome_candidato": "SOLANGE GOUVEIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2966,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93149",
+    "nome_municipio": "GUARAÍTA",
+    "nome_candidato": "HEBIM DA MARCELA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1662,
+    "percentual": 66.67,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93149",
+    "nome_municipio": "GUARAÍTA",
+    "nome_candidato": "BUENO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 831,
+    "percentual": 33.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93157",
+    "nome_municipio": "CÓRREGO DO OURO",
+    "nome_candidato": "DANILO CONTADOR",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1564,
+    "percentual": 53.8,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93157",
+    "nome_municipio": "CÓRREGO DO OURO",
+    "nome_candidato": "ROSEMAR DE PAULA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1343,
+    "percentual": 46.2,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93165",
+    "nome_municipio": "INACIOLÂNDIA",
+    "nome_candidato": "CLÁUDIO CAIXETA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 2232,
+    "percentual": 53.55,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93165",
+    "nome_municipio": "INACIOLÂNDIA",
+    "nome_candidato": "ZÉ ANTÔNIO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1936,
+    "percentual": 46.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93173",
+    "nome_municipio": "CORUMBÁ DE GOIÁS",
+    "nome_candidato": "CHICO VACA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 4317,
+    "percentual": 66.72,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93173",
+    "nome_municipio": "CORUMBÁ DE GOIÁS",
+    "nome_candidato": "TOIN FERREIRA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 2153,
+    "percentual": 33.28,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93181",
+    "nome_municipio": "MONTIVIDIU DO NORTE",
+    "nome_candidato": "CLEMERSON LOPES",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1688,
+    "percentual": 51.54,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93181",
+    "nome_municipio": "MONTIVIDIU DO NORTE",
+    "nome_candidato": "DEGA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1587,
+    "percentual": 48.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93190",
+    "nome_municipio": "CORUMBAÍBA",
+    "nome_candidato": "WISNER",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3104,
+    "percentual": 52.47,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93190",
+    "nome_municipio": "CORUMBAÍBA",
+    "nome_candidato": "DENISMAR ARAÚJO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2812,
+    "percentual": 47.53,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93203",
+    "nome_municipio": "SANTO ANTÔNIO DA BARRA",
+    "nome_candidato": "ZÉ CÂNDIDO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2677,
+    "percentual": 71.65,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93203",
+    "nome_municipio": "SANTO ANTÔNIO DA BARRA",
+    "nome_candidato": "DAIANE OLIVEIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1059,
+    "percentual": 28.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93220",
+    "nome_municipio": "TEREZÓPOLIS DE GOIÁS",
+    "nome_candidato": "FHELIPE DO BILL",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2872,
+    "percentual": 50.64,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93220",
+    "nome_municipio": "TEREZÓPOLIS DE GOIÁS",
+    "nome_candidato": "UILTINHO ",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 2799,
+    "percentual": 49.36,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93246",
+    "nome_municipio": "UIRAPURU",
+    "nome_candidato": "ELIVAN CARREIRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2058,
+    "percentual": 76.59,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93246",
+    "nome_municipio": "UIRAPURU",
+    "nome_candidato": "AILTON BILA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 629,
+    "percentual": 23.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93254",
+    "nome_municipio": "CRISTALINA",
+    "nome_candidato": "DR LUIS OTÁVIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 19375,
+    "percentual": 69.89,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93254",
+    "nome_municipio": "CRISTALINA",
+    "nome_candidato": "JEAN",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 8347,
+    "percentual": 30.11,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93262",
+    "nome_municipio": "BURITINÓPOLIS",
+    "nome_candidato": "MARCILENE",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1540,
+    "percentual": 50.49,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93262",
+    "nome_municipio": "BURITINÓPOLIS",
+    "nome_candidato": "JORGINO COSTA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1510,
+    "percentual": 49.51,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93270",
+    "nome_municipio": "CRISTIANÓPOLIS",
+    "nome_candidato": "JULIANA DA FARMÁCIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2793,
+    "percentual": 85.6,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93270",
+    "nome_municipio": "CRISTIANÓPOLIS",
+    "nome_candidato": "EDMAR BORGES",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 470,
+    "percentual": 14.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93289",
+    "nome_municipio": "VILA BOA",
+    "nome_candidato": "RUBENS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1548,
+    "percentual": 47.51,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93289",
+    "nome_municipio": "VILA BOA",
+    "nome_candidato": "DJALMA DA FARMÁCIA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 1468,
+    "percentual": 45.06,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93289",
+    "nome_municipio": "VILA BOA",
+    "nome_candidato": "JUNIOR BOSSE",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 242,
+    "percentual": 7.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93297",
+    "nome_municipio": "CRIXÁS",
+    "nome_candidato": "DR. ALLAN XAVIER",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 6120,
+    "percentual": 58.66,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93297",
+    "nome_municipio": "CRIXÁS",
+    "nome_candidato": "DR. CARLOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4134,
+    "percentual": 39.62,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93297",
+    "nome_municipio": "CRIXÁS",
+    "nome_candidato": "CLAUDIO BORGES",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 116,
+    "percentual": 1.11,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93297",
+    "nome_municipio": "CRIXÁS",
+    "nome_candidato": "WILLIAN MACHADO",
+    "partido": "PMB",
+    "partido_ideologia": "centro",
+    "votos": 63,
+    "percentual": 0.6,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93300",
+    "nome_municipio": "VALPARAÍSO DE GOIÁS",
+    "nome_candidato": "MARCUS VINICIUS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 40232,
+    "percentual": 61.28,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93300",
+    "nome_municipio": "VALPARAÍSO DE GOIÁS",
+    "nome_candidato": "ZÉ ANTÔNIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 13815,
+    "percentual": 21.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93300",
+    "nome_municipio": "VALPARAÍSO DE GOIÁS",
+    "nome_candidato": "MARIA YVELÔNIA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 8056,
+    "percentual": 12.27,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93300",
+    "nome_municipio": "VALPARAÍSO DE GOIÁS",
+    "nome_candidato": "PROFESSORA LUCIMAR",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 2781,
+    "percentual": 4.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93300",
+    "nome_municipio": "VALPARAÍSO DE GOIÁS",
+    "nome_candidato": "WESLEY PACHECO",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 768,
+    "percentual": 1.17,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93319",
+    "nome_municipio": "CROMÍNIA",
+    "nome_candidato": "FERNANDO CARDOSO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1867,
+    "percentual": 53.65,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93319",
+    "nome_municipio": "CROMÍNIA",
+    "nome_candidato": "MUXIM",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1613,
+    "percentual": 46.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93327",
+    "nome_municipio": "NOVO GAMA",
+    "nome_candidato": "CARLINHOS DO MANGÃO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 34998,
+    "percentual": 78.82,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93327",
+    "nome_municipio": "NOVO GAMA",
+    "nome_candidato": "JERTON SODRÉ",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 9257,
+    "percentual": 20.85,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93327",
+    "nome_municipio": "NOVO GAMA",
+    "nome_candidato": "IRAQUITAN PALMARES",
+    "partido": "PSTU",
+    "partido_ideologia": "centro",
+    "votos": 150,
+    "percentual": 0.34,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93335",
+    "nome_municipio": "CUMARI",
+    "nome_candidato": "RAFAEL MEIRELLES",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1645,
+    "percentual": 73.37,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93335",
+    "nome_municipio": "CUMARI",
+    "nome_candidato": "ANDRE LEAO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 597,
+    "percentual": 26.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93343",
+    "nome_municipio": "ÁGUAS LINDAS DE GOIÁS",
+    "nome_candidato": "DR LUCAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 73971,
+    "percentual": 83.08,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93343",
+    "nome_municipio": "ÁGUAS LINDAS DE GOIÁS",
+    "nome_candidato": "RIBEIRO DO TULLIO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 9171,
+    "percentual": 10.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93343",
+    "nome_municipio": "ÁGUAS LINDAS DE GOIÁS",
+    "nome_candidato": "OTÁVIO RODRIGUES",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 4449,
+    "percentual": 5.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93343",
+    "nome_municipio": "ÁGUAS LINDAS DE GOIÁS",
+    "nome_candidato": "JURACI TESOURA DE OURO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1014,
+    "percentual": 1.14,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93343",
+    "nome_municipio": "ÁGUAS LINDAS DE GOIÁS",
+    "nome_candidato": "DOUTOR KLAUS PAZLHAÇO",
+    "partido": "PSOL",
+    "partido_ideologia": "esquerda",
+    "votos": 434,
+    "percentual": 0.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93351",
+    "nome_municipio": "DAMIANÓPOLIS",
+    "nome_candidato": "DENI SANTANA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2181,
+    "percentual": 60.05,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93351",
+    "nome_municipio": "DAMIANÓPOLIS",
+    "nome_candidato": "ANDRÉIA DE FABIM",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1451,
+    "percentual": 39.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93360",
+    "nome_municipio": "ABADIA DE GOIÁS",
+    "nome_candidato": "WANDER SARAIVA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 10293,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93378",
+    "nome_municipio": "DAMOLÂNDIA",
+    "nome_candidato": "ROGERIM",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2580,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93386",
+    "nome_municipio": "AMARALINA",
+    "nome_candidato": "DR DÁSIO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1743,
+    "percentual": 67.72,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93386",
+    "nome_municipio": "AMARALINA",
+    "nome_candidato": "WESLEY",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 831,
+    "percentual": 32.28,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93394",
+    "nome_municipio": "DAVINÓPOLIS",
+    "nome_candidato": "VANUSA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 1891,
+    "percentual": 49.67,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93394",
+    "nome_municipio": "DAVINÓPOLIS",
+    "nome_candidato": "LORENA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1554,
+    "percentual": 40.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93394",
+    "nome_municipio": "DAVINÓPOLIS",
+    "nome_candidato": "MICHELLE CAMPOS",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 362,
+    "percentual": 9.51,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93408",
+    "nome_municipio": "BONÓPOLIS",
+    "nome_candidato": "DIOCLÉCIO (DIDI)",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2015,
+    "percentual": 59.46,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93408",
+    "nome_municipio": "BONÓPOLIS",
+    "nome_candidato": "GENEIR PATRIOTA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1374,
+    "percentual": 40.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93424",
+    "nome_municipio": "PORTEIRÃO",
+    "nome_candidato": "HENRIQUE",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1818,
+    "percentual": 50.57,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93424",
+    "nome_municipio": "PORTEIRÃO",
+    "nome_candidato": "CUNHA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1777,
+    "percentual": 49.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93432",
+    "nome_municipio": "DIORAMA",
+    "nome_candidato": "ALTAMIRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1429,
+    "percentual": 64.63,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93432",
+    "nome_municipio": "DIORAMA",
+    "nome_candidato": "VALÉRIA FERREIRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 782,
+    "percentual": 35.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93440",
+    "nome_municipio": "SANTA RITA DO NOVO DESTINO",
+    "nome_candidato": "GAGUINHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1849,
+    "percentual": 70.2,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93440",
+    "nome_municipio": "SANTA RITA DO NOVO DESTINO",
+    "nome_candidato": "RONALDO AZEVEDO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 679,
+    "percentual": 25.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93440",
+    "nome_municipio": "SANTA RITA DO NOVO DESTINO",
+    "nome_candidato": "DELEINHO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 106,
+    "percentual": 4.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93483",
+    "nome_municipio": "SÃO PATRÍCIO",
+    "nome_candidato": "DANILO MAX",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1380,
+    "percentual": 62.3,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93483",
+    "nome_municipio": "SÃO PATRÍCIO",
+    "nome_candidato": "ARTEMO PARREIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 437,
+    "percentual": 19.73,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93483",
+    "nome_municipio": "SÃO PATRÍCIO",
+    "nome_candidato": "ZIQUINHA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 398,
+    "percentual": 17.97,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93491",
+    "nome_municipio": "EDÉIA",
+    "nome_candidato": "CARLA FARIA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5449,
+    "percentual": 71.55,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93491",
+    "nome_municipio": "EDÉIA",
+    "nome_candidato": "DR THIAGO MARÇAL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2167,
+    "percentual": 28.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93505",
+    "nome_municipio": "VILA PROPÍCIO",
+    "nome_candidato": "WALDILEI LEMOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3185,
+    "percentual": 60.29,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93505",
+    "nome_municipio": "VILA PROPÍCIO",
+    "nome_candidato": "JÉSSICA MORAIS",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 2098,
+    "percentual": 39.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93513",
+    "nome_municipio": "ESTRELA DO NORTE",
+    "nome_candidato": "EDMAR DA CACILDA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2299,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93530",
+    "nome_municipio": "FAZENDA NOVA",
+    "nome_candidato": "MARCUS ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4149,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93548",
+    "nome_municipio": "IPIRANGA DE GOIÁS",
+    "nome_candidato": "BALTAZAR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1442,
+    "percentual": 52.3,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93548",
+    "nome_municipio": "IPIRANGA DE GOIÁS",
+    "nome_candidato": "ZÉ MAURO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1315,
+    "percentual": 47.7,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93564",
+    "nome_municipio": "GAMELEIRA DE GOIÁS",
+    "nome_candidato": "WIVVIANE DUARTE",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1643,
+    "percentual": 50.87,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93564",
+    "nome_municipio": "GAMELEIRA DE GOIÁS",
+    "nome_candidato": "GILBERTO GALDINO",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1587,
+    "percentual": 49.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93572",
+    "nome_municipio": "FIRMINÓPOLIS",
+    "nome_candidato": "JOSE AIRTON",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5319,
+    "percentual": 76.73,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93572",
+    "nome_municipio": "FIRMINÓPOLIS",
+    "nome_candidato": "MAJOR LAUDIMAR",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 874,
+    "percentual": 12.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93572",
+    "nome_municipio": "FIRMINÓPOLIS",
+    "nome_candidato": "VAVA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 739,
+    "percentual": 10.66,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93580",
+    "nome_municipio": "CAMPO LIMPO DE GOIÁS",
+    "nome_candidato": "GRACIELE DA ARTE TRIGO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4071,
+    "percentual": 77.22,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93580",
+    "nome_municipio": "CAMPO LIMPO DE GOIÁS",
+    "nome_candidato": "WALLISON DUARTE",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1201,
+    "percentual": 22.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93599",
+    "nome_municipio": "FLORES DE GOIÁS",
+    "nome_candidato": "ALTRAN AVELAR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6004,
+    "percentual": 88.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93599",
+    "nome_municipio": "FLORES DE GOIÁS",
+    "nome_candidato": "BODÃO",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 819,
+    "percentual": 12.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93602",
+    "nome_municipio": "LAGOA SANTA",
+    "nome_candidato": "ADIVAIR",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 799,
+    "percentual": 51.38,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93602",
+    "nome_municipio": "LAGOA SANTA",
+    "nome_candidato": "CONRADO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 722,
+    "percentual": 46.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93602",
+    "nome_municipio": "LAGOA SANTA",
+    "nome_candidato": "MÁRCIO DA DITA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 34,
+    "percentual": 2.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93610",
+    "nome_municipio": "FORMOSA",
+    "nome_candidato": "SIMONE RIBEIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 23319,
+    "percentual": 41.44,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93610",
+    "nome_municipio": "FORMOSA",
+    "nome_candidato": "DELEGADA FERNANDA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 16556,
+    "percentual": 29.42,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93610",
+    "nome_municipio": "FORMOSA",
+    "nome_candidato": "DÉCIO DO IDEAL",
+    "partido": "AVANTE",
+    "partido_ideologia": "centro",
+    "votos": 14828,
+    "percentual": 26.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93610",
+    "nome_municipio": "FORMOSA",
+    "nome_candidato": "DELEGADO YASSER",
+    "partido": "PV",
+    "partido_ideologia": "centro",
+    "votos": 1216,
+    "percentual": 2.16,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93610",
+    "nome_municipio": "FORMOSA",
+    "nome_candidato": "FÁBIO JR O ÁGUIA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 359,
+    "percentual": 0.64,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93637",
+    "nome_municipio": "FORMOSO",
+    "nome_candidato": "HALISON DO LEILÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2081,
+    "percentual": 50.18,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93637",
+    "nome_municipio": "FORMOSO",
+    "nome_candidato": "MELVINA DO EDMAR DO DOCE",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2066,
+    "percentual": 49.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93670",
+    "nome_municipio": "GOIANÁPOLIS",
+    "nome_candidato": "JEOVAZINHO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6407,
+    "percentual": 75.63,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93670",
+    "nome_municipio": "GOIANÁPOLIS",
+    "nome_candidato": "ISRAEL MARIANO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1563,
+    "percentual": 18.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93670",
+    "nome_municipio": "GOIANÁPOLIS",
+    "nome_candidato": "EWERTON FILHO DO IVERTO",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 501,
+    "percentual": 5.91,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93696",
+    "nome_municipio": "GOIANDIRA",
+    "nome_candidato": "ALLISSON PEIXOTO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2670,
+    "percentual": 71.31,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93696",
+    "nome_municipio": "GOIANDIRA",
+    "nome_candidato": "PEDRO DA AMBULANCIA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 1074,
+    "percentual": 28.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93718",
+    "nome_municipio": "GOIANÉSIA",
+    "nome_candidato": "RENATO DE CASTRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 25278,
+    "percentual": 56.22,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93718",
+    "nome_municipio": "GOIANÉSIA",
+    "nome_candidato": "LEOZÃO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 16790,
+    "percentual": 37.34,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93718",
+    "nome_municipio": "GOIANÉSIA",
+    "nome_candidato": "HENRIQUE VILELA",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 2417,
+    "percentual": 5.38,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93718",
+    "nome_municipio": "GOIANÉSIA",
+    "nome_candidato": "CARLOS DO ITAPUÃ",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 475,
+    "percentual": 1.06,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 43371,
+    "percentual": 3.27,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 41546,
+    "percentual": 3.14,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 40054,
+    "percentual": 3.02,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 39233,
+    "percentual": 2.96,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 39071,
+    "percentual": 2.95,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 38385,
+    "percentual": 2.9,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 38016,
+    "percentual": 2.87,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 37625,
+    "percentual": 2.84,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 36217,
+    "percentual": 2.73,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 33783,
+    "percentual": 2.55,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 32960,
+    "percentual": 2.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 32883,
+    "percentual": 2.48,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 32541,
+    "percentual": 2.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 32164,
+    "percentual": 2.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 31684,
+    "percentual": 2.39,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 30572,
+    "percentual": 2.31,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 30273,
+    "percentual": 2.29,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 26582,
+    "percentual": 2.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 26194,
+    "percentual": 1.98,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 25781,
+    "percentual": 1.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 24783,
+    "percentual": 1.87,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 24371,
+    "percentual": 1.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 23977,
+    "percentual": 1.81,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 23012,
+    "percentual": 1.74,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 23003,
+    "percentual": 1.74,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 22448,
+    "percentual": 1.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 22420,
+    "percentual": 1.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 22405,
+    "percentual": 1.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 22115,
+    "percentual": 1.67,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 21918,
+    "percentual": 1.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 21795,
+    "percentual": 1.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "FRED RODRIGUES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 21513,
+    "percentual": 1.62,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 20999,
+    "percentual": 1.59,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 20989,
+    "percentual": 1.58,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 20957,
+    "percentual": 1.58,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 20887,
+    "percentual": 1.58,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 19757,
+    "percentual": 1.49,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 19272,
+    "percentual": 1.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MABEL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 18708,
+    "percentual": 1.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 18610,
+    "percentual": 1.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 18272,
+    "percentual": 1.38,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 18019,
+    "percentual": 1.36,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 17426,
+    "percentual": 1.32,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 16780,
+    "percentual": 1.27,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ADRIANA ACCORSI",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 15877,
+    "percentual": 1.2,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 9120,
+    "percentual": 0.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5975,
+    "percentual": 0.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 5975,
+    "percentual": 0.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 5955,
+    "percentual": 0.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5709,
+    "percentual": 0.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5463,
+    "percentual": 0.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5438,
+    "percentual": 0.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5426,
+    "percentual": 0.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5393,
+    "percentual": 0.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 4932,
+    "percentual": 0.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 4893,
+    "percentual": 0.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 4850,
+    "percentual": 0.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 4569,
+    "percentual": 0.34,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 4409,
+    "percentual": 0.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "MATHEUS RIBEIRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 4130,
+    "percentual": 0.31,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 3400,
+    "percentual": 0.26,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 3266,
+    "percentual": 0.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 3264,
+    "percentual": 0.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "VANDERLAN CARDOSO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 3158,
+    "percentual": 0.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 3040,
+    "percentual": 0.23,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2572,
+    "percentual": 0.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2572,
+    "percentual": 0.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2489,
+    "percentual": 0.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 2399,
+    "percentual": 0.18,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1860,
+    "percentual": 0.14,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1758,
+    "percentual": 0.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "ROGÉRIO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1662,
+    "percentual": 0.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 289,
+    "percentual": 0.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 231,
+    "percentual": 0.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 227,
+    "percentual": 0.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 216,
+    "percentual": 0.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 154,
+    "percentual": 0.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 150,
+    "percentual": 0.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 148,
+    "percentual": 0.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 137,
+    "percentual": 0.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93734",
+    "nome_municipio": "GOIÂNIA",
+    "nome_candidato": "PROFESSOR PANTALEÃO",
+    "partido": "UP",
+    "partido_ideologia": "centro",
+    "votos": 105,
+    "percentual": 0.01,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93750",
+    "nome_municipio": "GOIANIRA",
+    "nome_candidato": "CLEYTON BENTO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 18305,
+    "percentual": 61.66,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93750",
+    "nome_municipio": "GOIANIRA",
+    "nome_candidato": "ÍCARO FLORES",
+    "partido": "PRTB",
+    "partido_ideologia": "centro",
+    "votos": 6244,
+    "percentual": 21.03,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93750",
+    "nome_municipio": "GOIANIRA",
+    "nome_candidato": "CREMOZINN",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 4654,
+    "percentual": 15.68,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93750",
+    "nome_municipio": "GOIANIRA",
+    "nome_candidato": "MARCÃO PUBLICIDADE",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 483,
+    "percentual": 1.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93777",
+    "nome_municipio": "GOIÁS",
+    "nome_candidato": "ADERSON",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 7009,
+    "percentual": 48.18,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93777",
+    "nome_municipio": "GOIÁS",
+    "nome_candidato": "DR. ELBER",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6291,
+    "percentual": 43.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93777",
+    "nome_municipio": "GOIÁS",
+    "nome_candidato": "CESINHA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1247,
+    "percentual": 8.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93793",
+    "nome_municipio": "GOIATUBA",
+    "nome_candidato": "ALBERTO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 15662,
+    "percentual": 69.31,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93793",
+    "nome_municipio": "GOIATUBA",
+    "nome_candidato": "MARCELO COELHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 6934,
+    "percentual": 30.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93815",
+    "nome_municipio": "GUAPÓ",
+    "nome_candidato": "FRANK ESTEVAN",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6850,
+    "percentual": 62.56,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93815",
+    "nome_municipio": "GUAPÓ",
+    "nome_candidato": "EDSON BANDINHA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 3589,
+    "percentual": 32.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93815",
+    "nome_municipio": "GUAPÓ",
+    "nome_candidato": "PROFESSORA NILZA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 456,
+    "percentual": 4.16,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93815",
+    "nome_municipio": "GUAPÓ",
+    "nome_candidato": "FRANCISCO FINAMOR",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 55,
+    "percentual": 0.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93831",
+    "nome_municipio": "GUARANI DE GOIÁS",
+    "nome_candidato": "JANEZIO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3759,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93874",
+    "nome_municipio": "HEITORAÍ",
+    "nome_candidato": "ESMAEL",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2171,
+    "percentual": 57.56,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93874",
+    "nome_municipio": "HEITORAÍ",
+    "nome_candidato": "ELAINE DE PAULA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1601,
+    "percentual": 42.44,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93890",
+    "nome_municipio": "HIDROLÂNDIA",
+    "nome_candidato": "ZÉ DÉLIO JR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 16510,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93912",
+    "nome_municipio": "HIDROLINA",
+    "nome_candidato": "ELIZÃO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2984,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93939",
+    "nome_municipio": "IACIARA",
+    "nome_candidato": "WAGUINHA DE DELZA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3168,
+    "percentual": 44.37,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93939",
+    "nome_municipio": "IACIARA",
+    "nome_candidato": "CLAUDIO MAXIXE",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2167,
+    "percentual": 30.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93939",
+    "nome_municipio": "IACIARA",
+    "nome_candidato": "ARTHURZINHO DO LABORATORIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 972,
+    "percentual": 13.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93939",
+    "nome_municipio": "IACIARA",
+    "nome_candidato": "ZEZINHO DO LAVADOR",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 833,
+    "percentual": 11.67,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93955",
+    "nome_municipio": "INHUMAS",
+    "nome_candidato": "ZÉ ESSADO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 13008,
+    "percentual": 42.54,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93955",
+    "nome_municipio": "INHUMAS",
+    "nome_candidato": "FABIANNE LEAO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 10306,
+    "percentual": 33.7,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93955",
+    "nome_municipio": "INHUMAS",
+    "nome_candidato": "SEBASTIÃO NETO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 7264,
+    "percentual": 23.76,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "93971",
+    "nome_municipio": "IPAMERI",
+    "nome_candidato": "JÂNIO PACHECO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 9632,
+    "percentual": 60.43,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "93971",
+    "nome_municipio": "IPAMERI",
+    "nome_candidato": "DANIELA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 6307,
+    "percentual": 39.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94013",
+    "nome_municipio": "ISRAELÂNDIA",
+    "nome_candidato": "ADELICIA MOURA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 2334,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94030",
+    "nome_municipio": "ITABERAÍ",
+    "nome_candidato": "RITA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 22576,
+    "percentual": 95.04,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94030",
+    "nome_municipio": "ITABERAÍ",
+    "nome_candidato": "PEDRO DA AGRODAN",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 1178,
+    "percentual": 4.96,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94072",
+    "nome_municipio": "ITAGUARU",
+    "nome_candidato": "FERNANDO ARAÚJO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 2744,
+    "percentual": 57.17,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94072",
+    "nome_municipio": "ITAGUARU",
+    "nome_candidato": "DÁRCIA FERNANDES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2056,
+    "percentual": 42.83,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94110",
+    "nome_municipio": "ITAJÁ",
+    "nome_candidato": "LUCAS MACHADO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1762,
+    "percentual": 53.44,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94110",
+    "nome_municipio": "ITAJÁ",
+    "nome_candidato": "ADEMIR",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1535,
+    "percentual": 46.56,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94137",
+    "nome_municipio": "ITAPACI",
+    "nome_candidato": "DR FABIO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 7236,
+    "percentual": 62.84,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94137",
+    "nome_municipio": "ITAPACI",
+    "nome_candidato": "ADEDY",
+    "partido": "DC",
+    "partido_ideologia": "direita",
+    "votos": 4279,
+    "percentual": 37.16,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94153",
+    "nome_municipio": "ITAPIRAPUÃ",
+    "nome_candidato": "DR. CÁSSIO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2907,
+    "percentual": 51.1,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94153",
+    "nome_municipio": "ITAPIRAPUÃ",
+    "nome_candidato": "ZELIA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2782,
+    "percentual": 48.9,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94196",
+    "nome_municipio": "ITAPURANGA",
+    "nome_candidato": "PAULINHO IMILA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 6029,
+    "percentual": 34.2,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94196",
+    "nome_municipio": "ITAPURANGA",
+    "nome_candidato": "JUNIOR CAMARGO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 5684,
+    "percentual": 32.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94196",
+    "nome_municipio": "ITAPURANGA",
+    "nome_candidato": "MIRO MARÇAL",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 5679,
+    "percentual": 32.22,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94196",
+    "nome_municipio": "ITAPURANGA",
+    "nome_candidato": "VANDER LUIZ",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 235,
+    "percentual": 1.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94218",
+    "nome_municipio": "ITARUMÃ",
+    "nome_candidato": "LUIZ HENRIQUE",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2211,
+    "percentual": 53.91,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94218",
+    "nome_municipio": "ITARUMÃ",
+    "nome_candidato": "RODRIGO PALAZZO",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1825,
+    "percentual": 44.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94218",
+    "nome_municipio": "ITARUMÃ",
+    "nome_candidato": "ALCEMI POTENCIA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 65,
+    "percentual": 1.58,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94234",
+    "nome_municipio": "ITAUÇU",
+    "nome_candidato": "CLEITON MELO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3714,
+    "percentual": 54.76,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94234",
+    "nome_municipio": "ITAUÇU",
+    "nome_candidato": "TULIM",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 3068,
+    "percentual": 45.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94250",
+    "nome_municipio": "ITUMBIARA",
+    "nome_candidato": "DIONE ARAUJO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 32035,
+    "percentual": 59.78,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94250",
+    "nome_municipio": "ITUMBIARA",
+    "nome_candidato": "GUGU NADER",
+    "partido": "AVANTE",
+    "partido_ideologia": "centro",
+    "votos": 21554,
+    "percentual": 40.22,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94277",
+    "nome_municipio": "IVOLÂNDIA",
+    "nome_candidato": "DR JUNIOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2360,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94293",
+    "nome_municipio": "JANDAIA",
+    "nome_candidato": "DANILO JANDAIA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 3144,
+    "percentual": 60.43,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94293",
+    "nome_municipio": "JANDAIA",
+    "nome_candidato": "JHONNATHAN PEREIRA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2059,
+    "percentual": 39.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94315",
+    "nome_municipio": "JARAGUÁ",
+    "nome_candidato": "PAULO VITOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 20622,
+    "percentual": 83.13,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94315",
+    "nome_municipio": "JARAGUÁ",
+    "nome_candidato": "EPAMINONDAS",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 4185,
+    "percentual": 16.87,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94331",
+    "nome_municipio": "JATAÍ",
+    "nome_candidato": "GENEILTON ASSIS",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 29827,
+    "percentual": 58.93,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94331",
+    "nome_municipio": "JATAÍ",
+    "nome_candidato": "HUMBERTO MACHADO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 18689,
+    "percentual": 36.92,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94331",
+    "nome_municipio": "JATAÍ",
+    "nome_candidato": "SORAIA RODRIGUES",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 2100,
+    "percentual": 4.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94358",
+    "nome_municipio": "JAUPACI",
+    "nome_candidato": "EDVALDO BATISTA GUIMARÃES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1121,
+    "percentual": 41.14,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94358",
+    "nome_municipio": "JAUPACI",
+    "nome_candidato": "RUBINHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1077,
+    "percentual": 39.52,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94358",
+    "nome_municipio": "JAUPACI",
+    "nome_candidato": "GUILHERME ASSUNÇÃO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 527,
+    "percentual": 19.34,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94374",
+    "nome_municipio": "JOVIÂNIA",
+    "nome_candidato": "MAX",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 2463,
+    "percentual": 50.22,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94374",
+    "nome_municipio": "JOVIÂNIA",
+    "nome_candidato": "RENIN",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2441,
+    "percentual": 49.78,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94390",
+    "nome_municipio": "JUSSARA",
+    "nome_candidato": "IDALI BONTEMPO BRANCA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 9416,
+    "percentual": 86.12,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94390",
+    "nome_municipio": "JUSSARA",
+    "nome_candidato": "JONAS MENDONCA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1517,
+    "percentual": 13.88,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94439",
+    "nome_municipio": "LEOPOLDO DE BULHÕES",
+    "nome_candidato": "ROBERTA CAETANO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3190,
+    "percentual": 55.1,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94439",
+    "nome_municipio": "LEOPOLDO DE BULHÕES",
+    "nome_candidato": "CLINTON HOLANDA",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2599,
+    "percentual": 44.9,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94455",
+    "nome_municipio": "LUZIÂNIA",
+    "nome_candidato": "DIEGO SORGATTO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 72478,
+    "percentual": 75.32,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94455",
+    "nome_municipio": "LUZIÂNIA",
+    "nome_candidato": "WALTINHO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 12863,
+    "percentual": 13.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94455",
+    "nome_municipio": "LUZIÂNIA",
+    "nome_candidato": "DIRETORA ANA LÚCIA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 10279,
+    "percentual": 10.68,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94455",
+    "nome_municipio": "LUZIÂNIA",
+    "nome_candidato": "LEE ALMEIDA",
+    "partido": "PSOL",
+    "partido_ideologia": "esquerda",
+    "votos": 609,
+    "percentual": 0.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94471",
+    "nome_municipio": "MAIRIPOTABA",
+    "nome_candidato": "LINDOMAR BESSA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1955,
+    "percentual": 63.43,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94471",
+    "nome_municipio": "MAIRIPOTABA",
+    "nome_candidato": "ADEMIR",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1064,
+    "percentual": 34.52,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94471",
+    "nome_municipio": "MAIRIPOTABA",
+    "nome_candidato": "TITO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 63,
+    "percentual": 2.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94498",
+    "nome_municipio": "MAMBAÍ",
+    "nome_candidato": "EDER LACERDA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2297,
+    "percentual": 41.01,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94498",
+    "nome_municipio": "MAMBAÍ",
+    "nome_candidato": "AGENOR COSTA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1951,
+    "percentual": 34.83,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94498",
+    "nome_municipio": "MAMBAÍ",
+    "nome_candidato": "MICHELLY VALENTE",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1353,
+    "percentual": 24.16,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94510",
+    "nome_municipio": "MARA ROSA",
+    "nome_candidato": "FLAVIO MOURA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5781,
+    "percentual": 83.98,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94510",
+    "nome_municipio": "MARA ROSA",
+    "nome_candidato": "WAGNER FACUNDO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1103,
+    "percentual": 16.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94536",
+    "nome_municipio": "MARZAGÃO",
+    "nome_candidato": "SOLIMAR CARDOSO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 2028,
+    "percentual": 75.64,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94536",
+    "nome_municipio": "MARZAGÃO",
+    "nome_candidato": "EDIVANA MARTINS",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 653,
+    "percentual": 24.36,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94552",
+    "nome_municipio": "PARANAIGUARA",
+    "nome_candidato": "BARBOSINHA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 3895,
+    "percentual": 64.81,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94552",
+    "nome_municipio": "PARANAIGUARA",
+    "nome_candidato": "RICARDO VALADÃO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2115,
+    "percentual": 35.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94579",
+    "nome_municipio": "MAURILÂNDIA",
+    "nome_candidato": "WANDERVAL",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3315,
+    "percentual": 53.21,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94579",
+    "nome_municipio": "MAURILÂNDIA",
+    "nome_candidato": "ELDER SÁ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2824,
+    "percentual": 45.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94579",
+    "nome_municipio": "MAURILÂNDIA",
+    "nome_candidato": "FLAVINHO DI MELLO",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 91,
+    "percentual": 1.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94595",
+    "nome_municipio": "MINEIROS",
+    "nome_candidato": "ALEOMAR REZENDE",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 29406,
+    "percentual": 79.89,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94595",
+    "nome_municipio": "MINEIROS",
+    "nome_candidato": "DR LOURIVAL",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 5667,
+    "percentual": 15.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94595",
+    "nome_municipio": "MINEIROS",
+    "nome_candidato": "JULIANA BARCELOS",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1257,
+    "percentual": 3.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94595",
+    "nome_municipio": "MINEIROS",
+    "nome_candidato": "ROBERTINHO JOIA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 479,
+    "percentual": 1.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94650",
+    "nome_municipio": "MOIPORÁ",
+    "nome_candidato": "ZÉ WILSON",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1532,
+    "percentual": 67.25,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94650",
+    "nome_municipio": "MOIPORÁ",
+    "nome_candidato": "MURILO HIAGO",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 746,
+    "percentual": 32.75,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94676",
+    "nome_municipio": "MONTE ALEGRE DE GOIÁS",
+    "nome_candidato": "FELIPI CAMPOS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3224,
+    "percentual": 68.23,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94676",
+    "nome_municipio": "MONTE ALEGRE DE GOIÁS",
+    "nome_candidato": "JUVENAL",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1501,
+    "percentual": 31.77,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94714",
+    "nome_municipio": "MONTES CLAROS DE GOIÁS",
+    "nome_candidato": "VILMAR MACIEL",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3393,
+    "percentual": 57.55,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94714",
+    "nome_municipio": "MONTES CLAROS DE GOIÁS",
+    "nome_candidato": "MARCÃO DO POSTO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2503,
+    "percentual": 42.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94730",
+    "nome_municipio": "MORRINHOS",
+    "nome_candidato": "MAYCLLYN CARREIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 9481,
+    "percentual": 33.9,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94730",
+    "nome_municipio": "MORRINHOS",
+    "nome_candidato": "ROGERIO TRONCOSO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 9432,
+    "percentual": 33.73,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94730",
+    "nome_municipio": "MORRINHOS",
+    "nome_candidato": "JOAQUIM GUILHERME",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 8932,
+    "percentual": 31.94,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94730",
+    "nome_municipio": "MORRINHOS",
+    "nome_candidato": "RODRIGO CARNOT",
+    "partido": "PSOL",
+    "partido_ideologia": "esquerda",
+    "votos": 119,
+    "percentual": 0.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94757",
+    "nome_municipio": "MOSSÂMEDES",
+    "nome_candidato": "MARTA CAETANO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2751,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94773",
+    "nome_municipio": "MOZARLÂNDIA",
+    "nome_candidato": "LUCIJANE ALENCAR",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3379,
+    "percentual": 36.35,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94773",
+    "nome_municipio": "MOZARLÂNDIA",
+    "nome_candidato": "CASSIO DA MADEIMANAS",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3120,
+    "percentual": 33.57,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94773",
+    "nome_municipio": "MOZARLÂNDIA",
+    "nome_candidato": "VALTER ALEIXO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 2796,
+    "percentual": 30.08,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94790",
+    "nome_municipio": "MUTUNÓPOLIS",
+    "nome_candidato": "LUIZINHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1874,
+    "percentual": 61.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94790",
+    "nome_municipio": "MUTUNÓPOLIS",
+    "nome_candidato": "VANDERLEI CARVALHO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1198,
+    "percentual": 39.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94854",
+    "nome_municipio": "NAZÁRIO",
+    "nome_candidato": "FERRUJA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3426,
+    "percentual": 52.16,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94854",
+    "nome_municipio": "NAZÁRIO",
+    "nome_candidato": "RICARDO DA FARMACIA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 3112,
+    "percentual": 47.38,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94854",
+    "nome_municipio": "NAZÁRIO",
+    "nome_candidato": "NELSON DA PAMONHA",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 30,
+    "percentual": 0.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94870",
+    "nome_municipio": "NERÓPOLIS",
+    "nome_candidato": "DR LUIZ",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 10887,
+    "percentual": 56.14,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94870",
+    "nome_municipio": "NERÓPOLIS",
+    "nome_candidato": "ELISA DA SAÚDE",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 7973,
+    "percentual": 41.11,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94870",
+    "nome_municipio": "NERÓPOLIS",
+    "nome_candidato": "LUIZ STIVAL LUIZINHO",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 313,
+    "percentual": 1.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94870",
+    "nome_municipio": "NERÓPOLIS",
+    "nome_candidato": "KLEITON CABELIN",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 220,
+    "percentual": 1.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94897",
+    "nome_municipio": "NIQUELÂNDIA",
+    "nome_candidato": "EDUARDO NIQTURBO",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 8988,
+    "percentual": 41.38,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94897",
+    "nome_municipio": "NIQUELÂNDIA",
+    "nome_candidato": "OZEAS BOIADEIRO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 7368,
+    "percentual": 33.92,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94897",
+    "nome_municipio": "NIQUELÂNDIA",
+    "nome_candidato": "DR. SANDRO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 5363,
+    "percentual": 24.69,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94919",
+    "nome_municipio": "NOVA AMÉRICA",
+    "nome_candidato": "CLÉBER JUNIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2164,
+    "percentual": 92.48,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94919",
+    "nome_municipio": "NOVA AMÉRICA",
+    "nome_candidato": "SEBASTIAO DOS PASSOS",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 176,
+    "percentual": 7.52,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94935",
+    "nome_municipio": "NOVA AURORA",
+    "nome_candidato": "JOÃO PIMENTA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1811,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94951",
+    "nome_municipio": "NOVA ROMA",
+    "nome_candidato": "ELEUSES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2073,
+    "percentual": 76.13,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94951",
+    "nome_municipio": "NOVA ROMA",
+    "nome_candidato": "MIRIAN",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 650,
+    "percentual": 23.87,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "94978",
+    "nome_municipio": "NOVA VENEZA",
+    "nome_candidato": "COSTA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4934,
+    "percentual": 74.05,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "94978",
+    "nome_municipio": "NOVA VENEZA",
+    "nome_candidato": "PATRÍCIA FERNANDES",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 1729,
+    "percentual": 25.95,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95010",
+    "nome_municipio": "NOVO BRASIL",
+    "nome_candidato": "GABRIEL DO FABIANO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1820,
+    "percentual": 57.7,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95010",
+    "nome_municipio": "NOVO BRASIL",
+    "nome_candidato": "OZIRES FREITAS",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 1334,
+    "percentual": 42.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95036",
+    "nome_municipio": "ORIZONA",
+    "nome_candidato": "FELIPE DIAS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 4784,
+    "percentual": 50.24,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95036",
+    "nome_municipio": "ORIZONA",
+    "nome_candidato": "JOÃO FLÁVIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 4739,
+    "percentual": 49.76,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95052",
+    "nome_municipio": "OURO VERDE DE GOIÁS",
+    "nome_candidato": "RODRIGO FONSECA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2174,
+    "percentual": 66.42,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95052",
+    "nome_municipio": "OURO VERDE DE GOIÁS",
+    "nome_candidato": "GILMARAO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1099,
+    "percentual": 33.58,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95079",
+    "nome_municipio": "OUVIDOR",
+    "nome_candidato": "CEBINHA",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 7355,
+    "percentual": 84.35,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95079",
+    "nome_municipio": "OUVIDOR",
+    "nome_candidato": "ONOFRIM",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1365,
+    "percentual": 15.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95095",
+    "nome_municipio": "PADRE BERNARDO",
+    "nome_candidato": "JOSELEIDE LÁZARO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7732,
+    "percentual": 47.81,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95095",
+    "nome_municipio": "PADRE BERNARDO",
+    "nome_candidato": "CLAUDIÊNIO TEIXEIRA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 4661,
+    "percentual": 28.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95095",
+    "nome_municipio": "PADRE BERNARDO",
+    "nome_candidato": "ZÉ MATHEUS",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 3779,
+    "percentual": 23.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95117",
+    "nome_municipio": "PALMEIRAS DE GOIÁS",
+    "nome_candidato": "DR OSVALDO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 9056,
+    "percentual": 50.82,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95117",
+    "nome_municipio": "PALMEIRAS DE GOIÁS",
+    "nome_candidato": "TAÍS LOPES",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 8451,
+    "percentual": 47.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95117",
+    "nome_municipio": "PALMEIRAS DE GOIÁS",
+    "nome_candidato": "JAIRO DO PT",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 312,
+    "percentual": 1.75,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95133",
+    "nome_municipio": "PALMELO",
+    "nome_candidato": "RENATO DAMASIO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 1623,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95150",
+    "nome_municipio": "PALMINÓPOLIS",
+    "nome_candidato": "DR FRANC",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3238,
+    "percentual": 81.56,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95150",
+    "nome_municipio": "PALMINÓPOLIS",
+    "nome_candidato": "BRIZOLA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 732,
+    "percentual": 18.44,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95176",
+    "nome_municipio": "PANAMÁ",
+    "nome_candidato": "RENÊ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1655,
+    "percentual": 60.85,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95176",
+    "nome_municipio": "PANAMÁ",
+    "nome_candidato": "ROBSON CORREA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1065,
+    "percentual": 39.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95230",
+    "nome_municipio": "PARAÚNA",
+    "nome_candidato": "FLÁVIO MACARRÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5757,
+    "percentual": 80.78,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95230",
+    "nome_municipio": "PARAÚNA",
+    "nome_candidato": "RODOLFO BEZERRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1370,
+    "percentual": 19.22,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95311",
+    "nome_municipio": "PETROLINA DE GOIÁS",
+    "nome_candidato": "TIAGO PACHECO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3691,
+    "percentual": 58.28,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95311",
+    "nome_municipio": "PETROLINA DE GOIÁS",
+    "nome_candidato": "RAFAEL DO BORGINHO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2513,
+    "percentual": 39.68,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95311",
+    "nome_municipio": "PETROLINA DE GOIÁS",
+    "nome_candidato": "BETINHO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 129,
+    "percentual": 2.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95354",
+    "nome_municipio": "PILAR DE GOIÁS",
+    "nome_candidato": "TIAGÃO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1660,
+    "percentual": 43.95,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95354",
+    "nome_municipio": "PILAR DE GOIÁS",
+    "nome_candidato": "VATECO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1432,
+    "percentual": 37.91,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95354",
+    "nome_municipio": "PILAR DE GOIÁS",
+    "nome_candidato": "JOÃO PAULO DO SANDRO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 685,
+    "percentual": 18.14,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "PROFESSORA LENIZIA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3242,
+    "percentual": 23.11,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "ELLEN DE LIMA",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 3109,
+    "percentual": 22.16,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "CLÁUDIO GRILO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2722,
+    "percentual": 19.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "JOÃO BARBOSA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2563,
+    "percentual": 18.27,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "CLAUDINEY BODE",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2068,
+    "percentual": 14.74,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95397",
+    "nome_municipio": "PIRACANJUBA",
+    "nome_candidato": "FERNANDO PACÍFICO",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 327,
+    "percentual": 2.33,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95419",
+    "nome_municipio": "PIRANHAS",
+    "nome_candidato": "PROFESSOR FABIO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 3983,
+    "percentual": 54.04,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95419",
+    "nome_municipio": "PIRANHAS",
+    "nome_candidato": "MARCO ROGERIO - CHICÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3237,
+    "percentual": 43.92,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95419",
+    "nome_municipio": "PIRANHAS",
+    "nome_candidato": "JAIR PARREIRA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 150,
+    "percentual": 2.04,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95435",
+    "nome_municipio": "PIRENÓPOLIS",
+    "nome_candidato": "NIVALDO MELO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 7147,
+    "percentual": 45.44,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95435",
+    "nome_municipio": "PIRENÓPOLIS",
+    "nome_candidato": "YNAÊ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 6247,
+    "percentual": 39.72,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95435",
+    "nome_municipio": "PIRENÓPOLIS",
+    "nome_candidato": "VALDEIR ALVES",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1620,
+    "percentual": 10.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95435",
+    "nome_municipio": "PIRENÓPOLIS",
+    "nome_candidato": "ALEXANDRE POMPEU",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 713,
+    "percentual": 4.53,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95451",
+    "nome_municipio": "PIRES DO RIO",
+    "nome_candidato": "HUGO DO LATICÍNIO",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 8489,
+    "percentual": 52.85,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95451",
+    "nome_municipio": "PIRES DO RIO",
+    "nome_candidato": "CIDA TOMAZINI",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5806,
+    "percentual": 36.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95451",
+    "nome_municipio": "PIRES DO RIO",
+    "nome_candidato": "JUNIOR DA METASA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1766,
+    "percentual": 11.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95494",
+    "nome_municipio": "PONTALINA",
+    "nome_candidato": "EDSON GUIMARÃES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 5041,
+    "percentual": 43.83,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95494",
+    "nome_municipio": "PONTALINA",
+    "nome_candidato": "MILTON RICARDO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 4430,
+    "percentual": 38.52,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95494",
+    "nome_municipio": "PONTALINA",
+    "nome_candidato": "JURANDIR AUGUSTO",
+    "partido": "AGIR",
+    "partido_ideologia": "centro",
+    "votos": 2030,
+    "percentual": 17.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95559",
+    "nome_municipio": "PORANGATU",
+    "nome_candidato": "VANUZA VALADARES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 11739,
+    "percentual": 50.83,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95559",
+    "nome_municipio": "PORANGATU",
+    "nome_candidato": "GLAUCIA MELO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 9985,
+    "percentual": 43.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95559",
+    "nome_municipio": "PORANGATU",
+    "nome_candidato": "GUSTAVO DOURADO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 993,
+    "percentual": 4.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95559",
+    "nome_municipio": "PORANGATU",
+    "nome_candidato": "JOSE UILTON N DE OLIVEIRA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 376,
+    "percentual": 1.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95575",
+    "nome_municipio": "PORTELÂNDIA",
+    "nome_candidato": "MARLY REZENDE",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 2217,
+    "percentual": 100.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95613",
+    "nome_municipio": "POSSE",
+    "nome_candidato": "PAULO TRABALHO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 10661,
+    "percentual": 54.06,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95613",
+    "nome_municipio": "POSSE",
+    "nome_candidato": "DR. HELDER",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7902,
+    "percentual": 40.07,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95613",
+    "nome_municipio": "POSSE",
+    "nome_candidato": "DA HORA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 641,
+    "percentual": 3.25,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95613",
+    "nome_municipio": "POSSE",
+    "nome_candidato": "KAIO FELIPE",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 518,
+    "percentual": 2.63,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95630",
+    "nome_municipio": "QUIRINÓPOLIS",
+    "nome_candidato": "ANDERSON DE PAULA",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 15823,
+    "percentual": 59.43,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95630",
+    "nome_municipio": "QUIRINÓPOLIS",
+    "nome_candidato": "MARCO AURELIO",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 8039,
+    "percentual": 30.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95630",
+    "nome_municipio": "QUIRINÓPOLIS",
+    "nome_candidato": "RONNE CEZAR",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2303,
+    "percentual": 8.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95630",
+    "nome_municipio": "QUIRINÓPOLIS",
+    "nome_candidato": "JOENE ROSA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 461,
+    "percentual": 1.73,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95656",
+    "nome_municipio": "RIALMA",
+    "nome_candidato": "DR LUCAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4110,
+    "percentual": 54.57,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95656",
+    "nome_municipio": "RIALMA",
+    "nome_candidato": "TIAGO MENDONÇA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3421,
+    "percentual": 45.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95672",
+    "nome_municipio": "RIANÁPOLIS",
+    "nome_candidato": "GILBER MIRANDA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2317,
+    "percentual": 67.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95672",
+    "nome_municipio": "RIANÁPOLIS",
+    "nome_candidato": "ZÉ CARLOS",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1141,
+    "percentual": 33.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "WELLINGTON CARRIJO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 40420,
+    "percentual": 36.6,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "WELLINGTON CARRIJO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 28789,
+    "percentual": 26.07,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "LISSAUER VIEIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 14081,
+    "percentual": 12.75,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "LISSAUER VIEIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 10724,
+    "percentual": 9.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "DR OSVALDO FONSECA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 6173,
+    "percentual": 5.59,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "DR OSVALDO FONSECA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 4563,
+    "percentual": 4.13,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "KARLOS CABRAL",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 2236,
+    "percentual": 2.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "KARLOS CABRAL",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 1423,
+    "percentual": 1.29,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "DANIEL CUNHA DA CAMARA",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 1043,
+    "percentual": 0.94,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95710",
+    "nome_municipio": "RIO VERDE",
+    "nome_candidato": "DANIEL CUNHA DA CAMARA",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 982,
+    "percentual": 0.89,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95737",
+    "nome_municipio": "RUBIATABA",
+    "nome_candidato": "PADRE WEBER",
+    "partido": "PSD",
+    "partido_ideologia": "centro-direita",
+    "votos": 7634,
+    "percentual": 63.44,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95737",
+    "nome_municipio": "RUBIATABA",
+    "nome_candidato": "DR. MARCOS ATHAÍDE",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 4399,
+    "percentual": 36.56,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95753",
+    "nome_municipio": "SANCLERLÂNDIA",
+    "nome_candidato": "ZÉ GORDO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 3449,
+    "percentual": 56.07,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95753",
+    "nome_municipio": "SANCLERLÂNDIA",
+    "nome_candidato": "JOÃO PAULO CARNEIRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2702,
+    "percentual": 43.93,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95770",
+    "nome_municipio": "SANTA BÁRBARA DE GOIÁS",
+    "nome_candidato": "JOB MARTINS DE DEUS",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 3635,
+    "percentual": 83.35,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95770",
+    "nome_municipio": "SANTA BÁRBARA DE GOIÁS",
+    "nome_candidato": "SANTIAGO",
+    "partido": "PV",
+    "partido_ideologia": "centro",
+    "votos": 726,
+    "percentual": 16.65,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95796",
+    "nome_municipio": "SANTA CRUZ DE GOIÁS",
+    "nome_candidato": "ÂNGELO DA PAZ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2266,
+    "percentual": 72.1,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95796",
+    "nome_municipio": "SANTA CRUZ DE GOIÁS",
+    "nome_candidato": "CARLOS FERNANDO",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 830,
+    "percentual": 26.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95796",
+    "nome_municipio": "SANTA CRUZ DE GOIÁS",
+    "nome_candidato": "EUCLIDES KIDU",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 47,
+    "percentual": 1.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95818",
+    "nome_municipio": "SANTA HELENA DE GOIÁS",
+    "nome_candidato": "IRIS PARREIRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 12052,
+    "percentual": 52.49,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95818",
+    "nome_municipio": "SANTA HELENA DE GOIÁS",
+    "nome_candidato": "AGENOR",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 10910,
+    "percentual": 47.51,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95834",
+    "nome_municipio": "SANTA RITA DO ARAGUAIA",
+    "nome_candidato": "CARLOS TADEU",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2490,
+    "percentual": 69.49,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95834",
+    "nome_municipio": "SANTA RITA DO ARAGUAIA",
+    "nome_candidato": "JURACI MANGA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 980,
+    "percentual": 27.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95834",
+    "nome_municipio": "SANTA RITA DO ARAGUAIA",
+    "nome_candidato": "PROFESSOR JÚNIOR INÁCIO",
+    "partido": "PSB",
+    "partido_ideologia": "esquerda",
+    "votos": 113,
+    "percentual": 3.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95850",
+    "nome_municipio": "SANTA ROSA DE GOIÁS",
+    "nome_candidato": "ULISSES",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1761,
+    "percentual": 54.15,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95850",
+    "nome_municipio": "SANTA ROSA DE GOIÁS",
+    "nome_candidato": "LEILA CÉSAR",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1491,
+    "percentual": 45.85,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95877",
+    "nome_municipio": "SANTA TEREZA DE GOIÁS",
+    "nome_candidato": "LEIA MENDONÇA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1948,
+    "percentual": 59.5,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95877",
+    "nome_municipio": "SANTA TEREZA DE GOIÁS",
+    "nome_candidato": "RAFAEL VIEIRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1326,
+    "percentual": 40.5,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95893",
+    "nome_municipio": "SANTA TEREZINHA DE GOIÁS",
+    "nome_candidato": "KARLA MOREIRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 5108,
+    "percentual": 72.29,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95893",
+    "nome_municipio": "SANTA TEREZINHA DE GOIÁS",
+    "nome_candidato": "MARCOS CABRAL",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1958,
+    "percentual": 27.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95915",
+    "nome_municipio": "SÃO DOMINGOS",
+    "nome_candidato": "GILVANIR CARDOSO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3981,
+    "percentual": 68.51,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95915",
+    "nome_municipio": "SÃO DOMINGOS",
+    "nome_candidato": "JONAS CARDOSO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1562,
+    "percentual": 26.88,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95915",
+    "nome_municipio": "SÃO DOMINGOS",
+    "nome_candidato": "NESIMÁRIO RAMOS",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 268,
+    "percentual": 4.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95931",
+    "nome_municipio": "SÃO FRANCISCO DE GOIÁS",
+    "nome_candidato": "TIMBÓ",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3941,
+    "percentual": 90.76,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95931",
+    "nome_municipio": "SÃO FRANCISCO DE GOIÁS",
+    "nome_candidato": "ANINHA STIVAL",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 401,
+    "percentual": 9.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95958",
+    "nome_municipio": "PLANALTINA",
+    "nome_candidato": "DELEGADO CRISTIOMÁRIO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 33748,
+    "percentual": 69.78,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95958",
+    "nome_municipio": "PLANALTINA",
+    "nome_candidato": "PROFESSOR ZENILTON",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 11868,
+    "percentual": 24.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95958",
+    "nome_municipio": "PLANALTINA",
+    "nome_candidato": "EVA MÁRCIA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 1849,
+    "percentual": 3.82,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95958",
+    "nome_municipio": "PLANALTINA",
+    "nome_candidato": "DENIS FRANCO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 793,
+    "percentual": 1.64,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95958",
+    "nome_municipio": "PLANALTINA",
+    "nome_candidato": "INGRITH MATIAS",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 103,
+    "percentual": 0.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95974",
+    "nome_municipio": "SÃO JOÃO D ALIANÇA",
+    "nome_candidato": "GENIVAM",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 4577,
+    "percentual": 73.54,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95974",
+    "nome_municipio": "SÃO JOÃO D ALIANÇA",
+    "nome_candidato": "EDMILSON DA DISBRAVE",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1647,
+    "percentual": 26.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95990",
+    "nome_municipio": "SÃO LUÍS DE MONTES BELOS",
+    "nome_candidato": "JÚNIOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 10368,
+    "percentual": 56.78,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "95990",
+    "nome_municipio": "SÃO LUÍS DE MONTES BELOS",
+    "nome_candidato": "PROFESSOR ERLY",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 7137,
+    "percentual": 39.09,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95990",
+    "nome_municipio": "SÃO LUÍS DE MONTES BELOS",
+    "nome_candidato": "DR RAFAEL CRUZ",
+    "partido": "AVANTE",
+    "partido_ideologia": "centro",
+    "votos": 384,
+    "percentual": 2.1,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "95990",
+    "nome_municipio": "SÃO LUÍS DE MONTES BELOS",
+    "nome_candidato": "EBER DIAS",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 370,
+    "percentual": 2.03,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96016",
+    "nome_municipio": "SÃO MIGUEL DO ARAGUAIA",
+    "nome_candidato": "JERONYMO SIQUEIRA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 8465,
+    "percentual": 58.55,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96016",
+    "nome_municipio": "SÃO MIGUEL DO ARAGUAIA",
+    "nome_candidato": "JADIR DA FARMÁCIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5992,
+    "percentual": 41.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96059",
+    "nome_municipio": "SÃO SIMÃO",
+    "nome_candidato": "DR WALLISSON",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 6805,
+    "percentual": 64.82,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96059",
+    "nome_municipio": "SÃO SIMÃO",
+    "nome_candidato": "DR. FABIO DENTISTA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3646,
+    "percentual": 34.73,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96059",
+    "nome_municipio": "SÃO SIMÃO",
+    "nome_candidato": "FREDSON CRUZ SILVA",
+    "partido": "REDE",
+    "partido_ideologia": "centro",
+    "votos": 47,
+    "percentual": 0.45,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96075",
+    "nome_municipio": "SERRANÓPOLIS",
+    "nome_candidato": "ZILMAR CARVALHO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3658,
+    "percentual": 69.92,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96075",
+    "nome_municipio": "SERRANÓPOLIS",
+    "nome_candidato": "SIRLEIDE GARCIA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1345,
+    "percentual": 25.71,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96075",
+    "nome_municipio": "SERRANÓPOLIS",
+    "nome_candidato": "GERLANE TEIXEIRA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 229,
+    "percentual": 4.38,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96091",
+    "nome_municipio": "SILVÂNIA",
+    "nome_candidato": "CARLÃO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 7034,
+    "percentual": 56.08,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96091",
+    "nome_municipio": "SILVÂNIA",
+    "nome_candidato": "DOUTOR GERALDO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 5509,
+    "percentual": 43.92,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96113",
+    "nome_municipio": "SÍTIO D ABADIA",
+    "nome_candidato": "ORLANDO NETO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1584,
+    "percentual": 51.45,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96113",
+    "nome_municipio": "SÍTIO D ABADIA",
+    "nome_candidato": "LAUDIMAR",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1398,
+    "percentual": 45.4,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96113",
+    "nome_municipio": "SÍTIO D ABADIA",
+    "nome_candidato": "JAIR DE PAIVA",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 97,
+    "percentual": 3.15,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96172",
+    "nome_municipio": "TAQUARAL DE GOIÁS",
+    "nome_candidato": "LORENA NERI",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1775,
+    "percentual": 45.32,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96172",
+    "nome_municipio": "TAQUARAL DE GOIÁS",
+    "nome_candidato": "DR HEBERSON FREITAS",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1347,
+    "percentual": 34.39,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96172",
+    "nome_municipio": "TAQUARAL DE GOIÁS",
+    "nome_candidato": "BELAS",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 795,
+    "percentual": 20.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96237",
+    "nome_municipio": "TRÊS RANCHOS",
+    "nome_candidato": "HAROLDINHO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2256,
+    "percentual": 66.59,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96237",
+    "nome_municipio": "TRÊS RANCHOS",
+    "nome_candidato": "CLENYS PINHEIRA",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1132,
+    "percentual": 33.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96253",
+    "nome_municipio": "TRINDADE",
+    "nome_candidato": "MARDEN",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 39189,
+    "percentual": 57.3,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96253",
+    "nome_municipio": "TRINDADE",
+    "nome_candidato": "DR. GEORGE",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 23177,
+    "percentual": 33.89,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96253",
+    "nome_municipio": "TRINDADE",
+    "nome_candidato": "RONI FERREIRA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 6028,
+    "percentual": 8.81,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96318",
+    "nome_municipio": "TURVÂNIA",
+    "nome_candidato": "JADIR POLICARPIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2268,
+    "percentual": 60.0,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96318",
+    "nome_municipio": "TURVÂNIA",
+    "nome_candidato": "DR. SAULO",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 1512,
+    "percentual": 40.0,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96334",
+    "nome_municipio": "URUAÇU",
+    "nome_candidato": "MACHADINHO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 12369,
+    "percentual": 54.7,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96334",
+    "nome_municipio": "URUAÇU",
+    "nome_candidato": "OZIRIS RIBEIRO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 9743,
+    "percentual": 43.09,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96334",
+    "nome_municipio": "URUAÇU",
+    "nome_candidato": "CRISTIANO SOLUÇÃO",
+    "partido": "NOVO",
+    "partido_ideologia": "direita",
+    "votos": 499,
+    "percentual": 2.21,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96350",
+    "nome_municipio": "URUANA",
+    "nome_candidato": "NEI CANELA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 6983,
+    "percentual": 79.16,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96350",
+    "nome_municipio": "URUANA",
+    "nome_candidato": "DIVINA ARRUDA",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1838,
+    "percentual": 20.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96377",
+    "nome_municipio": "URUTAÍ",
+    "nome_candidato": "ALEXANDRE ARAÚJO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1908,
+    "percentual": 53.72,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96377",
+    "nome_municipio": "URUTAÍ",
+    "nome_candidato": "EZINHO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1625,
+    "percentual": 45.75,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96377",
+    "nome_municipio": "URUTAÍ",
+    "nome_candidato": "AMORIM",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 19,
+    "percentual": 0.53,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96393",
+    "nome_municipio": "VARJÃO",
+    "nome_candidato": "DIOGO GUIMARÃES",
+    "partido": "PODE",
+    "partido_ideologia": "centro",
+    "votos": 1916,
+    "percentual": 50.78,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96393",
+    "nome_municipio": "VARJÃO",
+    "nome_candidato": "RAFAEL PEREIRA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1692,
+    "percentual": 44.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96393",
+    "nome_municipio": "VARJÃO",
+    "nome_candidato": "LEÔNIDAS",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 165,
+    "percentual": 4.37,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96415",
+    "nome_municipio": "VIANÓPOLIS",
+    "nome_candidato": "MARCELO REZENDE",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 4610,
+    "percentual": 52.22,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96415",
+    "nome_municipio": "VIANÓPOLIS",
+    "nome_candidato": "DOUTOR CLÁUDIO",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 3795,
+    "percentual": 42.99,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96415",
+    "nome_municipio": "VIANÓPOLIS",
+    "nome_candidato": "TONY WILLY",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 423,
+    "percentual": 4.79,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96458",
+    "nome_municipio": "ACREÚNA",
+    "nome_candidato": "CLAUDIOMAR PORTUGAL",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 7336,
+    "percentual": 58.59,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96458",
+    "nome_municipio": "ACREÚNA",
+    "nome_candidato": "ROBSON RIOS",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 5185,
+    "percentual": 41.41,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96474",
+    "nome_municipio": "MINAÇU",
+    "nome_candidato": "CARLOS ALBERTO LEREIA",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 12931,
+    "percentual": 73.57,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96474",
+    "nome_municipio": "MINAÇU",
+    "nome_candidato": "ROGER SEABRA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 4645,
+    "percentual": 26.43,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96512",
+    "nome_municipio": "MUNDO NOVO",
+    "nome_candidato": "MARLENE LOURENÇO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1971,
+    "percentual": 43.19,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96512",
+    "nome_municipio": "MUNDO NOVO",
+    "nome_candidato": "HELCIO OLIVEIRA",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1956,
+    "percentual": 42.86,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96512",
+    "nome_municipio": "MUNDO NOVO",
+    "nome_candidato": "EDVALDO",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 637,
+    "percentual": 13.96,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96539",
+    "nome_municipio": "NOVA CRIXÁS",
+    "nome_candidato": "RODRIGO TAVARES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2696,
+    "percentual": 35.31,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96539",
+    "nome_municipio": "NOVA CRIXÁS",
+    "nome_candidato": "PARAÍBA DA FARMÁCIA",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2567,
+    "percentual": 33.62,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96539",
+    "nome_municipio": "NOVA CRIXÁS",
+    "nome_candidato": "ZÉ GONTIJO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 1322,
+    "percentual": 17.31,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96539",
+    "nome_municipio": "NOVA CRIXÁS",
+    "nome_candidato": "JOSÉ CARLOS",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 1051,
+    "percentual": 13.76,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96555",
+    "nome_municipio": "NOVA GLÓRIA",
+    "nome_candidato": "LUIZ CONTADOR",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 3323,
+    "percentual": 57.7,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96555",
+    "nome_municipio": "NOVA GLÓRIA",
+    "nome_candidato": "DR NEIDSON",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 2436,
+    "percentual": 42.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96571",
+    "nome_municipio": "VICENTINÓPOLIS",
+    "nome_candidato": "ARIOVALDO CARVALHO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 3017,
+    "percentual": 50.76,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96571",
+    "nome_municipio": "VICENTINÓPOLIS",
+    "nome_candidato": "DR GIOVANE",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 2927,
+    "percentual": 49.24,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96695",
+    "nome_municipio": "ARAGUAPAZ",
+    "nome_candidato": "DEURISTOM",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2942,
+    "percentual": 56.54,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96695",
+    "nome_municipio": "ARAGUAPAZ",
+    "nome_candidato": "BIGODE",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2261,
+    "percentual": 43.46,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96717",
+    "nome_municipio": "ARENÓPOLIS",
+    "nome_candidato": "DELMIRO CANO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2279,
+    "percentual": 69.8,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96717",
+    "nome_municipio": "ARENÓPOLIS",
+    "nome_candidato": "JOÃO MARCOS VILELA",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 986,
+    "percentual": 30.2,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96733",
+    "nome_municipio": "CACHOEIRA DOURADA",
+    "nome_candidato": "RODRIGO RODRIGUES",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 4577,
+    "percentual": 76.65,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96733",
+    "nome_municipio": "CACHOEIRA DOURADA",
+    "nome_candidato": "DR.. NATÁLIA",
+    "partido": "REPUBLICANOS",
+    "partido_ideologia": "centro-direita",
+    "votos": 1394,
+    "percentual": 23.35,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96750",
+    "nome_municipio": "DOVERLÂNDIA",
+    "nome_candidato": "AMILCAR JUNIOR",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 3168,
+    "percentual": 65.81,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96750",
+    "nome_municipio": "DOVERLÂNDIA",
+    "nome_candidato": "OTACÍLIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1646,
+    "percentual": 34.19,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96776",
+    "nome_municipio": "SANTO ANTÔNIO DO DESCOBERTO",
+    "nome_candidato": "JESSICA DO PREMIUM",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 18230,
+    "percentual": 53.28,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96776",
+    "nome_municipio": "SANTO ANTÔNIO DO DESCOBERTO",
+    "nome_candidato": "MEIRANNY REIS",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 14902,
+    "percentual": 43.56,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96776",
+    "nome_municipio": "SANTO ANTÔNIO DO DESCOBERTO",
+    "nome_candidato": "PROFESSORA RAILDA",
+    "partido": "PT",
+    "partido_ideologia": "esquerda",
+    "votos": 628,
+    "percentual": 1.84,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96776",
+    "nome_municipio": "SANTO ANTÔNIO DO DESCOBERTO",
+    "nome_candidato": "LUIZ LIRA",
+    "partido": "DC",
+    "partido_ideologia": "direita",
+    "votos": 350,
+    "percentual": 1.02,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96776",
+    "nome_municipio": "SANTO ANTÔNIO DO DESCOBERTO",
+    "nome_candidato": "PASTORA SILMAR",
+    "partido": "PDT",
+    "partido_ideologia": "esquerda",
+    "votos": 104,
+    "percentual": 0.3,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96814",
+    "nome_municipio": "INDIARA",
+    "nome_candidato": "DR CONIN",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 5172,
+    "percentual": 49.88,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96814",
+    "nome_municipio": "INDIARA",
+    "nome_candidato": "IVAIR FRANCO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 5157,
+    "percentual": 49.74,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96814",
+    "nome_municipio": "INDIARA",
+    "nome_candidato": "MARQUINHOS DA CREDFACIL",
+    "partido": "PRD",
+    "partido_ideologia": "centro-direita",
+    "votos": 39,
+    "percentual": 0.38,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96873",
+    "nome_municipio": "CAMPINAÇU",
+    "nome_candidato": "DR. DOUGLAS",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 2113,
+    "percentual": 61.39,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96873",
+    "nome_municipio": "CAMPINAÇU",
+    "nome_candidato": "ODAIR JR",
+    "partido": "PL",
+    "partido_ideologia": "direita",
+    "votos": 1329,
+    "percentual": 38.61,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96890",
+    "nome_municipio": "SANTA ISABEL",
+    "nome_candidato": "LEVINO",
+    "partido": "SOLIDARIEDADE",
+    "partido_ideologia": "centro-direita",
+    "votos": 1866,
+    "percentual": 55.04,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96890",
+    "nome_municipio": "SANTA ISABEL",
+    "nome_candidato": "EUMI CAMARGO",
+    "partido": "MDB",
+    "partido_ideologia": "centro-direita",
+    "votos": 1524,
+    "percentual": 44.96,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96911",
+    "nome_municipio": "ADELÂNDIA",
+    "nome_candidato": "EDINHO DO LATICÍNIO",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1868,
+    "percentual": 71.46,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96911",
+    "nome_municipio": "ADELÂNDIA",
+    "nome_candidato": "MONIKELE",
+    "partido": "PSDB",
+    "partido_ideologia": "centro",
+    "votos": 746,
+    "percentual": 28.54,
+    "eleito": false
+  },
+  {
+    "codigo_municipio": "96938",
+    "nome_municipio": "ÁGUA FRIA DE GOIÁS",
+    "nome_candidato": "VIRGINIA CASTRO",
+    "partido": "PP",
+    "partido_ideologia": "centro-direita",
+    "votos": 2524,
+    "percentual": 57.04,
+    "eleito": true
+  },
+  {
+    "codigo_municipio": "96938",
+    "nome_municipio": "ÁGUA FRIA DE GOIÁS",
+    "nome_candidato": "NILTON DA MENDES",
+    "partido": "UNIÃO",
+    "partido_ideologia": "centro-direita",
+    "votos": 1901,
+    "percentual": 42.96,
+    "eleito": false
+  }
+]
