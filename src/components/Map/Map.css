@@ -45,13 +45,16 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     font-family: Arial, sans-serif;
-    min-width: 220px;
-    max-width: 300px;
+    min-width: 280px;
+    max-width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .state-controls h4 {
     margin: 0 0 10px 0;
     color: #2c3e50;
+    font-size: 16px;
 }
 
 .status-info {
@@ -67,18 +70,66 @@
     font-weight: 500;
 }
 
-.state-button {
-    margin: 3px;
-    padding: 8px 15px;
+.action-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.action-button {
+    flex: 1;
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    color: white;
-    cursor: pointer;
+    font-size: 12px;
     font-weight: bold;
+    cursor: pointer;
     transition: all 0.3s ease;
-    display: inline-block;
-    min-width: 60px;
+}
+
+.action-button.select-all {
+    background: #16a34a;
+    color: white;
+}
+
+.action-button.select-all:hover:not(:disabled) {
+    background: #15803d;
+}
+
+.action-button.clear-all {
+    background: #dc2626;
+    color: white;
+}
+
+.action-button.clear-all:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+.action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.states-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.state-button {
+    padding: 8px 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-align: center;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .state-button:hover:not(:disabled) {
@@ -93,6 +144,7 @@
 
 .state-button.active {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.8);
 }
 
 .state-stats, .electoral-stats, .error-stats {
@@ -115,29 +167,59 @@
 
 .info.legend {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     right: 10px;
-    padding: 10px;
+    padding: 15px;
     font-size: 12px;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    min-width: 200px;
 }
 
 .info.legend h4 {
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
     color: #2c3e50;
+    font-size: 14px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
 }
 
-.info.legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-    display: inline-block;
-    border-radius: 2px;
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.legend-item i {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legend-item span {
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.legend-item small {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.legend-note {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.legend-note small {
+    color: #6b7280;
+    font-style: italic;
 }
 
 /* Garantir que o mapa seja visível */
@@ -160,13 +242,56 @@
         left: 5px;
         right: 5px;
         min-width: auto;
+        max-width: none;
         padding: 10px;
+        max-height: 60vh;
+    }
+    
+    .states-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3px;
+    }
+    
+    .state-button {
+        padding: 6px 2px;
+        font-size: 10px;
+        min-height: 30px;
+    }
+    
+    .action-controls {
+        flex-direction: column;
+        gap: 5px;
     }
     
     .info.legend {
         bottom: 10px;
         right: 5px;
+        left: 5px;
         font-size: 11px;
-        padding: 8px;
+        padding: 10px;
+        min-width: auto;
+    }
+    
+    .legend-item {
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .states-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .state-button {
+        font-size: 9px;
+        min-height: 28px;
+    }
+    
+    .info.legend {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        margin: 10px;
     }
 }
