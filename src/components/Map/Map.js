@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'; 
-import { MapContainer, TileLayer } from 'react-leaflet'; 
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'; 
 import L from 'leaflet'; 
 import './Map.css'; 
 import MultiStateLoader from './MultiStateLoader'; 
+import DebugComponent from './DebugComponent';
 import { useElectoralData } from '../../hooks/useElectoralData'; 
 
 // Corrigir ícones do Leaflet
@@ -13,6 +14,20 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'), 
 }); 
 
+// Componente para capturar a instância do mapa
+const MapInstance = ({ onMapReady }) => {
+    const map = useMap(); // Hook correto do React-Leaflet
+    
+    useEffect(() => {
+        if (map && onMapReady) {
+            console.log('🗺️ Instância do mapa capturada via useMap:', map);
+            onMapReady(map);
+        }
+    }, [map, onMapReady]);
+    
+    return null;
+};
+
 const Map = () => { 
     const mapRef = useRef(null);
     const [activeStates, setActiveStates] = useState(['go']); 
@@ -20,6 +35,8 @@ const Map = () => {
     const [multiLoader, setMultiLoader] = useState(null); 
     const [mapReady, setMapReady] = useState(false);
     const [dadosCarregados, setDadosCarregados] = useState(false);
+    const [showDebug, setShowDebug] = useState(true);
+    const [renderStats, setRenderStats] = useState({ totalMunicipios: 0, municipiosComDados: 0 });
     
     // Hook personalizado para dados eleitorais 
     const { electoralData, loading: electoralLoading, error: electoralError } = useElectoralData(); 
@@ -55,22 +72,44 @@ const Map = () => {
         { code: 'rr', name: 'Roraima' }
     ];
 
-    // Inicializar o mapa e MultiStateLoader
-    useEffect(() => {
-        console.log('🗺️ Mapa montado, aguardando inicialização...');
-        
-        const timer = setTimeout(() => {
-            if (mapRef.current) {
-                console.log('🔧 Inicializando MultiStateLoader...');
-                const loader = new MultiStateLoader();
-                loader.inicializar(mapRef.current);
-                setMultiLoader(loader);
-                setMapReady(true);
-            }
-        }, 1000);
+    // Callback seguro para quando o mapa for criado
+    const handleMapReady = (map) => {
+        if (!map) {
+            console.error('❌ Mapa não fornecido no callback');
+            return;
+        }
 
-        return () => clearTimeout(timer);
-    }, []);
+        console.log('🗺️ Instância do mapa recebida:', map);
+        mapRef.current = map;
+        
+        // Verificar se o mapa já foi inicializado para evitar duplicação
+        if (multiLoader) {
+            console.log('⚠️ MultiStateLoader já inicializado, ignorando...');
+            return;
+        }
+        
+        // Adicionar evento de debug
+        try {
+            map.on('click', (e) => {
+                console.log('🖱️ Clique no mapa:', e.latlng);
+            });
+        } catch (error) {
+            console.warn('⚠️ Erro ao adicionar evento de clique:', error);
+        }
+
+        // Inicializar MultiStateLoader após obter a instância do mapa
+        console.log('🔧 Inicializando MultiStateLoader...');
+        const loader = new MultiStateLoader();
+        const sucesso = loader.inicializar(map);
+        
+        if (sucesso) {
+            setMultiLoader(loader);
+            setMapReady(true);
+            console.log('✅ MultiStateLoader inicializado com sucesso');
+        } else {
+            console.error('❌ Falha na inicialização do MultiStateLoader');
+        }
+    };
 
     // Carregar dados iniciais do Brasil
     useEffect(() => {
@@ -84,7 +123,8 @@ const Map = () => {
     useEffect(() => {
         if (dadosCarregados && multiLoader && !electoralLoading && electoralData) {
             console.log('🎨 Atualizando renderização com dados eleitorais...');
-            multiLoader.renderizarTodos(electoralData);
+            console.log(`📊 Dados eleitorais carregados: ${electoralData.length} registros`);
+            updateRender();
         }
     }, [dadosCarregados, electoralData, electoralLoading]);
 
@@ -94,18 +134,19 @@ const Map = () => {
             console.log('📍 Carregando dados do Brasil...');
             
             // Carregar dados do Brasil
-            await multiLoader.carregarDadosBrasil();
+            const dadosGeo = await multiLoader.carregarDadosBrasil();
+            console.log('📊 Dados GeoJSON carregados:', dadosGeo);
+            
             setDadosCarregados(true);
             
             // Renderizar estados ativos iniciais
             for (const estado of activeStates) {
                 await multiLoader.mostrarEstado(estado, true);
+                console.log(`✅ Estado ${estado.toUpperCase()} mostrado`);
             }
             
             // Renderizar com dados eleitorais se disponível
-            if (electoralData) {
-                await multiLoader.renderizarTodos(electoralData);
-            }
+            await updateRender();
             
             console.log('✅ Carregamento inicial concluído');
         } catch (error) {
@@ -115,13 +156,33 @@ const Map = () => {
         }
     };
 
+    const updateRender = async () => {
+        if (!multiLoader) {
+            console.warn('⚠️ MultiStateLoader não disponível para renderização');
+            return;
+        }
+        
+        try {
+            console.log('🎨 Iniciando renderização com dados eleitorais...');
+            const stats = await multiLoader.renderizarTodos(electoralData);
+            setRenderStats(stats);
+            console.log('📊 Estatísticas de renderização:', stats);
+        } catch (error) {
+            console.error('❌ Erro na renderização:', error);
+        }
+    };
+
     const handleStateToggle = async (stateCode) => {
-        if (!multiLoader || loading || !dadosCarregados) return;
+        if (!multiLoader || loading || !dadosCarregados) {
+            console.log('⚠️ Toggle bloqueado:', { multiLoader: !!multiLoader, loading, dadosCarregados });
+            return;
+        }
         
         const isActive = activeStates.includes(stateCode);
         
         try {
             setLoading(true);
+            console.log(`🔄 Toggling estado ${stateCode.toUpperCase()}, ativo: ${isActive}`);
             
             if (isActive) {
                 // Remover estado
@@ -135,8 +196,12 @@ const Map = () => {
                 console.log(`➕ Estado ${stateCode.toUpperCase()} adicionado`);
                 
                 // Renderizar o estado com dados eleitorais
-                await multiLoader.renderizarEstado(stateCode, electoralData);
+                const stats = await multiLoader.renderizarEstado(stateCode, electoralData);
+                console.log(`🎨 Estado ${stateCode.toUpperCase()} renderizado:`, stats);
             }
+            
+            // Atualizar estatísticas gerais
+            await updateRender();
             
         } catch (error) {
             console.error(`❌ Erro ao alternar ${stateCode}:`, error);
@@ -152,16 +217,20 @@ const Map = () => {
             setLoading(true);
             const todosEstados = estadosDisponiveis.map(e => e.code);
             
+            console.log('🚀 Selecionando todos os estados...');
+            
             // Adicionar estados que não estão ativos
             for (const estado of todosEstados) {
                 if (!activeStates.includes(estado)) {
                     await multiLoader.mostrarEstado(estado, true);
+                    console.log(`➕ Adicionado: ${estado.toUpperCase()}`);
                 }
             }
             
             setActiveStates(todosEstados);
-            await multiLoader.renderizarTodos(electoralData);
+            await updateRender();
             
+            console.log('✅ Todos os estados selecionados');
         } catch (error) {
             console.error('❌ Erro ao selecionar todos os estados:', error);
         } finally {
@@ -175,24 +244,23 @@ const Map = () => {
         try {
             setLoading(true);
             
+            console.log('🧹 Removendo todos os estados...');
+            
             // Remover todos os estados ativos
             for (const estado of activeStates) {
                 await multiLoader.mostrarEstado(estado, false);
+                console.log(`➖ Removido: ${estado.toUpperCase()}`);
             }
             
             setActiveStates([]);
+            setRenderStats({ totalMunicipios: 0, municipiosComDados: 0 });
             
+            console.log('✅ Todos os estados removidos');
         } catch (error) {
             console.error('❌ Erro ao limpar todos os estados:', error);
         } finally {
             setLoading(false);
         }
-    };
-
-    // Callback para quando o mapa for criado
-    const handleMapCreated = (map) => {
-        console.log('🗺️ Instância do mapa criada:', map);
-        mapRef.current = map;
     };
 
     const getStatusMessage = () => {
@@ -204,12 +272,17 @@ const Map = () => {
         return '✅ Pronto!';
     };
 
+    const toggleDebug = () => {
+        setShowDebug(!showDebug);
+    };
+
     return (
         <div className="map-container">
             {loading && (
                 <div className="map-loading">
                     <div className="loading-spinner"></div>
                     <p>Carregando dados do mapa...</p>
+                    <small>{getStatusMessage()}</small>
                 </div>
             )}
             
@@ -217,14 +290,17 @@ const Map = () => {
                 center={[-15.7942, -47.8822]}
                 zoom={5}
                 style={{ height: '100%', width: '100%' }}
-                ref={handleMapCreated}
                 className="map"
             >
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
+                <MapInstance onMapReady={handleMapReady} />
             </MapContainer>
+            
+            {/* Debug Component */}
+            {showDebug && <DebugComponent />}
             
             {/* Controles dos Estados */}
             <div className="state-controls">
@@ -233,6 +309,24 @@ const Map = () => {
                 {/* Status */}
                 <div className="status-info">
                     <small>{getStatusMessage()}</small>
+                </div>
+
+                {/* Toggle Debug */}
+                <div style={{ marginBottom: '10px' }}>
+                    <button
+                        onClick={toggleDebug}
+                        style={{
+                            padding: '5px 10px',
+                            fontSize: '11px',
+                            background: showDebug ? '#dc3545' : '#28a745',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '3px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        {showDebug ? '🐛 Ocultar Debug' : '🐛 Mostrar Debug'}
+                    </button>
                 </div>
 
                 {/* Controles de ação */}
@@ -281,7 +375,9 @@ const Map = () => {
                     <div className="state-stats">
                         <small>
                             Estados ativos: {activeStates.length}<br/>
-                            Total municípios: {multiLoader.obterEstatisticas().totalMunicipios?.toLocaleString()}
+                            Municípios renderizados: {renderStats.totalMunicipios?.toLocaleString()}<br/>
+                            Com dados eleitorais: {renderStats.municipiosComDados?.toLocaleString()}<br/>
+                            Total no arquivo: {multiLoader.obterEstatisticas().totalMunicipios?.toLocaleString()}
                         </small>
                     </div>
                 )}
@@ -305,42 +401,52 @@ const Map = () => {
                 )}
             </div>
             
-            {/* Legenda */}
+            {/* Legenda Atualizada por Ideologia */}
             <div className="info legend">
-                <h4>Legenda Política</h4>
+                <h4>Legenda por Ideologia Política</h4>
                 <div className="legend-item">
-                    <i style={{background: '#dc2626'}}></i> 
-                    <span>Esquerda</span>
-                    <small>(PT, PSOL, PSB, PDT)</small>
+                    <i style={{background: '#1a1a2e'}}></i> 
+                    <span>Extrema-direita</span>
+                    <small>(Azul escuro)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#2563eb'}}></i> 
-                    <span>Centro</span>
-                    <small>(PSDB, PODE, AVANTE)</small>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#ea580c'}}></i> 
-                    <span>Centro-Direita</span>
-                    <small>(PL, PP, UNIÃO, MDB)</small>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#c2410c'}}></i> 
+                    <i style={{background: '#16213e'}}></i> 
                     <span>Direita</span>
-                    <small>(NOVO, DC)</small>
+                    <small>(Azul)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#7c3aed'}}></i> 
-                    <span>Outros</span>
-                    <small>(AGIR, MOBILIZA)</small>
+                    <i style={{background: '#4a90e2'}}></i> 
+                    <span>Centro-direita</span>
+                    <small>(Azul claro)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#94a3b8'}}></i> 
+                    <i style={{background: '#f7dc6f'}}></i> 
+                    <span>Centro</span>
+                    <small>(Amarelo)</small>
+                </div>
+                <div className="legend-item">
+                    <i style={{background: '#f1948a'}}></i> 
+                    <span>Centro-esquerda</span>
+                    <small>(Vermelho claro)</small>
+                </div>
+                <div className="legend-item">
+                    <i style={{background: '#e74c3c'}}></i> 
+                    <span>Esquerda</span>
+                    <small>(Vermelho)</small>
+                </div>
+                <div className="legend-item">
+                    <i style={{background: '#922b21'}}></i> 
+                    <span>Extrema-esquerda</span>
+                    <small>(Vermelho escuro)</small>
+                </div>
+                <div className="legend-item">
+                    <i style={{background: '#6b7280'}}></i> 
                     <span>Sem dados</span>
-                    <small></small>
+                    <small>(Cinza)</small>
                 </div>
                 
                 <div className="legend-note">
-                    <small>Clique nos municípios para ver detalhes</small>
+                    <small>As cores refletem a ideologia do partido do prefeito eleito</small>
                 </div>
             </div>
         </div>

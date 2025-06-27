@@ -6,6 +6,7 @@ class MultiStateLoader {
         this.dadosBrasil = null;
         this.layerGroups = new Map();
         this.estadosAtivos = new Set();
+        this.loadingProgress = { loaded: 0, total: 0 };
         this.cores = {
             'go': '#e74c3c', 'ac': '#27ae60', 'sp': '#3498db', 'rj': '#9b59b6',
             'mg': '#f39c12', 'rs': '#1abc9c', 'pr': '#e67e22', 'sc': '#2ecc71',
@@ -15,8 +16,20 @@ class MultiStateLoader {
             'df': '#fdeaa7', 'se': '#fab1a0', 'am': '#74b9ff', 'ro': '#a29bfe',
             'to': '#fd79a8', 'ap': '#fdcb6e', 'rr': '#6c5ce7'
         };
+        
+        // Cores por ideologia política
+        this.coresIdeologia = {
+            'extrema-direita': '#1a1a2e',      // Azul escuro
+            'direita': '#16213e',              // Azul
+            'centro-direita': '#4a90e2',       // Azul claro
+            'centro': '#f7dc6f',               // Amarelo
+            'centro-esquerda': '#f1948a',      // Vermelho bem claro
+            'esquerda': '#e74c3c',             // Vermelho
+            'extrema-esquerda': '#922b21'      // Vermelho escuro
+        };
+        
         this.map = null;
-        console.log('🏗️ MultiStateLoader construído para arquivo único do Brasil');
+        console.log('🏗️ MultiStateLoader construído com sistema de cores por ideologia');
     }
 
     inicializar(map) {
@@ -45,7 +58,7 @@ class MultiStateLoader {
         return true;
     }
 
-    async carregarDadosBrasil() {
+    async carregarDadosBrasil(progressCallback = null) {
         if (this.dadosBrasil) {
             console.log('📋 Dados do Brasil já carregados, reutilizando...');
             return this.dadosBrasil;
@@ -54,124 +67,310 @@ class MultiStateLoader {
         console.log('🔄 Carregando dados do Brasil...');
         
         try {
-            const arquivo = '/data/geo/brazil-municipalities.geojson';
-            console.log(`📁 Tentando carregar arquivo: ${arquivo}`);
+            // Tentar diferentes estratégias de carregamento
+            const estrategias = [
+                () => this.carregarComStreaming(),
+                () => this.carregarComTimeout(),
+                () => this.carregarComChunks(),
+                () => this.carregarSimples()
+            ];
 
-            const response = await fetch(arquivo);
-            console.log(`📡 Resposta do fetch:`, {
-                ok: response.ok,
-                status: response.status,
-                statusText: response.statusText,
-                url: response.url
-            });
-
-            if (!response.ok) {
-                throw new Error(`Erro ao carregar arquivo: ${response.status} ${response.statusText}`);
+            for (const estrategia of estrategias) {
+                try {
+                    console.log(`🔄 Tentando estratégia: ${estrategia.name}`);
+                    const dados = await estrategia();
+                    if (dados) {
+                        this.dadosBrasil = dados;
+                        return dados;
+                    }
+                } catch (error) {
+                    console.log(`❌ Estratégia ${estrategia.name} falhou:`, error.message);
+                }
             }
 
-            const dadosGeo = await response.json();
-            console.log(`📊 Dados GeoJSON carregados:`, {
-                type: dadosGeo.type,
-                features: dadosGeo.features?.length || 0
-            });
+            throw new Error('Todas as estratégias de carregamento falharam');
 
-            if (!dadosGeo || !dadosGeo.features || !Array.isArray(dadosGeo.features)) {
-                throw new Error('Arquivo GeoJSON inválido ou vazio');
-            }
-
-            this.dadosBrasil = dadosGeo;
-            console.log(`✅ Brasil: ${dadosGeo.features.length} municípios carregados`);
-
-            // Analisar estrutura dos dados
-            if (dadosGeo.features.length > 0) {
-                const primeiroMunicipio = dadosGeo.features[0];
-                console.log('🔍 Estrutura do primeiro município:', {
-                    properties: Object.keys(primeiroMunicipio.properties || {}),
-                    geometry: primeiroMunicipio.geometry?.type,
-                    sample: primeiroMunicipio.properties
-                });
-            }
-
-            return dadosGeo;
         } catch (error) {
             console.error('❌ Erro ao carregar dados do Brasil:', error);
             
             // Criar dados mock como fallback
-            console.log('🎭 Criando dados mock do Brasil...');
-            const dadosMock = this.criarDadosMockBrasil();
+            console.log('🎭 Criando dados mock expandidos...');
+            const dadosMock = this.criarDadosMockExpandidos();
             this.dadosBrasil = dadosMock;
             return dadosMock;
         }
     }
 
-    criarDadosMockBrasil() {
-        console.log('🎭 Criando dados mock do Brasil...');
+    async carregarComStreaming() {
+        console.log('📡 Tentando carregamento com streaming...');
+        
+        const response = await fetch('/data/geo/brazil-municipalities.geojson', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Cache-Control': 'no-cache'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        // Verificar tamanho do arquivo
+        const contentLength = response.headers.get('content-length');
+        if (contentLength) {
+            const size = parseInt(contentLength);
+            console.log(`📦 Tamanho do arquivo: ${(size / 1024 / 1024).toFixed(2)} MB`);
+            
+            if (size > 50 * 1024 * 1024) { // 50MB
+                throw new Error('Arquivo muito grande para carregamento direto');
+            }
+        }
+
+        const data = await response.json();
+        console.log(`✅ Arquivo carregado com streaming: ${data.features?.length} features`);
+        return data;
+    }
+
+    async carregarComTimeout() {
+        console.log('⏱️ Tentando carregamento com timeout estendido...');
+        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 segundos
+
+        try {
+            const response = await fetch('/data/geo/brazil-municipalities.geojson', {
+                signal: controller.signal,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            console.log(`✅ Arquivo carregado com timeout: ${data.features?.length} features`);
+            return data;
+        } catch (error) {
+            clearTimeout(timeoutId);
+            throw error;
+        }
+    }
+
+    async carregarComChunks() {
+        console.log('🧩 Tentando carregamento em chunks...');
+        
+        const response = await fetch('/data/geo/brazil-municipalities.geojson');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const reader = response.body.getReader();
+        const chunks = [];
+        let receivedLength = 0;
+
+        try {
+            while (true) {
+                const { done, value } = await reader.read();
+                
+                if (done) break;
+                
+                chunks.push(value);
+                receivedLength += value.length;
+                
+                console.log(`📥 Recebido: ${(receivedLength / 1024 / 1024).toFixed(2)} MB`);
+            }
+
+            // Concatenar chunks
+            const allChunks = new Uint8Array(receivedLength);
+            let position = 0;
+            for (const chunk of chunks) {
+                allChunks.set(chunk, position);
+                position += chunk.length;
+            }
+
+            // Converter para string e parsear JSON
+            const text = new TextDecoder().decode(allChunks);
+            const data = JSON.parse(text);
+            
+            console.log(`✅ Arquivo carregado em chunks: ${data.features?.length} features`);
+            return data;
+        } finally {
+            reader.releaseLock();
+        }
+    }
+
+    async carregarSimples() {
+        console.log('📁 Tentando carregamento simples...');
+        
+        const caminhos = [
+            '/data/geo/brazil-municipalities.geojson',
+            'data/geo/brazil-municipalities.geojson',
+            '/public/data/geo/brazil-municipalities.geojson'
+        ];
+
+        for (const caminho of caminhos) {
+            try {
+                console.log(`📁 Testando: ${caminho}`);
+                const response = await fetch(caminho);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(`✅ Carregado de ${caminho}: ${data.features?.length} features`);
+                    return data;
+                }
+            } catch (error) {
+                console.log(`❌ Falha em ${caminho}:`, error.message);
+            }
+        }
+
+        throw new Error('Nenhum caminho funcionou');
+    }
+
+    criarDadosMockExpandidos() {
+        console.log('🎭 Criando dados mock expandidos...');
         
         const municipiosMock = [
-            // Goiás
+            // Goiás (códigos reais que constam nos dados eleitorais)
             {
                 type: 'Feature',
                 properties: {
-                    id: '5208707',
-                    name: 'Goiânia',
-                    state: 'GO',
-                    estado: 'GO'
+                    CD_GEOCMU: '5208707',
+                    NM_MUNICIP: 'Goiânia',
+                    SIGLA_UF: 'GO'
                 },
                 geometry: {
                     type: 'Polygon',
                     coordinates: [[
-                        [-49.3, -16.7], [-49.2, -16.7], 
-                        [-49.2, -16.6], [-49.3, -16.6], [-49.3, -16.7]
+                        [-49.4, -16.8], [-49.1, -16.8], 
+                        [-49.1, -16.5], [-49.4, -16.5], [-49.4, -16.8]
                     ]]
                 }
             },
             {
                 type: 'Feature',
                 properties: {
-                    id: '5201405',
-                    name: 'Anápolis',
-                    state: 'GO',
-                    estado: 'GO'
+                    CD_GEOCMU: '5201405',
+                    NM_MUNICIP: 'Anápolis',
+                    SIGLA_UF: 'GO'
                 },
                 geometry: {
                     type: 'Polygon',
                     coordinates: [[
-                        [-48.9, -16.3], [-48.8, -16.3], 
-                        [-48.8, -16.2], [-48.9, -16.2], [-48.9, -16.3]
+                        [-49.0, -16.4], [-48.7, -16.4], 
+                        [-48.7, -16.1], [-49.0, -16.1], [-49.0, -16.4]
                     ]]
                 }
             },
-            // Acre
             {
                 type: 'Feature',
                 properties: {
-                    id: '1200401',
-                    name: 'Rio Branco',
-                    state: 'AC',
-                    estado: 'AC'
+                    CD_GEOCMU: '5201108',
+                    NM_MUNICIP: 'Aparecida de Goiânia',
+                    SIGLA_UF: 'GO'
                 },
                 geometry: {
                     type: 'Polygon',
                     coordinates: [[
-                        [-67.8, -10.0], [-67.7, -10.0], 
-                        [-67.7, -9.9], [-67.8, -9.9], [-67.8, -10.0]
+                        [-49.3, -16.9], [-49.1, -16.9], 
+                        [-49.1, -16.7], [-49.3, -16.7], [-49.3, -16.9]
                     ]]
                 }
             },
-            // São Paulo
             {
                 type: 'Feature',
                 properties: {
-                    id: '3550308',
-                    name: 'São Paulo',
-                    state: 'SP',
-                    estado: 'SP'
+                    CD_GEOCMU: '5218805',
+                    NM_MUNICIP: 'Rio Verde',
+                    SIGLA_UF: 'GO'
                 },
                 geometry: {
                     type: 'Polygon',
                     coordinates: [[
-                        [-46.8, -23.6], [-46.7, -23.6], 
-                        [-46.7, -23.5], [-46.8, -23.5], [-46.8, -23.6]
+                        [-50.9, -17.8], [-50.7, -17.8], 
+                        [-50.7, -17.6], [-50.9, -17.6], [-50.9, -17.8]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_GEOCMU: '92215',
+                    NM_MUNICIP: 'Anápolis',
+                    SIGLA_UF: 'GO'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-48.95, -16.35], [-48.75, -16.35], 
+                        [-48.75, -16.15], [-48.95, -16.15], [-48.95, -16.35]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_GEOCMU: '92274',
+                    NM_MUNICIP: 'Aparecida de Goiânia',
+                    SIGLA_UF: 'GO'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-49.25, -16.85], [-49.05, -16.85], 
+                        [-49.05, -16.65], [-49.25, -16.65], [-49.25, -16.85]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_GEOCMU: '93734',
+                    NM_MUNICIP: 'Goiânia',
+                    SIGLA_UF: 'GO'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-49.35, -16.75], [-49.15, -16.75], 
+                        [-49.15, -16.55], [-49.35, -16.55], [-49.35, -16.75]
+                    ]]
+                }
+            },
+            // São Paulo (exemplo)
+            {
+                type: 'Feature',
+                properties: {
+                    CD_GEOCMU: '3550308',
+                    NM_MUNICIP: 'São Paulo',
+                    SIGLA_UF: 'SP'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-46.8, -23.6], [-46.6, -23.6], 
+                        [-46.6, -23.4], [-46.8, -23.4], [-46.8, -23.6]
+                    ]]
+                }
+            },
+            // Rio de Janeiro (exemplo)
+            {
+                type: 'Feature',
+                properties: {
+                    CD_GEOCMU: '3304557',
+                    NM_MUNICIP: 'Rio de Janeiro',
+                    SIGLA_UF: 'RJ'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-43.3, -22.9], [-43.1, -22.9], 
+                        [-43.1, -22.7], [-43.3, -22.7], [-43.3, -22.9]
                     ]]
                 }
             }
@@ -187,8 +386,24 @@ class MultiStateLoader {
         const props = feature.properties || {};
         
         // Tentar diferentes campos que podem conter o estado
-        return props.state || props.estado || props.uf || props.UF || 
-               props.sigla_uf || props.cod_estado || null;
+        return props.SIGLA_UF || props.sigla_uf || props.UF || props.uf || 
+               props.STATE || props.state || props.estado || props.ESTADO || null;
+    }
+
+    obterCodigoMunicipio(feature) {
+        const props = feature.properties || {};
+        
+        // Tentar diferentes campos que podem conter o código
+        return props.CD_GEOCMU || props.cd_geocmu || props.GEOCODIGO || 
+               props.geocodigo || props.id || props.ID || props.code || null;
+    }
+
+    obterNomeMunicipio(feature) {
+        const props = feature.properties || {};
+        
+        // Tentar diferentes campos que podem conter o nome
+        return props.NM_MUNICIP || props.nm_municip || props.NOME || 
+               props.nome || props.name || props.NAME || 'Nome não disponível';
     }
 
     filtrarMunicipiosPorEstado(siglaEstado) {
@@ -203,73 +418,37 @@ class MultiStateLoader {
         });
 
         console.log(`🔍 ${municipios.length} municípios encontrados para ${siglaEstado.toUpperCase()}`);
+        
+        // Debug: mostrar alguns exemplos se encontrou municípios
+        if (municipios.length > 0) {
+            console.log(`📝 Primeiros municípios de ${siglaEstado.toUpperCase()}:`, 
+                municipios.slice(0, 3).map(m => ({
+                    nome: this.obterNomeMunicipio(m),
+                    codigo: this.obterCodigoMunicipio(m),
+                    estado: this.obterEstadoDoMunicipio(m)
+                }))
+            );
+        }
+        
         return municipios;
     }
 
-    async carregarEstado(siglaEstado) {
-        console.log(`🔄 Carregando estado ${siglaEstado.toUpperCase()}...`);
-        
-        // Garantir que os dados do Brasil estão carregados
-        await this.carregarDadosBrasil();
-        
-        // Filtrar municípios do estado
-        const municipiosEstado = this.filtrarMunicipiosPorEstado(siglaEstado);
-        
-        if (municipiosEstado.length === 0) {
-            console.warn(`⚠️ Nenhum município encontrado para ${siglaEstado.toUpperCase()}`);
+    getColorByIdeology(ideologia) {
+        if (!ideologia) {
+            console.warn('⚠️ Ideologia não fornecida');
+            return '#6b7280'; // Cinza para sem dados
         }
 
-        return {
-            type: 'FeatureCollection',
-            features: municipiosEstado
-        };
-    }
-
-    async carregarMultiplosEstados(estados) {
-        console.log(`🚀 Carregando múltiplos estados: ${estados.join(', ').toUpperCase()}`);
-
-        // Carregar dados do Brasil uma vez
-        await this.carregarDadosBrasil();
-
-        let sucessos = 0;
-        for (const estado of estados) {
-            try {
-                const municipios = this.filtrarMunicipiosPorEstado(estado);
-                if (municipios.length > 0) {
-                    sucessos++;
-                }
-            } catch (error) {
-                console.error(`❌ Falha ao processar ${estado}:`, error);
-            }
+        const ideologiaNormalizada = ideologia.toLowerCase().trim();
+        const cor = this.coresIdeologia[ideologiaNormalizada];
+        
+        if (!cor) {
+            console.warn(`⚠️ Ideologia não mapeada: "${ideologia}"`);
+            return '#6b7280'; // Cinza para ideologias não mapeadas
         }
 
-        console.log(`📊 Processamento concluído: ${sucessos}/${estados.length} estados`);
-        return sucessos;
-    }
-
-    getColorByParty(partido) {
-        const cores = {
-            // Esquerda - Vermelho
-            'PT': '#dc2626', 'PSOL': '#dc2626', 'PCdoB': '#dc2626', 
-            'PSB': '#ef4444', 'PDT': '#f87171',
-
-            // Centro - Azul
-            'PSDB': '#2563eb', 'CIDADANIA': '#2563eb', 'PMB': '#2563eb', 
-            'PODE': '#3b82f6', 'AVANTE': '#60a5fa',
-
-            // Centro-Direita - Laranja
-            'PL': '#ea580c', 'PP': '#ea580c', 'UNIÃO': '#ea580c', 
-            'REPUBLICANOS': '#ea580c', 'MDB': '#fb923c', 'PSD': '#fdba74',
-            'SOLIDARIEDADE': '#fed7aa', 'PRD': '#ffedd5',
-
-            // Direita - Laranja escuro
-            'NOVO': '#c2410c', 'DC': '#9a3412',
-
-            // Outros - Roxo
-            'AGIR': '#7c3aed', 'MOBILIZA': '#8b5cf6', 'PRTB': '#a78bfa'
-        };
-
-        return cores[partido] || '#6b7280'; // Cinza para partidos não mapeados
+        console.log(`🎨 Ideologia "${ideologia}" -> cor ${cor}`);
+        return cor;
     }
 
     renderizarMunicipio(feature, siglaEstado, dadosEleitorais = null) {
@@ -278,25 +457,32 @@ class MultiStateLoader {
             return null;
         }
 
-        const props = feature.properties || {};
-        const codigoMunicipio = props.id || props.code || props.codigo || 'unknown';
-        const nomeMunicipio = props.name || props.nome || 'Nome não disponível';
+        const codigoMunicipio = this.obterCodigoMunicipio(feature);
+        const nomeMunicipio = this.obterNomeMunicipio(feature);
 
-        // Buscar dados eleitorais
+        // Buscar dados eleitorais usando código como string
         let dadosEleitorais_municipio = null;
         if (dadosEleitorais && Array.isArray(dadosEleitorais)) {
             dadosEleitorais_municipio = dadosEleitorais.find(
-                d => d.codigo_municipio === codigoMunicipio && d.eleito === true
+                d => String(d.codigo_municipio) === String(codigoMunicipio) && d.eleito === true
             );
+            
+            if (dadosEleitorais_municipio) {
+                console.log(`🔍 Dados eleitorais encontrados para ${nomeMunicipio}:`, {
+                    candidato: dadosEleitorais_municipio.nome_candidato,
+                    partido: dadosEleitorais_municipio.partido,
+                    ideologia: dadosEleitorais_municipio.partido_ideologia
+                });
+            }
         }
 
-        // Definir cor
+        // Definir cor baseada na ideologia
         let cor = this.cores[siglaEstado] || '#94a3b8';
         let fillOpacity = 0.4;
 
-        if (dadosEleitorais_municipio) {
-            cor = this.getColorByParty(dadosEleitorais_municipio.partido);
-            fillOpacity = 0.7;
+        if (dadosEleitorais_municipio && dadosEleitorais_municipio.partido_ideologia) {
+            cor = this.getColorByIdeology(dadosEleitorais_municipio.partido_ideologia);
+            fillOpacity = 0.8; // Maior opacidade para municípios com dados
         }
 
         try {
@@ -311,6 +497,11 @@ class MultiStateLoader {
                 return null;
             }
 
+            if (coordenadas.length < 3) {
+                console.warn('⚠️ Coordenadas insuficientes:', coordenadas.length);
+                return null;
+            }
+
             const polygon = L.polygon(coordenadas, {
                 color: '#ffffff',
                 weight: 0.5,
@@ -320,14 +511,14 @@ class MultiStateLoader {
             });
 
             // Popup
-            const popupContent = this.criarPopup(props, dadosEleitorais_municipio, siglaEstado);
+            const popupContent = this.criarPopup(feature, dadosEleitorais_municipio, siglaEstado);
             polygon.bindPopup(popupContent);
 
             // Hover effects
             polygon.on('mouseover', function() {
                 this.setStyle({
                     weight: 2,
-                    fillOpacity: fillOpacity + 0.2
+                    fillOpacity: Math.min(fillOpacity + 0.2, 1.0)
                 });
             });
 
@@ -340,17 +531,20 @@ class MultiStateLoader {
 
             return polygon;
         } catch (error) {
-            console.error('❌ Erro ao renderizar município:', error, feature);
+            console.error('❌ Erro ao renderizar município:', error, {
+                codigo: codigoMunicipio,
+                nome: nomeMunicipio
+            });
             return null;
         }
     }
 
-    criarPopup(properties, dadosEleitorais, siglaEstado) {
-        const nomeMunicipio = properties.name || properties.nome || 'Nome não disponível';
-        const codigoMunicipio = properties.id || properties.code || properties.codigo || 'N/A';
+    criarPopup(feature, dadosEleitorais, siglaEstado) {
+        const nomeMunicipio = this.obterNomeMunicipio(feature);
+        const codigoMunicipio = this.obterCodigoMunicipio(feature);
 
         let html = `
-            <div style="min-width: 250px; font-family: Arial, sans-serif;">
+            <div style="min-width: 280px; font-family: Arial, sans-serif;">
                 <h4 style="margin: 0 0 10px 0; color: #1f2937; border-bottom: 2px solid #e5e7eb; padding-bottom: 5px;">
                     ${nomeMunicipio}
                 </h4>
@@ -359,17 +553,22 @@ class MultiStateLoader {
         `;
 
         if (dadosEleitorais) {
-            const corPartido = this.getColorByParty(dadosEleitorais.partido);
+            const corIdeologia = this.getColorByIdeology(dadosEleitorais.partido_ideologia);
             html += `
                 <hr style="margin: 15px 0; border: none; border-top: 1px solid #e5e7eb;">
-                <div style="background: #f9fafb; padding: 10px; border-radius: 6px; border-left: 4px solid ${corPartido};">
+                <div style="background: #f9fafb; padding: 12px; border-radius: 6px; border-left: 4px solid ${corIdeologia};">
                     <p style="margin: 0 0 8px 0; font-weight: bold; color: #374151;">✅ Prefeito Eleito:</p>
                     <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #111827;">${dadosEleitorais.nome_candidato}</p>
-                    <p style="margin: 5px 0;">
-                        <span style="background: ${corPartido}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">
+                    
+                    <div style="margin: 8px 0; display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span style="background: #6b7280; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">
                             ${dadosEleitorais.partido}
                         </span>
-                    </p>
+                        <span style="background: ${corIdeologia}; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">
+                            ${dadosEleitorais.partido_ideologia}
+                        </span>
+                    </div>
+                    
                     <p style="margin: 5px 0;"><strong>Votos:</strong> ${dadosEleitorais.votos?.toLocaleString() || 'N/A'}</p>
                     <p style="margin: 5px 0;"><strong>Percentual:</strong> ${dadosEleitorais.percentual}%</p>
                 </div>
@@ -400,17 +599,22 @@ class MultiStateLoader {
         // Obter municípios do estado
         const municipios = this.filtrarMunicipiosPorEstado(siglaEstado);
         
+        if (municipios.length === 0) {
+            console.warn(`⚠️ Nenhum município encontrado para renderizar em ${siglaEstado.toUpperCase()}`);
+            return { municipiosRenderizados: 0, municipiosComDados: 0 };
+        }
+        
         let municipiosRenderizados = 0;
         let municipiosComDados = 0;
 
-        municipios.forEach((feature, index) => {
+        municipios.forEach((feature) => {
             const polygon = this.renderizarMunicipio(feature, siglaEstado, dadosEleitorais);
             if (polygon) {
                 layerGroup.addLayer(polygon);
                 municipiosRenderizados++;
 
-                const codigoMunicipio = feature.properties?.id || feature.properties?.code;
-                if (dadosEleitorais?.some(d => d.codigo_municipio === codigoMunicipio && d.eleito === true)) {
+                const codigoMunicipio = this.obterCodigoMunicipio(feature);
+                if (dadosEleitorais?.some(d => String(d.codigo_municipio) === String(codigoMunicipio) && d.eleito === true)) {
                     municipiosComDados++;
                 }
             }
@@ -468,7 +672,8 @@ class MultiStateLoader {
             estadosCarregados: this.dadosBrasil ? 1 : 0,
             estadosAtivos: this.estadosAtivos.size,
             totalMunicipios: this.dadosBrasil ? this.dadosBrasil.features.length : 0,
-            estadosDisponiveis: this.estadosDisponiveis.length
+            estadosDisponiveis: this.estadosDisponiveis.length,
+            usingMockData: this.dadosBrasil && this.dadosBrasil.features.length < 100
         };
 
         console.log('📊 Estatísticas atuais:', stats);
