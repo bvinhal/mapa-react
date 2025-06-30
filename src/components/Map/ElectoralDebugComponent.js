@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const ElectoralDebugComponent = ({ electoralData, geoData }) => {
+const ElectoralDebugComponent = ({ electoralData, geoData, renderStats, multiLoader }) => {
     const [analysis, setAnalysis] = useState({
         electoralSample: [],
         geoSample: [],
@@ -109,11 +109,11 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
                 borderRadius: '8px',
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 zIndex: 10000,
-                maxWidth: '300px',
+                maxWidth: '350px',
                 fontFamily: 'monospace',
                 fontSize: '12px'
             }}>
-                <h4>🔗 Debug Eleitoral</h4>
+                <h4>📊 Debug Eleitoral</h4>
                 <p>Aguardando dados...</p>
             </div>
         );
@@ -130,11 +130,11 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
                 borderRadius: '8px',
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 zIndex: 10000,
-                maxWidth: '300px',
+                maxWidth: '350px',
                 fontFamily: 'monospace',
                 fontSize: '12px'
             }}>
-                <h4>🔗 Debug Eleitoral</h4>
+                <h4>📊 Debug Eleitoral</h4>
                 <p>🔄 Analisando dados...</p>
             </div>
         );
@@ -158,7 +158,73 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
             maxHeight: '80vh',
             overflow: 'auto'
         }}>
-            <h4 style={{ margin: '0 0 15px 0', color: '#333' }}>🔗 Debug Eleitoral</h4>
+            <h4 style={{ margin: '0 0 15px 0', color: '#333' }}>📊 Debug Eleitoral</h4>
+            
+            {/* Estatísticas de Renderização */}
+            {renderStats && (
+                <div style={{ 
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '4px',
+                    background: '#e8f5e8',
+                    border: '1px solid #c3e6cb'
+                }}>
+                    <strong>📈 Estatísticas de Renderização:</strong>
+                    <br />
+                    <div style={{ marginTop: '8px', lineHeight: '1.4' }}>
+                        <div>🏛️ <strong>Municípios renderizados:</strong> {renderStats.totalMunicipios?.toLocaleString()}</div>
+                        <div>📊 <strong>Com dados eleitorais:</strong> {renderStats.municipiosComDados?.toLocaleString()}</div>
+                        {multiLoader && (
+                            <div>📁 <strong>Total no arquivo:</strong> {multiLoader.obterEstatisticas().totalMunicipios?.toLocaleString()}</div>
+                        )}
+                        {renderStats.municipiosComDados > 0 && renderStats.totalMunicipios > 0 && (
+                            <div style={{color: '#16a34a', fontWeight: 'bold', marginTop: '5px'}}>
+                                ✅ <strong>Taxa de match:</strong> {((renderStats.municipiosComDados / renderStats.totalMunicipios) * 100).toFixed(1)}%
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* Estatísticas dos Dados Eleitorais */}
+            {electoralData && (
+                <div style={{ 
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '4px',
+                    background: '#e3f2fd',
+                    border: '1px solid #bbdefb'
+                }}>
+                    <strong>🗳️ Dados Eleitorais:</strong>
+                    <br />
+                    <div style={{ marginTop: '8px', lineHeight: '1.4' }}>
+                        <div>📋 <strong>Total de registros:</strong> {electoralData.length.toLocaleString()}</div>
+                        <div>🏛️ <strong>Códigos únicos:</strong> {new Set(electoralData.map(d => d.codigo_municipio)).size.toLocaleString()}</div>
+                        <div>👨‍💼 <strong>Prefeitos eleitos:</strong> {electoralData.filter(d => d.eleito === true).length.toLocaleString()}</div>
+                        <div>🎯 <strong>Candidatos totais:</strong> {electoralData.length.toLocaleString()}</div>
+                    </div>
+                </div>
+            )}
+
+            {/* Debug Técnico */}
+            {multiLoader && (
+                <div style={{ 
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '4px',
+                    background: '#fff3cd',
+                    border: '1px solid #ffeaa7'
+                }}>
+                    <strong>🔧 Debug Técnico:</strong>
+                    <br />
+                    <div style={{ marginTop: '8px', lineHeight: '1.4' }}>
+                        <div>🎭 <strong>Mock data:</strong> {multiLoader.obterEstatisticas().usingMockData ? 'Sim' : 'Não'}</div>
+                        <div>🗺️ <strong>Estados disponíveis:</strong> {multiLoader.estadosDisponiveis.length}</div>
+                        <div>📂 <strong>Layer groups:</strong> {multiLoader.layerGroups.size}</div>
+                        <div>⚡ <strong>Estados ativos:</strong> {multiLoader.estadosAtivos.size}</div>
+                    </div>
+                </div>
+            )}
             
             {/* Estatísticas de Match */}
             <div style={{ 
@@ -168,7 +234,7 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
                 background: matchStats.matched > 0 ? '#d4edda' : '#f8d7da',
                 border: `1px solid ${matchStats.matched > 0 ? '#c3e6cb' : '#f5c6cb'}`
             }}>
-                <strong>📊 Taxa de Match:</strong>
+                <strong>🎯 Taxa de Match (Amostra):</strong>
                 <br />
                 <span style={{ 
                     color: matchStats.matched > 0 ? '#155724' : '#721c24',
@@ -210,8 +276,16 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
             </div>
 
             {/* Testes de Match */}
-            <div style={{ marginBottom: '15px' }}>
-                <strong>🔍 Testes de Match (Amostra):</strong>
+            <details style={{ marginBottom: '15px' }}>
+                <summary style={{ 
+                    cursor: 'pointer', 
+                    fontWeight: 'bold',
+                    padding: '5px',
+                    background: '#f8f9fa',
+                    borderRadius: '4px'
+                }}>
+                    🔍 Testes de Match (Amostra)
+                </summary>
                 <div style={{
                     background: '#f5f5f5',
                     padding: '8px',
@@ -242,7 +316,7 @@ const ElectoralDebugComponent = ({ electoralData, geoData }) => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </details>
 
             {/* Amostras dos Dados */}
             <details style={{ marginBottom: '10px' }}>

@@ -3,9 +3,11 @@ import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import L from 'leaflet'; 
 import './Map.css'; 
 import MultiStateLoader from './MultiStateLoader'; 
-import DebugComponent from './DebugComponent';
-import ElectoralDebugComponent from './ElectoralDebugComponent';
 import { useElectoralData } from '../../hooks/useElectoralData'; 
+
+// Importações condicionais dos componentes de debug
+const DebugComponent = React.lazy(() => import('./DebugComponent'));
+const ElectoralDebugComponent = React.lazy(() => import('./ElectoralDebugComponent'));
 
 // Corrigir ícones do Leaflet
 delete L.Icon.Default.prototype._getIconUrl; 
@@ -36,43 +38,56 @@ const Map = () => {
     const [multiLoader, setMultiLoader] = useState(null); 
     const [mapReady, setMapReady] = useState(false);
     const [dadosCarregados, setDadosCarregados] = useState(false);
-    const [showDebug, setShowDebug] = useState(true);
-    const [showElectoralDebug, setShowElectoralDebug] = useState(false);
+    const [showDebug, setShowDebug] = useState(false); // Alterado para false por padrão
+    const [showElectoralDebug, setShowElectoralDebug] = useState(false); // Alterado para false por padrão
     const [renderStats, setRenderStats] = useState({ totalMunicipios: 0, municipiosComDados: 0 });
     
     // Hook personalizado para dados eleitorais 
     const { electoralData, loading: electoralLoading, error: electoralError } = useElectoralData(); 
 
-    // Lista de estados disponíveis
-    const estadosDisponiveis = [
-        { code: 'go', name: 'Goiás' },
-        { code: 'ac', name: 'Acre' },
-        { code: 'sp', name: 'São Paulo' },
-        { code: 'rj', name: 'Rio de Janeiro' },
-        { code: 'mg', name: 'Minas Gerais' },
-        { code: 'rs', name: 'Rio Grande do Sul' },
-        { code: 'pr', name: 'Paraná' },
-        { code: 'sc', name: 'Santa Catarina' },
-        { code: 'ba', name: 'Bahia' },
-        { code: 'pe', name: 'Pernambuco' },
-        { code: 'ce', name: 'Ceará' },
-        { code: 'pa', name: 'Pará' },
-        { code: 'ma', name: 'Maranhão' },
-        { code: 'pb', name: 'Paraíba' },
-        { code: 'es', name: 'Espírito Santo' },
-        { code: 'pi', name: 'Piauí' },
-        { code: 'al', name: 'Alagoas' },
-        { code: 'rn', name: 'Rio Grande do Norte' },
-        { code: 'mt', name: 'Mato Grosso' },
-        { code: 'ms', name: 'Mato Grosso do Sul' },
-        { code: 'df', name: 'Distrito Federal' },
-        { code: 'se', name: 'Sergipe' },
-        { code: 'am', name: 'Amazonas' },
-        { code: 'ro', name: 'Rondônia' },
-        { code: 'to', name: 'Tocantins' },
-        { code: 'ap', name: 'Amapá' },
-        { code: 'rr', name: 'Roraima' }
-    ];
+    // Lista de estados organizados por região
+    const estadosPorRegiao = {
+        'Centro-Oeste': [
+            { code: 'go', name: 'Goiás' },
+            { code: 'mt', name: 'Mato Grosso' },
+            { code: 'ms', name: 'Mato Grosso do Sul' },
+            { code: 'df', name: 'Distrito Federal' }
+        ],
+        'Nordeste': [
+            { code: 'al', name: 'Alagoas' },
+            { code: 'ba', name: 'Bahia' },
+            { code: 'ce', name: 'Ceará' },
+            { code: 'ma', name: 'Maranhão' },
+            { code: 'pb', name: 'Paraíba' },
+            { code: 'pe', name: 'Pernambuco' },
+            { code: 'pi', name: 'Piauí' },
+            { code: 'rn', name: 'Rio Grande do Norte' },
+            { code: 'se', name: 'Sergipe' }
+        ],
+        'Norte': [
+            { code: 'ac', name: 'Acre' },
+            { code: 'am', name: 'Amazonas' },
+            { code: 'ap', name: 'Amapá' },
+            { code: 'pa', name: 'Pará' },
+            { code: 'ro', name: 'Rondônia' },
+            { code: 'rr', name: 'Roraima' },
+            { code: 'to', name: 'Tocantins' }
+        ],
+        'Sudeste': [
+            { code: 'es', name: 'Espírito Santo' },
+            { code: 'mg', name: 'Minas Gerais' },
+            { code: 'rj', name: 'Rio de Janeiro' },
+            { code: 'sp', name: 'São Paulo' }
+        ],
+        'Sul': [
+            { code: 'pr', name: 'Paraná' },
+            { code: 'rs', name: 'Rio Grande do Sul' },
+            { code: 'sc', name: 'Santa Catarina' }
+        ]
+    };
+
+    // Obter todos os estados em ordem
+    const todosEstados = Object.values(estadosPorRegiao).flat();
 
     // Callback seguro para quando o mapa for criado
     const handleMapReady = (map) => {
@@ -218,19 +233,19 @@ const Map = () => {
         
         try {
             setLoading(true);
-            const todosEstados = estadosDisponiveis.map(e => e.code);
+            const todosEstadosCodes = todosEstados.map(e => e.code);
             
             console.log('🚀 Selecionando todos os estados...');
             
             // Adicionar estados que não estão ativos
-            for (const estado of todosEstados) {
+            for (const estado of todosEstadosCodes) {
                 if (!activeStates.includes(estado)) {
                     await multiLoader.mostrarEstado(estado, true);
                     console.log(`➕ Adicionado: ${estado.toUpperCase()}`);
                 }
             }
             
-            setActiveStates(todosEstados);
+            setActiveStates(todosEstadosCodes);
             await updateRender();
             
             console.log('✅ Todos os estados selecionados');
@@ -306,14 +321,41 @@ const Map = () => {
                 <MapInstance onMapReady={handleMapReady} />
             </MapContainer>
             
-            {/* Debug Components */}
-            {showDebug && <DebugComponent />}
-            {showElectoralDebug && (
-                <ElectoralDebugComponent 
-                    electoralData={electoralData}
-                    geoData={multiLoader?.dadosBrasil}
-                />
+            {/* Debug Components - Carregamento condicional */}
+            {showDebug && (
+                <React.Suspense fallback={<div>Carregando debug...</div>}>
+                    <DebugComponent />
+                </React.Suspense>
             )}
+            {showElectoralDebug && (
+                <React.Suspense fallback={<div>Carregando debug eleitoral...</div>}>
+                    <ElectoralDebugComponent 
+                        electoralData={electoralData}
+                        geoData={multiLoader?.dadosBrasil}
+                        renderStats={renderStats}
+                        multiLoader={multiLoader}
+                    />
+                </React.Suspense>
+            )}
+            
+            {/* Controles de Debug - Movidos para o canto inferior esquerdo */}
+            <div className="debug-controls">
+                <button
+                    onClick={toggleDebug}
+                    className={`debug-button ${showDebug ? 'active' : ''}`}
+                    title="Debug Geográfico"
+                >
+                    🗺️
+                </button>
+                
+                <button
+                    onClick={toggleElectoralDebug}
+                    className={`debug-button ${showElectoralDebug ? 'active' : ''}`}
+                    title="Debug Eleitoral"
+                >
+                    📊
+                </button>
+            </div>
             
             {/* Controles dos Estados */}
             <div className="state-controls">
@@ -322,39 +364,6 @@ const Map = () => {
                 {/* Status */}
                 <div className="status-info">
                     <small>{getStatusMessage()}</small>
-                </div>
-
-                {/* Toggle Debug */}
-                <div style={{ marginBottom: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
-                    <button
-                        onClick={toggleDebug}
-                        style={{
-                            padding: '5px 8px',
-                            fontSize: '10px',
-                            background: showDebug ? '#dc3545' : '#28a745',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '3px',
-                            cursor: 'pointer'
-                        }}
-                    >
-                        {showDebug ? '🐛 Geo' : '🐛 Geo'}
-                    </button>
-                    
-                    <button
-                        onClick={toggleElectoralDebug}
-                        style={{
-                            padding: '5px 8px',
-                            fontSize: '10px',
-                            background: showElectoralDebug ? '#dc3545' : '#6c757d',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '3px',
-                            cursor: 'pointer'
-                        }}
-                    >
-                        {showElectoralDebug ? '📊 Ocultar' : '📊 Eleitorais'}
-                    </button>
                 </div>
 
                 {/* Controles de ação */}
@@ -375,60 +384,37 @@ const Map = () => {
                     </button>
                 </div>
                 
-                {/* Grid de Estados */}
-                <div className="states-grid">
-                    {estadosDisponiveis.map(estado => (
-                        <button
-                            key={estado.code}
-                            className={`state-button ${activeStates.includes(estado.code) ? 'active' : ''}`}
-                            onClick={() => handleStateToggle(estado.code)}
-                            disabled={!dadosCarregados || loading}
-                            style={{
-                                backgroundColor: activeStates.includes(estado.code)
-                                    ? (multiLoader?.cores[estado.code] || '#007bff')
-                                    : '#e2e8f0',
-                                color: activeStates.includes(estado.code) ? 'white' : '#64748b',
-                                opacity: (!dadosCarregados || loading) ? 0.5 : 1,
-                                cursor: (!dadosCarregados || loading) ? 'not-allowed' : 'pointer'
-                            }}
-                            title={estado.name}
-                        >
-                            {estado.code.toUpperCase()}
-                        </button>
-                    ))}
-                </div>
+                {/* Grid de Estados por Região */}
+                {Object.entries(estadosPorRegiao).map(([regiao, estados]) => (
+                    <div key={regiao} className="region-section">
+                        <h5 className="region-title">{regiao}</h5>
+                        <div className="states-grid">
+                            {estados.map(estado => (
+                                <button
+                                    key={estado.code}
+                                    className={`state-button ${activeStates.includes(estado.code) ? 'active' : ''}`}
+                                    onClick={() => handleStateToggle(estado.code)}
+                                    disabled={!dadosCarregados || loading}
+                                    title={estado.name}
+                                >
+                                    {estado.code.toUpperCase()}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                ))}
                 
-                {/* Estatísticas */}
+                {/* Estatísticas Simplificadas */}
                 {multiLoader && dadosCarregados && (
                     <div className="state-stats">
                         <small>
-                            Estados ativos: {activeStates.length}<br/>
-                            Municípios renderizados: {renderStats.totalMunicipios?.toLocaleString()}<br/>
-                            Com dados eleitorais: {renderStats.municipiosComDados?.toLocaleString()}<br/>
-                            Total no arquivo: {multiLoader.obterEstatisticas().totalMunicipios?.toLocaleString()}
+                            Estados ativos: {activeStates.length}
                             {renderStats.municipiosComDados > 0 && (
                                 <>
                                     <br/>
                                     <span style={{color: '#16a34a', fontWeight: 'bold'}}>
-                                        Taxa de match: {((renderStats.municipiosComDados / renderStats.totalMunicipios) * 100).toFixed(1)}%
+                                        ✅ Dados carregados com sucesso
                                     </span>
-                                </>
-                            )}
-                        </small>
-                    </div>
-                )}
-                
-                {/* Dados Eleitorais */}
-                {electoralData && (
-                    <div className="electoral-stats">
-                        <small style={{color: '#16a34a'}}>
-                            ✅ Dados eleitorais: {electoralData.length} registros
-                            {electoralData.length > 0 && (
-                                <>
-                                    <br/>
-                                    Códigos únicos: {new Set(electoralData.map(d => d.codigo_municipio)).size}
-                                    <br/>
-                                    Prefeitos eleitos: {electoralData.filter(d => d.eleito === true).length}
                                 </>
                             )}
                         </small>
@@ -441,25 +427,6 @@ const Map = () => {
                         <small style={{color: '#dc2626'}}>
                             ❌ Erro: {electoralError}
                         </small>
-                    </div>
-                )}
-
-                {/* Debug Info */}
-                {multiLoader && dadosCarregados && (
-                    <div style={{ 
-                        marginTop: '10px', 
-                        padding: '8px', 
-                        background: '#e3f2fd', 
-                        borderRadius: '4px', 
-                        fontSize: '10px' 
-                    }}>
-                        <strong>🔧 Debug Info:</strong>
-                        <br/>
-                        Mock data: {multiLoader.obterEstatisticas().usingMockData ? 'Sim' : 'Não'}
-                        <br/>
-                        Estados disponíveis: {multiLoader.estadosDisponiveis.length}
-                        <br/>
-                        Layer groups: {multiLoader.layerGroups.size}
                     </div>
                 )}
             </div>
