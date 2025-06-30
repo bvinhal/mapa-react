@@ -4,6 +4,7 @@ import L from 'leaflet';
 import './Map.css'; 
 import MultiStateLoader from './MultiStateLoader'; 
 import DebugComponent from './DebugComponent';
+import ElectoralDebugComponent from './ElectoralDebugComponent';
 import { useElectoralData } from '../../hooks/useElectoralData'; 
 
 // Corrigir ícones do Leaflet
@@ -16,7 +17,7 @@ L.Icon.Default.mergeOptions({
 
 // Componente para capturar a instância do mapa
 const MapInstance = ({ onMapReady }) => {
-    const map = useMap(); // Hook correto do React-Leaflet
+    const map = useMap();
     
     useEffect(() => {
         if (map && onMapReady) {
@@ -36,6 +37,7 @@ const Map = () => {
     const [mapReady, setMapReady] = useState(false);
     const [dadosCarregados, setDadosCarregados] = useState(false);
     const [showDebug, setShowDebug] = useState(true);
+    const [showElectoralDebug, setShowElectoralDebug] = useState(false);
     const [renderStats, setRenderStats] = useState({ totalMunicipios: 0, municipiosComDados: 0 });
     
     // Hook personalizado para dados eleitorais 
@@ -164,6 +166,7 @@ const Map = () => {
         
         try {
             console.log('🎨 Iniciando renderização com dados eleitorais...');
+            console.log('📊 Dados eleitorais para renderização:', electoralData?.length || 0);
             const stats = await multiLoader.renderizarTodos(electoralData);
             setRenderStats(stats);
             console.log('📊 Estatísticas de renderização:', stats);
@@ -276,6 +279,10 @@ const Map = () => {
         setShowDebug(!showDebug);
     };
 
+    const toggleElectoralDebug = () => {
+        setShowElectoralDebug(!showElectoralDebug);
+    };
+
     return (
         <div className="map-container">
             {loading && (
@@ -299,8 +306,14 @@ const Map = () => {
                 <MapInstance onMapReady={handleMapReady} />
             </MapContainer>
             
-            {/* Debug Component */}
+            {/* Debug Components */}
             {showDebug && <DebugComponent />}
+            {showElectoralDebug && (
+                <ElectoralDebugComponent 
+                    electoralData={electoralData}
+                    geoData={multiLoader?.dadosBrasil}
+                />
+            )}
             
             {/* Controles dos Estados */}
             <div className="state-controls">
@@ -312,12 +325,12 @@ const Map = () => {
                 </div>
 
                 {/* Toggle Debug */}
-                <div style={{ marginBottom: '10px' }}>
+                <div style={{ marginBottom: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
                     <button
                         onClick={toggleDebug}
                         style={{
-                            padding: '5px 10px',
-                            fontSize: '11px',
+                            padding: '5px 8px',
+                            fontSize: '10px',
                             background: showDebug ? '#dc3545' : '#28a745',
                             color: 'white',
                             border: 'none',
@@ -325,7 +338,22 @@ const Map = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        {showDebug ? '🐛 Ocultar Debug' : '🐛 Mostrar Debug'}
+                        {showDebug ? '🐛 Geo' : '🐛 Geo'}
+                    </button>
+                    
+                    <button
+                        onClick={toggleElectoralDebug}
+                        style={{
+                            padding: '5px 8px',
+                            fontSize: '10px',
+                            background: showElectoralDebug ? '#dc3545' : '#6c757d',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '3px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        {showElectoralDebug ? '📊 Ocultar' : '📊 Eleitorais'}
                     </button>
                 </div>
 
@@ -378,6 +406,14 @@ const Map = () => {
                             Municípios renderizados: {renderStats.totalMunicipios?.toLocaleString()}<br/>
                             Com dados eleitorais: {renderStats.municipiosComDados?.toLocaleString()}<br/>
                             Total no arquivo: {multiLoader.obterEstatisticas().totalMunicipios?.toLocaleString()}
+                            {renderStats.municipiosComDados > 0 && (
+                                <>
+                                    <br/>
+                                    <span style={{color: '#16a34a', fontWeight: 'bold'}}>
+                                        Taxa de match: {((renderStats.municipiosComDados / renderStats.totalMunicipios) * 100).toFixed(1)}%
+                                    </span>
+                                </>
+                            )}
                         </small>
                     </div>
                 )}
@@ -387,6 +423,14 @@ const Map = () => {
                     <div className="electoral-stats">
                         <small style={{color: '#16a34a'}}>
                             ✅ Dados eleitorais: {electoralData.length} registros
+                            {electoralData.length > 0 && (
+                                <>
+                                    <br/>
+                                    Códigos únicos: {new Set(electoralData.map(d => d.codigo_municipio)).size}
+                                    <br/>
+                                    Prefeitos eleitos: {electoralData.filter(d => d.eleito === true).length}
+                                </>
+                            )}
                         </small>
                     </div>
                 )}
@@ -399,50 +443,61 @@ const Map = () => {
                         </small>
                     </div>
                 )}
+
+                {/* Debug Info */}
+                {multiLoader && dadosCarregados && (
+                    <div style={{ 
+                        marginTop: '10px', 
+                        padding: '8px', 
+                        background: '#e3f2fd', 
+                        borderRadius: '4px', 
+                        fontSize: '10px' 
+                    }}>
+                        <strong>🔧 Debug Info:</strong>
+                        <br/>
+                        Mock data: {multiLoader.obterEstatisticas().usingMockData ? 'Sim' : 'Não'}
+                        <br/>
+                        Estados disponíveis: {multiLoader.estadosDisponiveis.length}
+                        <br/>
+                        Layer groups: {multiLoader.layerGroups.size}
+                    </div>
+                )}
             </div>
             
             {/* Legenda Atualizada por Ideologia */}
             <div className="info legend">
                 <h4>Legenda por Ideologia Política</h4>
                 <div className="legend-item">
-                    <i style={{background: '#1a1a2e'}}></i> 
+                    <i style={{background: '#043267'}}></i> 
                     <span>Extrema-direita</span>
-                    <small>(Azul escuro)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#16213e'}}></i> 
+                    <i style={{background: '#2D09DB'}}></i> 
                     <span>Direita</span>
-                    <small>(Azul)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#4a90e2'}}></i> 
+                    <i style={{background: '#0B5EDA'}}></i> 
                     <span>Centro-direita</span>
-                    <small>(Azul claro)</small>
                 </div>
                 <div className="legend-item">
                     <i style={{background: '#f7dc6f'}}></i> 
                     <span>Centro</span>
-                    <small>(Amarelo)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#f1948a'}}></i> 
+                    <i style={{background: '#F94200'}}></i> 
                     <span>Centro-esquerda</span>
-                    <small>(Vermelho claro)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#e74c3c'}}></i> 
+                    <i style={{background: '#C11000'}}></i> 
                     <span>Esquerda</span>
-                    <small>(Vermelho)</small>
                 </div>
                 <div className="legend-item">
-                    <i style={{background: '#922b21'}}></i> 
+                    <i style={{background: '#6E0251'}}></i> 
                     <span>Extrema-esquerda</span>
-                    <small>(Vermelho escuro)</small>
                 </div>
                 <div className="legend-item">
                     <i style={{background: '#6b7280'}}></i> 
                     <span>Sem dados</span>
-                    <small>(Cinza)</small>
                 </div>
                 
                 <div className="legend-note">

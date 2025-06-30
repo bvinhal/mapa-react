@@ -9,7 +9,7 @@ export const useElectoralData = () => {
         const loadElectoralData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('/data/electoral/eleicoes_prefeitos_go_2024.json');
+                const response = await fetch('/data/electoral/2024_prefeito.json');
                 
                 if (!response.ok) {
                     throw new Error(`Erro HTTP: ${response.status}`);

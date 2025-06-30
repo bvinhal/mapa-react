@@ -188,7 +188,7 @@
 
 .legend-item {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: 8px;
     gap: 8px;
 }
