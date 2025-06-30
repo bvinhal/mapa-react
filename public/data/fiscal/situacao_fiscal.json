@@ -1,0 +1,1494 @@
+{
+  "GO": [
+    {
+      "rreo": {
+        "municipio_codigo": "5200050",
+        "municipio_nome": "Abadia de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 95487234.67,
+        "receita_tributaria": 14322085.20,
+        "receita_transferencias": 66841064.27,
+        "despesa_pessoal": 38194893.87,
+        "despesa_investimento": 9548723.47,
+        "resultado_primario": 23844614.93
+      },
+      "rgf": {
+        "municipio_codigo": "5200050",
+        "municipio_nome": "Abadia de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 38194893.87,
+        "receita_corrente_liquida": 95487234.67,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 28646170.40,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200100",
+        "municipio_nome": "Abadiânia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 57423150.89,
+        "receita_tributaria": 8613472.63,
+        "receita_transferencias": 40196205.62,
+        "despesa_pessoal": 22969260.36,
+        "despesa_investimento": 5742315.09,
+        "resultado_primario": 14355787.72
+      },
+      "rgf": {
+        "municipio_codigo": "5200100",
+        "municipio_nome": "Abadiânia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 22969260.36,
+        "receita_corrente_liquida": 57423150.89,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 17226945.27,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200134",
+        "municipio_nome": "Acreúna",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 78956432.45,
+        "receita_tributaria": 11843464.87,
+        "receita_transferencias": 55269502.72,
+        "despesa_pessoal": 31582572.98,
+        "despesa_investimento": 7895643.25,
+        "resultado_primario": 19739108.11
+      },
+      "rgf": {
+        "municipio_codigo": "5200134",
+        "municipio_nome": "Acreúna",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 31582572.98,
+        "receita_corrente_liquida": 78956432.45,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 23686929.74,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200159",
+        "municipio_nome": "Adelândia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 35678921.34,
+        "receita_tributaria": 5351838.20,
+        "receita_transferencias": 24975244.94,
+        "despesa_pessoal": 14271568.54,
+        "despesa_investimento": 3567892.13,
+        "resultado_primario": 8919730.34
+      },
+      "rgf": {
+        "municipio_codigo": "5200159",
+        "municipio_nome": "Adelândia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 14271568.54,
+        "receita_corrente_liquida": 35678921.34,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 10703676.40,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200175",
+        "municipio_nome": "Água Fria de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 28543219.67,
+        "receita_tributaria": 4281482.95,
+        "receita_transferencias": 19980253.77,
+        "despesa_pessoal": 11417287.87,
+        "despesa_investimento": 2854321.97,
+        "resultado_primario": 7135804.92
+      },
+      "rgf": {
+        "municipio_codigo": "5200175",
+        "municipio_nome": "Água Fria de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11417287.87,
+        "receita_corrente_liquida": 28543219.67,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8562965.90,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200209",
+        "municipio_nome": "Água Limpa",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 31245678.90,
+        "receita_tributaria": 4686851.84,
+        "receita_transferencias": 21871975.23,
+        "despesa_pessoal": 12498271.56,
+        "despesa_investimento": 3124567.89,
+        "resultado_primario": 7811419.73
+      },
+      "rgf": {
+        "municipio_codigo": "5200209",
+        "municipio_nome": "Água Limpa",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 12498271.56,
+        "receita_corrente_liquida": 31245678.90,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 9373703.67,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200258",
+        "municipio_nome": "Águas Lindas de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 287456789.23,
+        "receita_tributaria": 43118518.38,
+        "receita_transferencias": 201219752.46,
+        "despesa_pessoal": 114982715.69,
+        "despesa_investimento": 28745678.92,
+        "resultado_primario": 71864197.31
+      },
+      "rgf": {
+        "municipio_codigo": "5200258",
+        "municipio_nome": "Águas Lindas de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 114982715.69,
+        "receita_corrente_liquida": 287456789.23,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 86237036.77,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200308",
+        "municipio_nome": "Alexânia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 89234567.12,
+        "receita_tributaria": 13385185.07,
+        "receita_transferencias": 62464196.98,
+        "despesa_pessoal": 35693826.85,
+        "despesa_investimento": 8923456.71,
+        "resultado_primario": 22308641.78
+      },
+      "rgf": {
+        "municipio_codigo": "5200308",
+        "municipio_nome": "Alexânia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 35693826.85,
+        "receita_corrente_liquida": 89234567.12,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 26770370.14,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200506",
+        "municipio_nome": "Aloândia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 26789543.21,
+        "receita_tributaria": 4018431.48,
+        "receita_transferencias": 18752680.25,
+        "despesa_pessoal": 10715817.28,
+        "despesa_investimento": 2678954.32,
+        "resultado_primario": 6697385.80
+      },
+      "rgf": {
+        "municipio_codigo": "5200506",
+        "municipio_nome": "Aloândia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10715817.28,
+        "receita_corrente_liquida": 26789543.21,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8036862.96,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200555",
+        "municipio_nome": "Alto Horizonte",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 29876543.45,
+        "receita_tributaria": 4481481.52,
+        "receita_transferencias": 20913580.42,
+        "despesa_pessoal": 11950617.38,
+        "despesa_investimento": 2987654.35,
+        "resultado_primario": 7469135.86
+      },
+      "rgf": {
+        "municipio_codigo": "5200555",
+        "municipio_nome": "Alto Horizonte",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11950617.38,
+        "receita_corrente_liquida": 29876543.45,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8962963.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200605",
+        "municipio_nome": "Alto Paraíso de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 34567890.12,
+        "receita_tributaria": 5185183.52,
+        "receita_transferencias": 24197523.08,
+        "despesa_pessoal": 13827156.05,
+        "despesa_investimento": 3456789.01,
+        "resultado_primario": 8641972.53
+      },
+      "rgf": {
+        "municipio_codigo": "5200605",
+        "municipio_nome": "Alto Paraíso de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 13827156.05,
+        "receita_corrente_liquida": 34567890.12,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 10370367.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200803",
+        "municipio_nome": "Alvorada do Norte",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 41234567.89,
+        "receita_tributaria": 6185185.18,
+        "receita_transferencias": 28864197.52,
+        "despesa_pessoal": 16493827.16,
+        "despesa_investimento": 4123456.79,
+        "resultado_primario": 10308641.97
+      },
+      "rgf": {
+        "municipio_codigo": "5200803",
+        "municipio_nome": "Alvorada do Norte",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 16493827.16,
+        "receita_corrente_liquida": 41234567.89,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 12370370.37,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200829",
+        "municipio_nome": "Amaralina",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 25789123.45,
+        "receita_tributaria": 3868368.52,
+        "receita_transferencias": 18052386.42,
+        "despesa_pessoal": 10315649.38,
+        "despesa_investimento": 2578912.35,
+        "resultado_primario": 6447280.86
+      },
+      "rgf": {
+        "municipio_codigo": "5200829",
+        "municipio_nome": "Amaralina",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10315649.38,
+        "receita_corrente_liquida": 25789123.45,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 7736737.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200852",
+        "municipio_nome": "Americano do Brasil",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 32145678.91,
+        "receita_tributaria": 4821851.84,
+        "receita_transferencias": 22501975.24,
+        "despesa_pessoal": 12858271.56,
+        "despesa_investimento": 3214567.89,
+        "resultado_primario": 8036419.73
+      },
+      "rgf": {
+        "municipio_codigo": "5200852",
+        "municipio_nome": "Americano do Brasil",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 12858271.56,
+        "receita_corrente_liquida": 32145678.91,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 9643703.67,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200902",
+        "municipio_nome": "Amorinópolis",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 28934567.23,
+        "receita_tributaria": 4340185.08,
+        "receita_transferencias": 20254197.06,
+        "despesa_pessoal": 11573826.89,
+        "despesa_investimento": 2893456.72,
+        "resultado_primario": 7233640.81
+      },
+      "rgf": {
+        "municipio_codigo": "5200902",
+        "municipio_nome": "Amorinópolis",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11573826.89,
+        "receita_corrente_liquida": 28934567.23,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8680370.17,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5200951",
+        "municipio_nome": "Anápolis",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 1456789012.34,
+        "receita_tributaria": 218518351.85,
+        "receita_transferencias": 1019752308.64,
+        "despesa_pessoal": 582715604.94,
+        "despesa_investimento": 145678901.23,
+        "resultado_primario": 364197253.09
+      },
+      "rgf": {
+        "municipio_codigo": "5200951",
+        "municipio_nome": "Anápolis",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 582715604.94,
+        "receita_corrente_liquida": 1456789012.34,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 437036703.70,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201001",
+        "municipio_nome": "Anhanguera",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 24567890.12,
+        "receita_tributaria": 3685183.52,
+        "receita_transferencias": 17197523.08,
+        "despesa_pessoal": 9827156.05,
+        "despesa_investimento": 2456789.01,
+        "resultado_primario": 6141972.53
+      },
+      "rgf": {
+        "municipio_codigo": "5201001",
+        "municipio_nome": "Anhanguera",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 9827156.05,
+        "receita_corrente_liquida": 24567890.12,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 7370367.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201108",
+        "municipio_nome": "Anhembi",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 27123456.78,
+        "receita_tributaria": 4068518.52,
+        "receita_transferencias": 18986419.75,
+        "despesa_pessoal": 10849382.71,
+        "despesa_investimento": 2712345.68,
+        "resultado_primario": 6780864.20
+      },
+      "rgf": {
+        "municipio_codigo": "5201108",
+        "municipio_nome": "Anhembi",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10849382.71,
+        "receita_corrente_liquida": 27123456.78,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8137037.03,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201207",
+        "municipio_nome": "Anápolis",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 1789012345.67,
+        "receita_tributaria": 268351851.85,
+        "receita_transferencias": 1252308641.97,
+        "despesa_pessoal": 715604938.27,
+        "despesa_investimento": 178901234.57,
+        "resultado_primario": 447253086.42
+      },
+      "rgf": {
+        "municipio_codigo": "5201207",
+        "municipio_nome": "Anápolis",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 715604938.27,
+        "receita_corrente_liquida": 1789012345.67,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 536703703.70,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201306",
+        "municipio_nome": "Anicuns",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 45287643.52,
+        "receita_tributaria": 6793146.53,
+        "receita_transferencias": 31701550.46,
+        "despesa_pessoal": 18115057.41,
+        "despesa_investimento": 4528764.35,
+        "resultado_primario": 11321910.88
+      },
+      "rgf": {
+        "municipio_codigo": "5201306",
+        "municipio_nome": "Anicuns",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 18115057.41,
+        "receita_corrente_liquida": 45287643.52,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 13586293.06,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201405",
+        "municipio_nome": "Aparecida de Goiânia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 2123456789.01,
+        "receita_tributaria": 318518518.35,
+        "receita_transferencias": 1486419752.31,
+        "despesa_pessoal": 849382715.60,
+        "despesa_investimento": 212345678.90,
+        "resultado_primario": 530864197.53
+      },
+      "rgf": {
+        "municipio_codigo": "5201405",
+        "municipio_nome": "Aparecida de Goiânia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 849382715.60,
+        "receita_corrente_liquida": 2123456789.01,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 637037036.70,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201454",
+        "municipio_nome": "Aparecida do Rio Doce",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 26789123.45,
+        "receita_tributaria": 4018368.52,
+        "receita_transferencias": 18752386.42,
+        "despesa_pessoal": 10715649.38,
+        "despesa_investimento": 2678912.35,
+        "resultado_primario": 6697280.86
+      },
+      "rgf": {
+        "municipio_codigo": "5201454",
+        "municipio_nome": "Aparecida do Rio Doce",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10715649.38,
+        "receita_corrente_liquida": 26789123.45,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8036737.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_nome": "Aporé",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11382715.65,
+        "receita_corrente_liquida": 28456789.12,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8537036.74,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201603",
+        "municipio_nome": "Araçu",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 31234567.89,
+        "receita_tributaria": 4685185.18,
+        "receita_transferencias": 21864197.52,
+        "despesa_pessoal": 12493827.16,
+        "despesa_investimento": 3123456.79,
+        "resultado_primario": 7808641.97
+      },
+      "rgf": {
+        "municipio_codigo": "5201603",
+        "municipio_nome": "Araçu",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 12493827.16,
+        "receita_corrente_liquida": 31234567.89,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 9370370.37,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201702",
+        "municipio_nome": "Aruanã",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 29876543.21,
+        "receita_tributaria": 4481481.48,
+        "receita_transferencias": 20913580.25,
+        "despesa_pessoal": 11950617.28,
+        "despesa_investimento": 2987654.32,
+        "resultado_primario": 7469135.80
+      },
+      "rgf": {
+        "municipio_codigo": "5201702",
+        "municipio_nome": "Aruanã",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11950617.28,
+        "receita_corrente_liquida": 29876543.21,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8962962.96,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201801",
+        "municipio_nome": "Aurilândia",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 26543210.98,
+        "receita_tributaria": 3981481.65,
+        "receita_transferencias": 18580247.69,
+        "despesa_pessoal": 10617284.39,
+        "despesa_investimento": 2654321.10,
+        "resultado_primario": 6635802.47
+      },
+      "rgf": {
+        "municipio_codigo": "5201801",
+        "municipio_nome": "Aurilândia",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10617284.39,
+        "receita_corrente_liquida": 26543210.98,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 7962963.29,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5201900",
+        "municipio_nome": "Avelinópolis",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 27891234.56,
+        "receita_tributaria": 4183685.18,
+        "receita_transferencias": 19523864.19,
+        "despesa_pessoal": 11156493.82,
+        "despesa_investimento": 2789123.46,
+        "resultado_primario": 6972808.64
+      },
+      "rgf": {
+        "municipio_codigo": "5201900",
+        "municipio_nome": "Avelinópolis",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11156493.82,
+        "receita_corrente_liquida": 27891234.56,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8367370.37,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5202056",
+        "municipio_nome": "Baliza",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 25678901.23,
+        "receita_tributaria": 3851835.18,
+        "receita_transferencias": 17975230.86,
+        "despesa_pessoal": 10271560.49,
+        "despesa_investimento": 2567890.12,
+        "resultado_primario": 6419725.31
+      },
+      "rgf": {
+        "municipio_codigo": "5202056",
+        "municipio_nome": "Baliza",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 10271560.49,
+        "receita_corrente_liquida": 25678901.23,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 7703670.37,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5202106",
+        "municipio_nome": "Barro Alto",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 32456789.01,
+        "receita_tributaria": 4868518.35,
+        "receita_transferencias": 22719752.31,
+        "despesa_pessoal": 12982715.60,
+        "despesa_investimento": 3245678.90,
+        "resultado_primario": 8114197.25
+      },
+      "rgf": {
+        "municipio_codigo": "5202106",
+        "municipio_nome": "Barro Alto",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 12982715.60,
+        "receita_corrente_liquida": 32456789.01,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 9737036.70,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5202155",
+        "municipio_nome": "Bela Vista de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 89234567.89,
+        "receita_tributaria": 13385185.18,
+        "receita_transferencias": 62464197.52,
+        "despesa_pessoal": 35693827.16,
+        "despesa_investimento": 8923456.79,
+        "resultado_primario": 22308641.97
+      },
+      "rgf": {
+        "municipio_codigo": "5202155",
+        "municipio_nome": "Bela Vista de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 35693827.16,
+        "receita_corrente_liquida": 89234567.89,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 26770370.37,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5202205",
+        "municipio_nome": "Bom Jardim de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 29876543.45,
+        "receita_tributaria": 4481481.52,
+        "receita_transferencias": 20913580.42,
+        "despesa_pessoal": 11950617.38,
+        "despesa_investimento": 2987654.35,
+        "resultado_primario": 7469135.86
+      },
+      "rgf": {
+        "municipio_codigo": "5202205",
+        "municipio_nome": "Bom Jardim de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 11950617.38,
+        "receita_corrente_liquida": 29876543.45,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 8962963.04,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    },
+    {
+      "rreo": {
+        "municipio_codigo": "5202254",
+        "municipio_nome": "Bom Jesus de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "receita_corrente_liquida": 87654321.09,
+        "receita_tributaria": 13148148.16,
+        "receita_transferencias": 61358024.76,
+        "despesa_pessoal": 35061728.44,
+        "despesa_investimento": 8765432.11,
+        "resultado_primario": 21913580.25
+      },
+      "rgf": {
+        "municipio_codigo": "5202254",
+        "municipio_nome": "Bom Jesus de Goiás",
+        "ano": 2025,
+        "periodo": 1,
+        "despesa_total_pessoal": 35061728.44,
+        "receita_corrente_liquida": 87654321.09,
+        "percentual_pessoal_rcl": 40.0,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 26296296.33,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 10.0,
+        "dependencia_transferencias": 70.0,
+        "autonomia_financeira": 30.0,
+        "eficiencia_gasto_pessoal": 40.0,
+        "capacidade_investimento": 60.0,
+        "classificacao_fiscal": "boa"
+      },
+      "simulated": true
+    }
+  ],
+  "AM": [
+    {
+      "rreo": {
+        "municipio_codigo": "1302603",
+        "municipio_nome": "Manaus",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 2404195375.325077,
+        "receita_tributaria": 138821644.34091252,
+        "receita_transferencias": 1867397849.5590603,
+        "despesa_pessoal": 413446618.41219187,
+        "despesa_investimento": 980914707.7861843,
+        "resultado_primario": 611858167.7015967
+      },
+      "rgf": {
+        "municipio_codigo": "1302603",
+        "municipio_nome": "Manaus",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 413446618.41219187,
+        "receita_corrente_liquida": 2404195375.325077,
+        "percentual_pessoal_rcl": 17.196881029533166,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 985513725.9752723,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 40.80012455949228,
+        "dependencia_transferencias": 77.67246658589737,
+        "autonomia_financeira": 22.327533414102632,
+        "eficiencia_gasto_pessoal": 17.196881029533166,
+        "capacidade_investimento": 36.803118970466834,
+        "classificacao_fiscal": "excelente"
+      },
+      "simulated": true
+    }
+  ],
+  "PA": [
+    {
+      "rreo": {
+        "municipio_codigo": "1501402",
+        "municipio_nome": "Belém",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 3347669905.3667107,
+        "receita_tributaria": 1886904330.9648914,
+        "receita_transferencias": 1786343462.1668727,
+        "despesa_pessoal": 1762481420.6134279,
+        "despesa_investimento": 522773465.4881976,
+        "resultado_primario": 1387992907.030139
+      },
+      "rgf": {
+        "municipio_codigo": "1501402",
+        "municipio_nome": "Belém",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1762481420.6134279,
+        "receita_corrente_liquida": 3347669905.3667107,
+        "percentual_pessoal_rcl": 52.64800504338739,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 2789581153.293528,
+        "status_fiscal": "alerta"
+      },
+      "indicators": {
+        "investimento_percentual": 15.616039820716193,
+        "dependencia_transferencias": 53.36080057663849,
+        "autonomia_financeira": 46.63919942336151,
+        "eficiencia_gasto_pessoal": 52.64800504338739,
+        "capacidade_investimento": 1.3519949566126073,
+        "classificacao_fiscal": "bom"
+      },
+      "simulated": true
+    }
+  ],
+  "CE": [
+    {
+      "rreo": {
+        "municipio_codigo": "2304400",
+        "municipio_nome": "Fortaleza",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 3231355144.00841,
+        "receita_tributaria": 654545203.3064777,
+        "receita_transferencias": 1905451936.3204887,
+        "despesa_pessoal": 1301090912.1513689,
+        "despesa_investimento": 512160362.811876,
+        "resultado_primario": 746745864.6637216
+      },
+      "rgf": {
+        "municipio_codigo": "2304400",
+        "municipio_nome": "Fortaleza",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1301090912.1513689,
+        "receita_corrente_liquida": 3231355144.00841,
+        "percentual_pessoal_rcl": 40.26455942374073,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 2248600070.106586,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 15.849708248922298,
+        "dependencia_transferencias": 58.96758020713335,
+        "autonomia_financeira": 41.03241979286665,
+        "eficiencia_gasto_pessoal": 40.26455942374073,
+        "capacidade_investimento": 13.735440576259272,
+        "classificacao_fiscal": "excelente"
+      },
+      "simulated": true
+    }
+  ],
+  "PE": [
+    {
+      "rreo": {
+        "municipio_codigo": "2611606",
+        "municipio_nome": "Recife",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 3580242803.2803116,
+        "receita_tributaria": 1828752385.9645593,
+        "receita_transferencias": 2960076018.1479135,
+        "despesa_pessoal": 947906820.4504982,
+        "despesa_investimento": 897569350.5745401,
+        "resultado_primario": 2943352233.0874343
+      },
+      "rgf": {
+        "municipio_codigo": "2611606",
+        "municipio_nome": "Recife",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 947906820.4504982,
+        "receita_corrente_liquida": 3580242803.2803116,
+        "percentual_pessoal_rcl": 26.476048484253674,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 2076692231.9687774,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 25.07006926324002,
+        "dependencia_transferencias": 82.67808025298773,
+        "autonomia_financeira": 17.321919747012274,
+        "eficiencia_gasto_pessoal": 26.476048484253674,
+        "capacidade_investimento": 27.523951515746326,
+        "classificacao_fiscal": "bom"
+      },
+      "simulated": true
+    }
+  ],
+  "BA": [
+
+    {
+      "rreo": {
+        "municipio_codigo": "2927408",
+        "municipio_nome": "Salvador",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 2081651442.3240013,
+        "receita_tributaria": 121302308.89792871,
+        "receita_transferencias": 940045152.0453573,
+        "despesa_pessoal": 1422990803.570269,
+        "despesa_investimento": 279137122.87581134,
+        "resultado_primario": -640780465.5027944
+      },
+      "rgf": {
+        "municipio_codigo": "2927408",
+        "municipio_nome": "Salvador",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1422990803.570269,
+        "receita_corrente_liquida": 2081651442.3240013,
+        "percentual_pessoal_rcl": 68.35874511160289,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 831876014.5186898,
+        "status_fiscal": "critico"
+      },
+      "indicators": {
+        "investimento_percentual": 13.409407415689945,
+        "dependencia_transferencias": 45.158624202516364,
+        "autonomia_financeira": 54.841375797483636,
+        "eficiencia_gasto_pessoal": 68.35874511160289,
+        "capacidade_investimento": 0,
+        "classificacao_fiscal": "regular"
+      },
+      "simulated": true
+    }
+  ],
+  "MG": [
+    {
+      "rreo": {
+        "municipio_codigo": "3106200",
+        "municipio_nome": "Belo Horizonte",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 2329835741.5276284,
+        "receita_tributaria": 1562521355.4763536,
+        "receita_transferencias": 700721619.4615128,
+        "despesa_pessoal": 1145032540.750971,
+        "despesa_investimento": 761798232.4490448,
+        "resultado_primario": 356412201.7378502
+      },
+      "rgf": {
+        "municipio_codigo": "3106200",
+        "municipio_nome": "Belo Horizonte",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1145032540.750971,
+        "receita_corrente_liquida": 2329835741.5276284,
+        "percentual_pessoal_rcl": 49.14649219005437,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 1993778428.5539258,
+        "status_fiscal": "atencao"
+      },
+      "indicators": {
+        "investimento_percentual": 32.69750819212467,
+        "dependencia_transferencias": 30.076009521686842,
+        "autonomia_financeira": 69.92399047831316,
+        "eficiencia_gasto_pessoal": 49.14649219005437,
+        "capacidade_investimento": 4.853507809945633,
+        "classificacao_fiscal": "excelente"
+      },
+      "simulated": true
+    }
+  ],
+  "RJ": [
+    {
+      "rreo": {
+        "municipio_codigo": "3304557",
+        "municipio_nome": "Rio de Janeiro",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 1282864800.4554243,
+        "receita_tributaria": 1477206847.4854496,
+        "receita_transferencias": 592755498.7542403,
+        "despesa_pessoal": 787756530.5878346,
+        "despesa_investimento": 604714141.3410045,
+        "resultado_primario": 677491674.3108506
+      },
+      "rgf": {
+        "municipio_codigo": "3304557",
+        "municipio_nome": "Rio de Janeiro",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 787756530.5878346,
+        "receita_corrente_liquida": 1282864800.4554243,
+        "percentual_pessoal_rcl": 61.40604452691948,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 2815125833.166356,
+        "status_fiscal": "critico"
+      },
+      "indicators": {
+        "investimento_percentual": 47.13779200476368,
+        "dependencia_transferencias": 46.20560939420964,
+        "autonomia_financeira": 53.79439060579036,
+        "eficiencia_gasto_pessoal": 61.40604452691948,
+        "capacidade_investimento": 0,
+        "classificacao_fiscal": "regular"
+      },
+      "simulated": true
+    } 
+  ],
+  "SP": [
+    {
+      "rreo": {
+        "municipio_codigo": "3550308",
+        "municipio_nome": "São Paulo",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 3427371518.512594,
+        "receita_tributaria": 909296466.3071911,
+        "receita_transferencias": 2598454734.443546,
+        "despesa_pessoal": 1869301754.5680723,
+        "despesa_investimento": 870642359.6462464,
+        "resultado_primario": 767807086.5364184
+      },
+      "rgf": {
+        "municipio_codigo": "3550308",
+        "municipio_nome": "São Paulo",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1869301754.5680723,
+        "receita_corrente_liquida": 3427371518.512594,
+        "percentual_pessoal_rcl": 54.540388880260906,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 989373464.4069197,
+        "status_fiscal": "critico"
+      },
+      "indicators": {
+        "investimento_percentual": 25.40262574230898,
+        "dependencia_transferencias": 75.81479627779656,
+        "autonomia_financeira": 24.18520372220344,
+        "eficiencia_gasto_pessoal": 54.540388880260906,
+        "capacidade_investimento": 0,
+        "classificacao_fiscal": "regular"
+      },
+      "simulated": true
+    }
+  ],
+  "DF": [
+    {
+      "rreo": {
+        "municipio_codigo": "5300108",
+        "municipio_nome": "Brasília",
+        "ano": 2022,
+        "periodo": 6,
+        "receita_corrente_liquida": 3275211741.9684753,
+        "receita_tributaria": 344225793.3717055,
+        "receita_transferencias": 2013984768.7869158,
+        "despesa_pessoal": 1039689119.209188,
+        "despesa_investimento": 633347560.8683382,
+        "resultado_primario": 685173882.0810952
+      },
+      "rgf": {
+        "municipio_codigo": "5300108",
+        "municipio_nome": "Brasília",
+        "ano": 2022,
+        "periodo": 2,
+        "despesa_total_pessoal": 1039689119.209188,
+        "receita_corrente_liquida": 3275211741.9684753,
+        "percentual_pessoal_rcl": 31.74418025823001,
+        "limite_legal_pessoal": 54.0,
+        "limite_prudencial_pessoal": 51.3,
+        "divida_consolidada_liquida": 1796214395.0004883,
+        "status_fiscal": "regular"
+      },
+      "indicators": {
+        "investimento_percentual": 19.3376065660928,
+        "dependencia_transferencias": 61.491742441557875,
+        "autonomia_financeira": 38.508257558442125,
+        "eficiencia_gasto_pessoal": 31.74418025823001,
+        "capacidade_investimento": 22.25581974176999,
+        "classificacao_fiscal": "excelente"
+      },
+      "simulated": true
+    }
+  ],
+  "metadata": {
+    "total_municipios": 10,
+    "ano_referencia": 2025,
+    "periodo_referencia": 1,
+    "data_processamento": "2025-05-25T00:00:00.000Z",
+    "fonte": "RREO e RGF - Dados baseados em análise dos anexos CSV",
+    "observacao": "Valores calculados com base em padrões municipais e dados disponíveis nos anexos. Esta é uma amostra dos municípios de Goiás."
+  }
+}

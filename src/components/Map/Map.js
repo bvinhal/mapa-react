@@ -8,6 +8,7 @@ import { useElectoralData } from '../../hooks/useElectoralData';
 // Importações condicionais dos componentes de debug
 const DebugComponent = React.lazy(() => import('./DebugComponent'));
 const ElectoralDebugComponent = React.lazy(() => import('./ElectoralDebugComponent'));
+const ProgressComponent = React.lazy(() => import('./ProgressComponent'));
 
 // Corrigir ícones do Leaflet
 delete L.Icon.Default.prototype._getIconUrl; 
@@ -41,6 +42,11 @@ const Map = () => {
     const [showDebug, setShowDebug] = useState(false); // Alterado para false por padrão
     const [showElectoralDebug, setShowElectoralDebug] = useState(false); // Alterado para false por padrão
     const [renderStats, setRenderStats] = useState({ totalMunicipios: 0, municipiosComDados: 0 });
+    
+    // Estados para progresso de carregamento
+    const [loadingProgress, setLoadingProgress] = useState(null);
+    const [loadingStage, setLoadingStage] = useState('loading');
+    const [loadingDetails, setLoadingDetails] = useState('');
     
     // Hook personalizado para dados eleitorais 
     const { electoralData, loading: electoralLoading, error: electoralError } = useElectoralData(); 
@@ -148,13 +154,33 @@ const Map = () => {
     const loadBrazilData = async () => {
         try {
             setLoading(true);
-            console.log('📍 Carregando dados do Brasil...');
+            setLoadingStage('loading');
+            setLoadingDetails('Iniciando carregamento...');
+            
+            console.log('📍 Carregando dados do Brasil com otimizações...');
+            
+            // Callback de progresso
+            const progressCallback = (progress) => {
+                setLoadingProgress(progress);
+                setLoadingDetails(`${(progress.loaded / 1024 / 1024).toFixed(1)} MB de ${(progress.total / 1024 / 1024).toFixed(1)} MB`);
+            };
             
             // Carregar dados do Brasil
-            const dadosGeo = await multiLoader.carregarDadosBrasil();
+            setLoadingStage('loading');
+            const dadosGeo = await multiLoader.carregarDadosBrasil(progressCallback);
             console.log('📊 Dados GeoJSON carregados:', dadosGeo);
             
+            setLoadingStage('processing');
+            setLoadingProgress({ percentage: 100 });
+            setLoadingDetails('Processando dados...');
+            
+            // Aguardar um momento para mostrar a conclusão
+            await new Promise(resolve => setTimeout(resolve, 500));
+            
             setDadosCarregados(true);
+            
+            setLoadingStage('rendering');
+            setLoadingDetails('Renderizando estados iniciais...');
             
             // Renderizar estados ativos iniciais
             for (const estado of activeStates) {
@@ -165,9 +191,25 @@ const Map = () => {
             // Renderizar com dados eleitorais se disponível
             await updateRender();
             
-            console.log('✅ Carregamento inicial concluído');
+            setLoadingStage('complete');
+            setLoadingDetails('Carregamento concluído!');
+            
+            // Otimizar após carregamento
+            multiLoader.otimizarPosCarregamento();
+            
+            // Aguardar um momento antes de ocultar o progresso
+            setTimeout(() => {
+                setLoadingProgress(null);
+                setLoadingStage('loading');
+                setLoadingDetails('');
+            }, 1500);
+            
+            console.log('✅ Carregamento inicial concluído com otimizações');
         } catch (error) {
             console.error('❌ Erro ao carregar dados do Brasil:', error);
+            setLoadingProgress(null);
+            setLoadingStage('loading');
+            setLoadingDetails('');
         } finally {
             setLoading(false);
         }
@@ -300,10 +342,22 @@ const Map = () => {
 
     return (
         <div className="map-container">
-            {loading && (
+            {/* Componente de progresso otimizado */}
+            {loadingProgress && (
+                <React.Suspense fallback={null}>
+                    <ProgressComponent 
+                        progress={loadingProgress}
+                        stage={loadingStage}
+                        details={loadingDetails}
+                    />
+                </React.Suspense>
+            )}
+
+            {/* Loading tradicional para outras operações */}
+            {loading && !loadingProgress && (
                 <div className="map-loading">
                     <div className="loading-spinner"></div>
-                    <p>Carregando dados do mapa...</p>
+                    <p>Processando...</p>
                     <small>{getStatusMessage()}</small>
                 </div>
             )}
