@@ -2,406 +2,209 @@ import L from 'leaflet';
 
 class MultiStateLoader {
     constructor() {
-        this.estadosDisponiveis = ['go', 'ac', 'sp', 'rj', 'mg', 'rs', 'pr', 'sc', 'ba', 'pe', 'ce', 'pa', 'ma', 'pb', 'es', 'pi', 'al', 'rn', 'mt', 'ms', 'df', 'se', 'am', 'ro', 'to', 'ap', 'rr'];
+        this.map = null;
         this.dadosBrasil = null;
         this.layerGroups = new Map();
         this.estadosAtivos = new Set();
-        this.loadingProgress = { loaded: 0, total: 0 };
-        
-        // Cache de polígonos por estado
+        this.estadosDisponiveis = [];
+        this.indicesPorEstado = null;
         this.polygonCache = new Map();
-        
-        // Cache de dados processados
-        this.processedDataCache = new Map();
+        this.electoralLookup = null;
+        this.fiscalLookup = null; // Novo cache para dados fiscais
+        this.dadosEleitoraisMock = null; // Para dados mock
         
         // Configurações de performance
         this.performanceConfig = {
-            simplifyTolerance: 0.001, // Simplificação de geometrias
-            maxZoomForDetails: 10,    // Zoom máximo para mostrar detalhes
-            batchSize: 50,           // Processar em lotes
-            useVirtualization: true   // Carregamento virtual
+            batchSize: 50,
+            maxCacheSize: 1000,
+            enableCache: true
         };
-        
-        this.cores = {
-            'go': '#e74c3c', 'ac': '#27ae60', 'sp': '#3498db', 'rj': '#9b59b6',
-            'mg': '#f39c12', 'rs': '#1abc9c', 'pr': '#e67e22', 'sc': '#2ecc71',
-            'ba': '#34495e', 'pe': '#16a085', 'ce': '#f1c40f', 'pa': '#8e44ad',
-            'ma': '#c0392b', 'pb': '#d35400', 'es': '#7f8c8d', 'pi': '#2c3e50',
-            'al': '#95a5a6', 'rn': '#e8daef', 'mt': '#fadbd8', 'ms': '#d5f4e6',
-            'df': '#fdeaa7', 'se': '#fab1a0', 'am': '#74b9ff', 'ro': '#a29bfe',
-            'to': '#fd79a8', 'ap': '#fdcb6e', 'rr': '#6c5ce7'
-        };
-        
-        // Cores por ideologia política
-        this.coresIdeologia = {
-            'extrema-direita': '#043267',
-            'direita': '#2D09DB',
-            'centro-direita': '#0B5EDA',
-            'centro': '#f7dc6f',
-            'centro-esquerda': '#F94200',
-            'esquerda': '#C11000',
-            'extrema-esquerda': '#6E0251'
-        };
-        
-        // Mapeamento de códigos de estado para siglas
-        this.mapeamentoEstados = {
-            '11': 'ro', '12': 'ac', '13': 'am', '14': 'rr', '15': 'pa', '16': 'ap', '17': 'to',
-            '21': 'ma', '22': 'pi', '23': 'ce', '24': 'rn', '25': 'pb', '26': 'pe', '27': 'al', '28': 'se', '29': 'ba',
-            '31': 'mg', '32': 'es', '33': 'rj', '35': 'sp',
-            '41': 'pr', '42': 'sc', '43': 'rs',
-            '50': 'ms', '51': 'mt',
-            '52': 'go', '53': 'df'
-        };
-        
-        this.map = null;
-        
-        // Worker para processamento em background (se disponível)
-        this.worker = null;
-        this.initWorker();
-        
-        console.log('🏗️ MultiStateLoader construído com otimizações de performance');
-    }
 
-    initWorker() {
-        // Tentar criar um Web Worker para processamento pesado
-        try {
-            const workerBlob = new Blob([`
-                self.onmessage = function(e) {
-                    const { type, data } = e.data;
-                    
-                    if (type === 'SIMPLIFY_GEOMETRY') {
-                        // Simplificar geometria usando algoritmo Douglas-Peucker
-                        const simplified = simplifyGeometry(data.coordinates, data.tolerance);
-                        self.postMessage({ type: 'GEOMETRY_SIMPLIFIED', data: simplified });
-                    }
-                };
-                
-                function simplifyGeometry(coordinates, tolerance) {
-                    // Implementação simplificada do Douglas-Peucker
-                    if (coordinates.length <= 2) return coordinates;
-                    
-                    // Para este exemplo, vamos apenas reduzir pontos
-                    const step = Math.max(1, Math.floor(coordinates.length / 100));
-                    return coordinates.filter((_, index) => index % step === 0);
-                }
-            `], { type: 'application/javascript' });
-            
-            this.worker = new Worker(URL.createObjectURL(workerBlob));
-            console.log('✅ Web Worker inicializado para processamento em background');
-        } catch (error) {
-            console.warn('⚠️ Web Worker não disponível:', error.message);
-        }
+        // Cores para ideologias políticas (modo eleitoral)
+        this.coresIdeologia = {
+            'esquerda': '#d73027',
+            'centro-esquerda': '#f46d43', 
+            'centro': '#fee08b',
+            'centro-direita': '#74add1',
+            'direita': '#4575b4'
+        };
+
+        // Cores para classificação fiscal (modo fiscal)
+        this.coresFiscal = {
+            'excelente': '#22c55e', // verde
+            'ótima': '#22c55e',     // verde (sinônimo)
+            'bom': '#3b82f6',       // azul
+            'boa': '#3b82f6',       // azul (sinônimo)
+            'regular': '#eab308',   // amarelo
+            'ruim': '#ef4444',      // vermelho
+            'péssima': '#8b5cf6',   // roxo
+            'pessima': '#8b5cf6'    // roxo (sem acento)
+        };
     }
 
     inicializar(map) {
-        console.log('🔧 Iniciando inicialização otimizada do MultiStateLoader...');
-        
         if (!map) {
-            console.error('❌ Mapa não fornecido para inicialização');
+            console.error('❌ Instância do mapa é obrigatória');
             return false;
         }
 
         this.map = map;
-
-        // Configurar otimizações do Leaflet
-        this.configureMapOptimizations();
-
-        // Criar layer groups para cada estado
-        this.estadosDisponiveis.forEach(estado => {
-            try {
-                const layerGroup = L.layerGroup();
-                this.layerGroups.set(estado, layerGroup);
-            } catch (error) {
-                console.error(`❌ Erro ao criar layer group para ${estado}:`, error);
-            }
-        });
-
-        console.log('✅ MultiStateLoader inicializado com otimizações');
+        console.log('✅ MultiStateLoader inicializado com sucesso');
         return true;
     }
 
-    configureMapOptimizations() {
-        // Configurar preferências de performance do Leaflet
-        this.map.options.preferCanvas = true; // Usar Canvas ao invés de SVG
-        this.map.options.renderer = L.canvas({ padding: 0.5 });
-        
-        // Configurar eventos otimizados
-        this.map.on('zoomstart', () => {
-            this.isZooming = true;
-        });
-        
-        this.map.on('zoomend', () => {
-            this.isZooming = false;
-            this.updateDetailLevel();
-        });
-        
-        console.log('🎨 Otimizações do mapa configuradas');
-    }
-
-    updateDetailLevel() {
-        const zoom = this.map.getZoom();
-        const showDetails = zoom >= this.performanceConfig.maxZoomForDetails;
-        
-        // Ajustar nível de detalhe baseado no zoom
-        this.layerGroups.forEach((layerGroup, estado) => {
-            layerGroup.eachLayer(layer => {
-                if (layer.setStyle) {
-                    layer.setStyle({
-                        weight: showDetails ? 1 : 0.5,
-                        opacity: showDetails ? 0.8 : 0.6
-                    });
-                }
-            });
-        });
-    }
-
-    async carregarDadosBrasil(progressCallback = null) {
-        if (this.dadosBrasil) {
-            console.log('📋 Dados do Brasil já carregados, reutilizando...');
-            return this.dadosBrasil;
-        }
-
-        console.log('🔄 Carregando dados do Brasil com otimizações...');
+    async carregarDadosBrasil(options = {}) {
+        const { onProgress } = options;
         
         try {
-            // Estratégia 1: Tentar carregamento com streaming otimizado
-            const dados = await this.carregarComStreamingOtimizado(progressCallback);
+            console.log('🌍 Iniciando carregamento dos dados geográficos...');
             
-            if (dados) {
-                this.dadosBrasil = dados;
-                
-                // Pré-processar dados em background
-                this.preprocessarDados();
-                
-                this.validarDados();
-                return dados;
-            }
+            if (onProgress) onProgress(10);
 
-            throw new Error('Falha no carregamento otimizado');
-
-        } catch (error) {
-            console.error('❌ Erro ao carregar dados do Brasil:', error);
-            
-            // Fallback para dados mock expandidos
-            console.log('🎭 Usando dados mock como fallback...');
-            const dadosMock = this.criarDadosMockExpandidos();
-            this.dadosBrasil = dadosMock;
-            return dadosMock;
-        }
-    }
-
-    async carregarComStreamingOtimizado(progressCallback) {
-        console.log('📡 Carregamento otimizado com streaming...');
-        
-        const response = await fetch('/data/geo/brazil-municipalities.geojson', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Cache-Control': 'public, max-age=3600' // Cache por 1 hora
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-
-        const contentLength = response.headers.get('content-length');
-        let loaded = 0;
-        
-        if (contentLength && progressCallback) {
-            const total = parseInt(contentLength);
-            
-            const reader = response.body.getReader();
-            const chunks = [];
-
-            while (true) {
-                const { done, value } = await reader.read();
-                
-                if (done) break;
-                
-                chunks.push(value);
-                loaded += value.length;
-                
-                // Callback de progresso
-                progressCallback({
-                    loaded,
-                    total,
-                    percentage: Math.round((loaded / total) * 100)
-                });
-            }
-
-            // Reconstruir dados
-            const allChunks = new Uint8Array(loaded);
-            let position = 0;
-            for (const chunk of chunks) {
-                allChunks.set(chunk, position);
-                position += chunk.length;
-            }
-
-            const text = new TextDecoder().decode(allChunks);
-            const data = JSON.parse(text);
-            
-            console.log(`✅ Arquivo carregado com progresso: ${data.features?.length} features`);
-            return data;
-        } else {
-            // Carregamento direto se não há content-length
-            const data = await response.json();
-            console.log(`✅ Arquivo carregado diretamente: ${data.features?.length} features`);
-            return data;
-        }
-    }
-
-    preprocessarDados() {
-        if (!this.dadosBrasil || !this.dadosBrasil.features) return;
-        
-        console.log('🔄 Pré-processando dados para otimização...');
-        
-        // Criar índices por estado para acesso rápido
-        const indicesPorEstado = new Map();
-        
-        this.dadosBrasil.features.forEach((feature, index) => {
-            const estado = this.obterEstadoDoMunicipio(feature);
-            if (estado) {
-                if (!indicesPorEstado.has(estado)) {
-                    indicesPorEstado.set(estado, []);
-                }
-                indicesPorEstado.get(estado).push(index);
-            }
-        });
-        
-        this.indicesPorEstado = indicesPorEstado;
-        
-        // Pré-calcular geometrias simplificadas
-        this.simplificarGeometrias();
-        
-        console.log('✅ Dados pré-processados');
-    }
-
-    simplificarGeometrias() {
-        console.log('🎨 Simplificando geometrias...');
-        
-        this.geometriasSimplificadas = new Map();
-        
-        this.dadosBrasil.features.forEach((feature, index) => {
+            // Tentar carregar dados reais primeiro
+            let dados = null;
             try {
-                const coords = feature.geometry.coordinates;
-                let simplifiedCoords;
+                console.log('📁 Tentando carregar dados reais...');
+                const response = await fetch('/data/geo/brazil-municipalities.geojson');
                 
-                if (feature.geometry.type === 'Polygon') {
-                    simplifiedCoords = this.simplifyPolygon(coords[0]);
-                } else if (feature.geometry.type === 'MultiPolygon') {
-                    simplifiedCoords = coords.map(polygon => 
-                        this.simplifyPolygon(polygon[0])
-                    );
-                }
-                
-                if (simplifiedCoords) {
-                    this.geometriasSimplificadas.set(index, simplifiedCoords);
+                if (response.ok) {
+                    dados = await response.json();
+                    console.log('✅ Dados reais carregados com sucesso');
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
                 }
             } catch (error) {
-                console.warn(`⚠️ Erro ao simplificar geometria ${index}:`, error);
+                console.warn('⚠️ Falha ao carregar dados reais:', error.message);
+                console.log('🎭 Usando dados mock expandidos...');
+                dados = this.criarDadosMockExpandidos();
             }
-        });
-        
-        console.log(`✅ ${this.geometriasSimplificadas.size} geometrias simplificadas`);
+
+            if (onProgress) onProgress(50);
+
+            if (!dados || !dados.features) {
+                throw new Error('Dados geográficos inválidos');
+            }
+
+            this.dadosBrasil = dados;
+            console.log(`📊 ${dados.features.length} municípios carregados`);
+
+            if (onProgress) onProgress(70);
+
+            // Criar índices por estado
+            this.criarIndicesPorEstado();
+            
+            if (onProgress) onProgress(85);
+
+            // Criar layer groups para todos os estados
+            this.criarLayerGroups();
+            
+            if (onProgress) onProgress(100);
+
+            console.log('✅ Dados do Brasil carregados e indexados com sucesso');
+            return true;
+
+        } catch (error) {
+            console.error('❌ Erro no carregamento dos dados:', error);
+            throw error;
+        }
     }
 
-    simplifyPolygon(coordinates) {
-        // Algoritmo simples de redução de pontos
-        if (!coordinates || coordinates.length < 10) return coordinates;
-        
-        const tolerance = this.performanceConfig.simplifyTolerance;
-        const step = Math.max(1, Math.floor(coordinates.length * tolerance));
-        
-        return coordinates.filter((_, index) => 
-            index === 0 || 
-            index === coordinates.length - 1 || 
-            index % step === 0
-        );
-    }
-
-    validarDados() {
-        if (!this.dadosBrasil || !this.dadosBrasil.features) {
-            console.warn('❌ Dados inválidos');
+    criarIndicesPorEstado() {
+        if (!this.dadosBrasil) {
+            console.warn('❌ Dados do Brasil não carregados');
             return;
         }
 
-        const amostra = this.dadosBrasil.features[0];
-        console.log('🔍 Validação dos dados - Amostra:', {
-            campos: Object.keys(amostra.properties),
-            codigo: this.obterCodigoMunicipio(amostra),
-            nome: this.obterNomeMunicipio(amostra),
-            estado: this.obterEstadoDoMunicipio(amostra)
+        console.log('🗂️ Criando índices por estado...');
+        this.indicesPorEstado = new Map();
+        this.estadosDisponiveis = [];
+
+        this.dadosBrasil.features.forEach((feature, index) => {
+            const siglaUF = this.obterSiglaEstado(feature);
+            
+            if (siglaUF) {
+                const siglaLower = siglaUF.toLowerCase();
+                
+                if (!this.indicesPorEstado.has(siglaLower)) {
+                    this.indicesPorEstado.set(siglaLower, []);
+                    this.estadosDisponiveis.push(siglaLower);
+                }
+                
+                this.indicesPorEstado.get(siglaLower).push(index);
+            }
         });
 
-        // Verificar distribuição por estados
-        const estadosEncontrados = new Set();
-        this.dadosBrasil.features.forEach(feature => {
-            const estado = this.obterEstadoDoMunicipio(feature);
-            if (estado) estadosEncontrados.add(estado);
-        });
-
-        console.log('🗺️ Estados encontrados nos dados:', Array.from(estadosEncontrados).sort());
+        console.log(`📋 Índices criados para ${this.estadosDisponiveis.length} estados:`, this.estadosDisponiveis);
     }
 
-    obterEstadoDoMunicipio(feature) {
-        const props = feature.properties || {};
+    criarLayerGroups() {
+        console.log('🗂️ Criando layer groups para estados...');
         
-        if (props.SIGLA_UF) {
-            return props.SIGLA_UF.toLowerCase();
-        }
+        this.estadosDisponiveis.forEach(siglaEstado => {
+            const layerGroup = L.layerGroup();
+            this.layerGroups.set(siglaEstado, layerGroup);
+        });
+
+        console.log(`✅ ${this.layerGroups.size} layer groups criados`);
+    }
+
+    atualizarEstadosAtivos(novosEstados) {
+        console.log('🔄 Atualizando estados ativos:', novosEstados);
         
-        if (props.CD_UF) {
-            const codigoUF = String(props.CD_UF);
-            const sigla = this.mapeamentoEstados[codigoUF];
-            if (sigla) {
-                return sigla;
+        // Remover estados que não estão mais ativos
+        this.estadosAtivos.forEach(estado => {
+            if (!novosEstados.includes(estado)) {
+                this.mostrarEstado(estado, false);
             }
-        }
-        
-        return (props.sigla_uf || props.UF || props.uf || 
-               props.STATE || props.state || props.estado || props.ESTADO || '').toLowerCase() || null;
+        });
+
+        // Adicionar novos estados ativos
+        novosEstados.forEach(estado => {
+            if (!this.estadosAtivos.has(estado)) {
+                this.mostrarEstado(estado, true);
+            }
+        });
+
+        this.estadosAtivos = new Set(novosEstados);
+        console.log(`✅ Estados ativos atualizados: ${this.estadosAtivos.size} estados`);
+    }
+
+    obterSiglaEstado(feature) {
+        const props = feature.properties;
+        return props.SIGLA_UF || props.UF || props.uf || null;
     }
 
     obterCodigoMunicipio(feature) {
-        const props = feature.properties || {};
+        const props = feature.properties;
+        const codigo = props.CD_MUN || props.codigo_ibge || props.codigo || props.id || null;
         
-        return props.CD_MUN || props.cd_mun || 
-               props.CD_GEOCMU || props.cd_geocmu || 
-               props.GEOCODIGO || props.geocodigo || 
-               props.id || props.ID || props.code || null;
+        // Debug para códigos específicos
+        if (props.NM_MUN === 'Goiânia' || props.NM_MUN === 'Anápolis' || props.NM_MUN === 'Morrinhos' || props.NM_MUN === 'Faina') {
+            console.log(`🔍 Código municipal para ${props.NM_MUN}:`, codigo, 'Propriedades:', props);
+        }
+        
+        return codigo;
     }
 
     obterNomeMunicipio(feature) {
-        const props = feature.properties || {};
-        
-        return props.NM_MUN || props.nm_mun ||
-               props.NM_MUNICIP || props.nm_municip || 
-               props.NOME || props.nome || 
-               props.name || props.NAME || 'Nome não disponível';
+        const props = feature.properties;
+        return props.NM_MUN || props.nome || props.name || 'Município';
     }
 
     filtrarMunicipiosPorEstado(siglaEstado) {
-        if (!this.dadosBrasil || !this.dadosBrasil.features) {
-            console.warn('❌ Dados do Brasil não carregados');
+        if (!this.indicesPorEstado || !this.dadosBrasil) {
+            console.warn(`❌ Índices ou dados não disponíveis para ${siglaEstado}`);
             return [];
         }
 
-        // Usar índice pré-calculado se disponível
-        if (this.indicesPorEstado && this.indicesPorEstado.has(siglaEstado.toLowerCase())) {
-            const indices = this.indicesPorEstado.get(siglaEstado.toLowerCase());
-            const municipios = indices.map(index => this.dadosBrasil.features[index]);
-            console.log(`🔍 ${municipios.length} municípios encontrados para ${siglaEstado.toUpperCase()} (usando índice)`);
-            return municipios;
+        const indices = this.indicesPorEstado.get(siglaEstado.toLowerCase());
+        if (!indices) {
+            console.warn(`❌ Estado ${siglaEstado.toUpperCase()} não encontrado nos índices`);
+            return [];
         }
 
-        // Fallback para busca linear
-        const municipios = this.dadosBrasil.features.filter(feature => {
-            const estadoMunicipio = this.obterEstadoDoMunicipio(feature);
-            return estadoMunicipio && estadoMunicipio === siglaEstado.toLowerCase();
-        });
-
-        console.log(`🔍 ${municipios.length} municípios encontrados para ${siglaEstado.toUpperCase()}`);
+        const municipios = indices.map(index => this.dadosBrasil.features[index]);
+        console.log(`📍 ${municipios.length} municípios encontrados para ${siglaEstado.toUpperCase()}`);
         return municipios;
     }
 
@@ -428,7 +231,7 @@ class MultiStateLoader {
             {
                 type: 'Feature',
                 properties: {
-                    CD_MUN: '92215',
+                    CD_MUN: '92215', // Código correto de Anápolis
                     NM_MUN: 'Anápolis',
                     SIGLA_UF: 'GO',
                     CD_UF: '52'
@@ -440,8 +243,187 @@ class MultiStateLoader {
                         [-48.7, -16.1], [-49.0, -16.1], [-49.0, -16.4]
                     ]]
                 }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '1501402',
+                    NM_MUN: 'Belém',
+                    SIGLA_UF: 'PA',
+                    CD_UF: '15'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-48.5, -1.5], [-48.2, -1.5], 
+                        [-48.2, -1.2], [-48.5, -1.2], [-48.5, -1.5]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '2304400',
+                    NM_MUN: 'Fortaleza',
+                    SIGLA_UF: 'CE',
+                    CD_UF: '23'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-38.6, -3.8], [-38.3, -3.8], 
+                        [-38.3, -3.5], [-38.6, -3.5], [-38.6, -3.8]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '2611606',
+                    NM_MUN: 'Recife',
+                    SIGLA_UF: 'PE',
+                    CD_UF: '26'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-35.0, -8.1], [-34.7, -8.1], 
+                        [-34.7, -7.8], [-35.0, -7.8], [-35.0, -8.1]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '3550308',
+                    NM_MUN: 'São Paulo',
+                    SIGLA_UF: 'SP',
+                    CD_UF: '35'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-46.8, -23.7], [-46.5, -23.7], 
+                        [-46.5, -23.4], [-46.8, -23.4], [-46.8, -23.7]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '5300108',
+                    NM_MUN: 'Brasília',
+                    SIGLA_UF: 'DF',
+                    CD_UF: '53'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-47.9, -15.8], [-47.6, -15.8], 
+                        [-47.6, -15.5], [-47.9, -15.5], [-47.9, -15.8]
+                    ]]
+                }
+            },
+            // Adicionar mais municípios de Goiás baseados nos dados reais
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '94730', // Morrinhos
+                    NM_MUN: 'Morrinhos',
+                    SIGLA_UF: 'GO',
+                    CD_UF: '52'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-49.2, -17.0], [-48.9, -17.0], 
+                        [-48.9, -16.7], [-49.2, -16.7], [-49.2, -17.0]
+                    ]]
+                }
+            },
+            {
+                type: 'Feature',
+                properties: {
+                    CD_MUN: '92223', // Faina
+                    NM_MUN: 'Faina',
+                    SIGLA_UF: 'GO',
+                    CD_UF: '52'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[
+                        [-50.5, -15.5], [-50.2, -15.5], 
+                        [-50.2, -15.2], [-50.5, -15.2], [-50.5, -15.5]
+                    ]]
+                }
             }
         ];
+
+        // Criar dados eleitorais mock correspondentes (usando códigos reais dos dados)
+        this.dadosEleitoraisMock = [
+            {
+                codigo_municipio: '5208707', // Goiânia
+                nome_municipio: 'Goiânia',
+                nome_candidato: 'João da Silva',
+                partido: 'PP',
+                ideologia: 'centro-direita',
+                votos_candidato: 285430,
+                percentual_votos: 52.3,
+                eleito: true
+            },
+            {
+                codigo_municipio: '92215', // Anápolis (código real dos dados)
+                nome_municipio: 'Anápolis',
+                nome_candidato: 'Maria Santos',
+                partido: 'PT',
+                ideologia: 'esquerda',
+                votos_candidato: 142850,
+                percentual_votos: 48.7,
+                eleito: true
+            },
+            {
+                codigo_municipio: '1501402', // Belém
+                nome_municipio: 'Belém',
+                nome_candidato: 'Pedro Oliveira',
+                partido: 'PSDB',
+                ideologia: 'centro',
+                votos_candidato: 325690,
+                percentual_votos: 54.2,
+                eleito: true
+            },
+            {
+                codigo_municipio: '2304400', // Fortaleza
+                nome_municipio: 'Fortaleza',
+                nome_candidato: 'Ana Costa',
+                partido: 'PDT',
+                ideologia: 'centro-esquerda',
+                votos_candidato: 687540,
+                percentual_votos: 57.8,
+                eleito: true
+            },
+            {
+                codigo_municipio: '94730', // Morrinhos (do arquivo real)
+                nome_municipio: 'Morrinhos',
+                nome_candidato: 'Maycllyn Carreiro',
+                partido: 'PL',
+                ideologia: 'direita',
+                votos_candidato: 9481,
+                percentual_votos: 33.9,
+                eleito: true
+            },
+            {
+                codigo_municipio: '92223', // Faina (do arquivo real)
+                nome_municipio: 'Faina',
+                nome_candidato: 'Creonir do Leilão',
+                partido: 'PP',
+                ideologia: 'centro-direita',
+                votos_candidato: 3208,
+                percentual_votos: 55.32,
+                eleito: true
+            }
+        ];
+
+        console.log('🎭 Dados eleitorais mock criados:', this.dadosEleitoraisMock);
 
         return {
             type: 'FeatureCollection',
@@ -465,8 +447,32 @@ class MultiStateLoader {
         return cor;
     }
 
+    getColorByFiscalClassification(classificacao) {
+        if (!classificacao) {
+            return '#6b7280';
+        }
+
+        const classificacaoNormalizada = classificacao.toLowerCase().trim();
+        const cor = this.coresFiscal[classificacaoNormalizada];
+        
+        if (!cor) {
+            console.warn(`⚠️ Classificação fiscal não mapeada: "${classificacao}"`);
+            return '#6b7280';
+        }
+
+        return cor;
+    }
+
     buscarDadosEleitorais(codigoMunicipio, dadosEleitorais) {
         if (!dadosEleitorais || !Array.isArray(dadosEleitorais)) {
+            // Se não há dados eleitorais reais, usar dados mock
+            if (this.dadosEleitoraisMock) {
+                const dadoMock = this.dadosEleitoraisMock.find(d => String(d.codigo_municipio) === String(codigoMunicipio));
+                if (dadoMock) {
+                    console.log(`🎭 Usando dado eleitoral mock para ${codigoMunicipio}:`, dadoMock);
+                    return dadoMock;
+                }
+            }
             return null;
         }
 
@@ -474,144 +480,176 @@ class MultiStateLoader {
         if (!this.electoralLookup) {
             this.electoralLookup = new Map();
             dadosEleitorais.forEach(dado => {
-                if (dado.eleito === true) {
-                    this.electoralLookup.set(String(dado.codigo_municipio), dado);
+                // Verificar se o candidato foi eleito
+                if (dado.eleito === true || dado.eleito === 'true' || dado.eleito === 1) {
+                    const codigo = String(dado.codigo_municipio);
+                    this.electoralLookup.set(codigo, dado);
+                    
+                    // Debug: log para verificar se está encontrando dados
+                    if (codigo === '5208707' || codigo === '92215' || codigo === '94730' || codigo === '92223') {
+                        console.log(`🔍 Dado eleitoral encontrado para ${codigo}:`, dado);
+                    }
                 }
+            });
+            console.log(`📊 Cache eleitoral criado com ${this.electoralLookup.size} municípios`);
+        }
+
+        const resultado = this.electoralLookup.get(String(codigoMunicipio));
+        
+        // Se não encontrou nos dados reais, tentar nos dados mock
+        if (!resultado && this.dadosEleitoraisMock) {
+            const dadoMock = this.dadosEleitoraisMock.find(d => String(d.codigo_municipio) === String(codigoMunicipio));
+            if (dadoMock) {
+                console.log(`🎭 Usando dado eleitoral mock para ${codigoMunicipio}:`, dadoMock);
+                return dadoMock;
+            }
+        }
+        
+        // Debug adicional para códigos específicos
+        if (['5208707', '92215', '94730', '92223'].includes(String(codigoMunicipio)) && !resultado) {
+            console.warn(`⚠️ Não encontrado dado eleitoral para código: ${codigoMunicipio}`);
+        }
+        
+        return resultado || null;
+    }
+
+    buscarDadosFiscais(codigoMunicipio, dadosFiscais) {
+        if (!dadosFiscais || !Array.isArray(dadosFiscais)) {
+            return null;
+        }
+
+        // Cache de lookup para dados fiscais
+        if (!this.fiscalLookup) {
+            this.fiscalLookup = new Map();
+            dadosFiscais.forEach(dado => {
+                this.fiscalLookup.set(String(dado.codigo_municipio), dado);
             });
         }
 
-        return this.electoralLookup.get(String(codigoMunicipio)) || null;
+        return this.fiscalLookup.get(String(codigoMunicipio)) || null;
     }
 
-    async renderizarMunicipioOtimizado(feature, siglaEstado, dadosEleitorais = null) {
-        if (!feature || !feature.geometry || !feature.geometry.coordinates) {
-            return null;
-        }
-
+    renderizarMunicipioOtimizado(feature, siglaEstado, dados, modo = 'eleitoral') {
         const codigoMunicipio = this.obterCodigoMunicipio(feature);
         const nomeMunicipio = this.obterNomeMunicipio(feature);
-
+        
         if (!codigoMunicipio) {
+            console.warn('❌ Código do município não encontrado:', feature.properties);
             return null;
         }
 
-        // Buscar dados eleitorais com cache
-        const dadosEleitorais_municipio = this.buscarDadosEleitorais(codigoMunicipio, dadosEleitorais);
-
-        // Definir cor baseada na ideologia
-        let cor = '#6b7280';
-        let fillOpacity = 0.4;
-
-        if (dadosEleitorais_municipio && dadosEleitorais_municipio.partido_ideologia) {
-            cor = this.getColorByIdeology(dadosEleitorais_municipio.partido_ideologia);
-            fillOpacity = 0.8;
+        // Verificar cache
+        const cacheKey = `${codigoMunicipio}_${modo}`;
+        if (this.performanceConfig.enableCache && this.polygonCache.has(cacheKey)) {
+            return this.polygonCache.get(cacheKey);
         }
 
         try {
-            // Usar geometria simplificada se disponível
-            const featureIndex = this.dadosBrasil.features.indexOf(feature);
-            const coordenadasSimplificadas = this.geometriasSimplificadas?.get(featureIndex);
-            
-            let coordenadas;
-            if (coordenadasSimplificadas) {
-                coordenadas = coordenadasSimplificadas.map(coord => [coord[1], coord[0]]);
-            } else {
-                // Fallback para coordenadas originais
-                if (feature.geometry.type === 'Polygon') {
-                    coordenadas = feature.geometry.coordinates[0].map(coord => [coord[1], coord[0]]);
-                } else if (feature.geometry.type === 'MultiPolygon') {
-                    coordenadas = feature.geometry.coordinates[0][0].map(coord => [coord[1], coord[0]]);
+            // Buscar dados específicos baseado no modo
+            let dadosMunicipio = null;
+            let cor = '#6b7280'; // Cor padrão (cinza)
+
+            if (modo === 'eleitoral') {
+                dadosMunicipio = this.buscarDadosEleitorais(codigoMunicipio, dados);
+                if (dadosMunicipio) {
+                    cor = this.getColorByIdeology(dadosMunicipio.ideologia);
+                    console.log(`🎨 Colorindo ${nomeMunicipio} (${codigoMunicipio}) com cor ${cor} para ideologia: ${dadosMunicipio.ideologia}`);
                 } else {
-                    return null;
+                    console.log(`⚪ Município ${nomeMunicipio} (${codigoMunicipio}) sem dados eleitorais - usando cor padrão`);
+                }
+            } else if (modo === 'fiscal') {
+                dadosMunicipio = this.buscarDadosFiscais(codigoMunicipio, dados);
+                if (dadosMunicipio) {
+                    cor = this.getColorByFiscalClassification(dadosMunicipio.classificacao_fiscal);
+                    console.log(`🎨 Colorindo ${nomeMunicipio} (${codigoMunicipio}) com cor ${cor} para classificação: ${dadosMunicipio.classificacao_fiscal}`);
                 }
             }
 
-            if (coordenadas.length < 3) {
-                return null;
+            // Criar polígono
+            const polygon = L.geoJSON(feature, {
+                style: {
+                    fillColor: cor,
+                    weight: 1,
+                    opacity: 0.8,
+                    color: '#ffffff',
+                    fillOpacity: 0.7
+                }
+            });
+
+            // Adicionar popup
+            if (dadosMunicipio) {
+                const popupContent = modo === 'eleitoral' ? 
+                    this.criarPopupEleitoral(dadosMunicipio, nomeMunicipio) : 
+                    this.criarPopupFiscal(dadosMunicipio, nomeMunicipio);
+                
+                polygon.bindPopup(popupContent, {
+                    maxWidth: 300,
+                    className: `popup-${modo}`
+                });
+            } else {
+                const popupContent = modo === 'eleitoral' ? 
+                    this.criarPopupSemDadosEleitorais(nomeMunicipio, codigoMunicipio) :
+                    this.criarPopupSemDadosFiscais(nomeMunicipio, codigoMunicipio);
+                
+                polygon.bindPopup(popupContent, {
+                    maxWidth: 300,
+                    className: `popup-no-data`
+                });
             }
 
-            // Configurações otimizadas do polígono
-            const polygon = L.polygon(coordenadas, {
-                color: '#ffffff',
-                weight: this.map.getZoom() >= this.performanceConfig.maxZoomForDetails ? 1 : 0.5,
-                fillColor: cor,
-                fillOpacity: fillOpacity,
-                smoothFactor: 2, // Maior smoothFactor para melhor performance
-                interactive: true
-            });
-
-            // Popup otimizado (criado apenas quando necessário)
-            polygon.on('click', () => {
-                if (!polygon._popup) {
-                    const popupContent = this.criarPopup(feature, dadosEleitorais_municipio, siglaEstado);
-                    polygon.bindPopup(popupContent);
+            // Adicionar ao cache
+            if (this.performanceConfig.enableCache) {
+                if (this.polygonCache.size >= this.performanceConfig.maxCacheSize) {
+                    const firstKey = this.polygonCache.keys().next().value;
+                    this.polygonCache.delete(firstKey);
                 }
-                polygon.openPopup();
-            });
-
-            // Hover effects otimizados
-            polygon.on('mouseover', function() {
-                if (!this.isZooming) {
-                    this.setStyle({
-                        weight: 2,
-                        fillOpacity: Math.min(fillOpacity + 0.2, 1.0)
-                    });
-                }
-            });
-
-            polygon.on('mouseout', function() {
-                if (!this.isZooming) {
-                    this.setStyle({
-                        weight: polygon.options.weight,
-                        fillOpacity: fillOpacity
-                    });
-                }
-            });
+                this.polygonCache.set(cacheKey, polygon);
+            }
 
             return polygon;
+
         } catch (error) {
-            console.error('❌ Erro ao renderizar município:', error);
+            console.error(`❌ Erro ao renderizar município ${nomeMunicipio}:`, error);
             return null;
         }
     }
 
-    criarPopup(feature, dadosEleitorais, siglaEstado) {
-        const nomeMunicipio = this.obterNomeMunicipio(feature);
-        const codigoMunicipio = this.obterCodigoMunicipio(feature);
+    criarPopupEleitoral(dados, nomeMunicipio) {
+        const formatarNumero = (num) => {
+            if (num == null) return 'N/A';
+            return new Intl.NumberFormat('pt-BR').format(num);
+        };
 
-        let html = `
-            <div style="min-width: 280px; font-family: Arial, sans-serif;">
-                <h4 style="margin: 0 0 10px 0; color: #1f2937; border-bottom: 2px solid #e5e7eb; padding-bottom: 5px;">
-                    ${nomeMunicipio}
-                </h4>
-                <p style="margin: 5px 0;"><strong>Estado:</strong> ${siglaEstado.toUpperCase()}</p>
-                <p style="margin: 5px 0;"><strong>Código:</strong> ${codigoMunicipio}</p>
-        `;
+        const formatarPorcentagem = (num) => {
+            if (num == null) return 'N/A';
+            return `${num.toFixed(1)}%`;
+        };
 
-        if (dadosEleitorais) {
-            const corIdeologia = this.getColorByIdeology(dadosEleitorais.partido_ideologia);
+        let html = '<div class="popup-content">';
+        html += `<h3 style="margin: 0 0 10px 0; color: #1e40af;">${nomeMunicipio}</h3>`;
+        
+        if (dados.eleito) {
             html += `
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e5e7eb;">
-                <div style="background: #f9fafb; padding: 12px; border-radius: 6px; border-left: 4px solid ${corIdeologia};">
-                    <p style="margin: 0 0 8px 0; font-weight: bold; color: #374151;">✅ Prefeito Eleito:</p>
-                    <p style="margin: 5px 0; font-size: 16px; font-weight: bold; color: #111827;">${dadosEleitorais.nome_candidato}</p>
-                    
-                    <div style="margin: 8px 0; display: flex; gap: 8px; flex-wrap: wrap;">
-                        <span style="background: #6b7280; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">
-                            ${dadosEleitorais.partido}
-                        </span>
-                        <span style="background: ${corIdeologia}; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">
-                            ${dadosEleitorais.partido_ideologia}
-                        </span>
-                    </div>
-                    
-                    <p style="margin: 5px 0;"><strong>Votos:</strong> ${dadosEleitorais.votos?.toLocaleString() || 'N/A'}</p>
+                <div style="background: #f0f9ff; padding: 8px; border-radius: 4px; margin-bottom: 8px;">
+                    <strong style="color: #0369a1;">👤 ${dados.nome_candidato}</strong><br>
+                    <small style="color: #64748b;">Código: ${dados.codigo_municipio}</small>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px;">
+                    <div><strong>🎯 Partido:</strong><br>${dados.partido || 'N/A'}</div>
+                    <div><strong>🏛️ Ideologia:</strong><br>${dados.ideologia || 'N/A'}</div>
+                    <div><strong>📊 Votos:</strong><br>${formatarNumero(dados.votos_candidato)}</div>
+                    <div><strong>📈 % Votos:</strong><br>${formatarPorcentagem(dados.percentual_votos)}</div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px;">
+                    <div><strong>📊 Votos:</strong><br>${formatarNumero(dados.votos_candidato)}</div>
+                    <div><strong>📈 % Votos:</strong><br>${formatarPorcentagem(dados.percentual_votos)}</div>
                 </div>
             `;
         } else {
             html += `
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e5e7eb;">
-                <p style="color: #6b7280; font-style: italic; margin: 10px 0;">📊 Dados eleitorais não disponíveis</p>
+                <div style="background: #fef2f2; padding: 8px; border-radius: 4px; border-left: 4px solid #f87171;">
+                    <p style="color: #dc2626; font-style: italic; margin: 0;">📊 Dados eleitorais não disponíveis</p>
+                </div>
             `;
         }
 
@@ -619,8 +657,117 @@ class MultiStateLoader {
         return html;
     }
 
-    async renderizarEstado(siglaEstado, dadosEleitorais = null) {
-        console.log(`🎨 Renderizando estado: ${siglaEstado.toUpperCase()}`);
+    criarPopupFiscal(dados, nomeMunicipio) {
+        const formatarValor = (valor) => {
+            if (valor == null) return 'N/A';
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                minimumFractionDigits: 2
+            }).format(valor);
+        };
+
+        const formatarPorcentagem = (num) => {
+            if (num == null) return 'N/A';
+            return `${num.toFixed(1)}%`;
+        };
+
+        const getClassificacaoColor = (classificacao) => {
+            const cores = {
+                'excelente': '#22c55e',
+                'ótima': '#22c55e',
+                'bom': '#3b82f6',
+                'boa': '#3b82f6',
+                'regular': '#eab308',
+                'ruim': '#ef4444',
+                'péssima': '#8b5cf6',
+                'pessima': '#8b5cf6'
+            };
+            return cores[classificacao?.toLowerCase()] || '#6b7280';
+        };
+
+        let html = '<div class="popup-content">';
+        html += `<h3 style="margin: 0 0 10px 0; color: #1e40af;">${nomeMunicipio}</h3>`;
+        
+        html += `
+            <div style="background: #f0f9ff; padding: 8px; border-radius: 4px; margin-bottom: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span><strong>💰 Situação Fiscal</strong></span>
+                    <span style="background: ${getClassificacaoColor(dados.classificacao_fiscal)}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: bold;">
+                        ${dados.classificacao_fiscal?.toUpperCase() || 'N/A'}
+                    </span>
+                </div>
+                <small style="color: #64748b;">Código: ${dados.codigo_municipio} | Ano: ${dados.ano}</small>
+            </div>
+        `;
+
+        html += `
+            <div style="display: grid; grid-template-columns: 1fr; gap: 6px; font-size: 12px;">
+                <div style="background: #f8fafc; padding: 6px; border-radius: 3px;">
+                    <strong>💵 Receita Corrente Líquida:</strong><br>
+                    ${formatarValor(dados.receita_corrente_liquida)}
+                </div>
+                <div style="background: #f8fafc; padding: 6px; border-radius: 3px;">
+                    <strong>👥 Gasto com Pessoal:</strong><br>
+                    ${formatarPorcentagem(dados.eficiencia_gasto_pessoal)} da RCL
+                </div>
+                <div style="background: #f8fafc; padding: 6px; border-radius: 3px;">
+                    <strong>🏗️ Investimentos:</strong><br>
+                    ${formatarPorcentagem(dados.investimento_percentual)} da receita
+                </div>
+                <div style="background: #f8fafc; padding: 6px; border-radius: 3px;">
+                    <strong>🤝 Dependência de Transferências:</strong><br>
+                    ${formatarPorcentagem(dados.dependencia_transferencias)}
+                </div>
+                <div style="background: #f8fafc; padding: 6px; border-radius: 3px;">
+                    <strong>📊 Status:</strong><br>
+                    ${dados.status_fiscal || 'N/A'}
+                </div>
+            </div>
+        `;
+
+        if (dados.simulated) {
+            html += `
+                <div style="margin-top: 8px; padding: 6px; background: #fef3c7; border-radius: 3px; border-left: 3px solid #f59e0b;">
+                    <small style="color: #92400e; font-style: italic;">
+                        ⚠️ Nota: Dados simulados para fins demonstrativos
+                    </small>
+                </div>
+            `;
+        }
+
+        html += '</div>';
+        return html;
+    }
+
+    criarPopupSemDadosEleitorais(nomeMunicipio, codigoMunicipio) {
+        let html = '<div class="popup-content">';
+        html += `<h3 style="margin: 0 0 10px 0; color: #1e40af;">${nomeMunicipio}</h3>`;
+        html += `
+            <div style="background: #fef2f2; padding: 8px; border-radius: 4px; border-left: 4px solid #f87171;">
+                <small style="color: #64748b;">Código: ${codigoMunicipio}</small><br>
+                <p style="color: #dc2626; font-style: italic; margin: 10px 0;">📊 Dados eleitorais não disponíveis</p>
+            </div>
+        `;
+        html += '</div>';
+        return html;
+    }
+
+    criarPopupSemDadosFiscais(nomeMunicipio, codigoMunicipio) {
+        let html = '<div class="popup-content">';
+        html += `<h3 style="margin: 0 0 10px 0; color: #1e40af;">${nomeMunicipio}</h3>`;
+        html += `
+            <div style="background: #fef2f2; padding: 8px; border-radius: 4px; border-left: 4px solid #f87171;">
+                <small style="color: #64748b;">Código: ${codigoMunicipio}</small><br>
+                <p style="color: #dc2626; font-style: italic; margin: 10px 0;">💰 Dados fiscais não disponíveis</p>
+            </div>
+        `;
+        html += '</div>';
+        return html;
+    }
+
+    async renderizarEstado(siglaEstado, dados = null, modo = 'eleitoral') {
+        console.log(`🎨 Renderizando estado: ${siglaEstado.toUpperCase()} no modo ${modo}`);
 
         const layerGroup = this.layerGroups.get(siglaEstado);
         if (!layerGroup) {
@@ -650,7 +797,7 @@ class MultiStateLoader {
             
             // Processar lote
             const polygons = await Promise.all(
-                batch.map(feature => this.renderizarMunicipioOtimizado(feature, siglaEstado, dadosEleitorais))
+                batch.map(feature => this.renderizarMunicipioOtimizado(feature, siglaEstado, dados, modo))
             );
             
             // Adicionar polígonos válidos ao layer group
@@ -661,7 +808,11 @@ class MultiStateLoader {
 
                     const feature = batch[index];
                     const codigoMunicipio = this.obterCodigoMunicipio(feature);
-                    if (this.buscarDadosEleitorais(codigoMunicipio, dadosEleitorais)) {
+                    const dadosMunicipio = modo === 'eleitoral' ? 
+                        this.buscarDadosEleitorais(codigoMunicipio, dados) :
+                        this.buscarDadosFiscais(codigoMunicipio, dados);
+                    
+                    if (dadosMunicipio) {
                         municipiosComDados++;
                     }
                 }
@@ -673,33 +824,37 @@ class MultiStateLoader {
             }
         }
 
-        console.log(`✅ ${siglaEstado.toUpperCase()}: ${municipiosRenderizados} municípios renderizados, ${municipiosComDados} com dados eleitorais`);
+        console.log(`✅ ${siglaEstado.toUpperCase()}: ${municipiosRenderizados} municípios renderizados, ${municipiosComDados} com dados ${modo}`);
         
         return { municipiosRenderizados, municipiosComDados };
     }
 
-    async renderizarTodos(dadosEleitorais = null) {
-        console.log('🎨 Renderizando todos os estados ativos...');
+    async renderizarTodos(dados = null, modo = 'eleitoral') {
+        console.log(`🎨 Renderizando todos os estados ativos no modo: ${modo}...`);
         
         if (!this.map) {
             console.error('❌ Mapa não inicializado');
             return { totalMunicipios: 0, municipiosComDados: 0 };
         }
 
-        // Limpar cache de lookup eleitoral para reconstruir
-        this.electoralLookup = null;
+        // Limpar cache de lookup para reconstruir
+        if (modo === 'eleitoral') {
+            this.electoralLookup = null;
+        } else {
+            this.fiscalLookup = null;
+        }
 
         let totalMunicipios = 0;
         let municipiosComDados = 0;
 
         for (const siglaEstado of this.estadosAtivos) {
-            const resultado = await this.renderizarEstado(siglaEstado, dadosEleitorais);
+            const resultado = await this.renderizarEstado(siglaEstado, dados, modo);
             totalMunicipios += resultado.municipiosRenderizados;
             municipiosComDados += resultado.municipiosComDados;
         }
 
         const resultado = { totalMunicipios, municipiosComDados };
-        console.log(`🎉 Renderização concluída:`, resultado);
+        console.log(`🎉 Renderização concluída no modo ${modo}:`, resultado);
         return resultado;
     }
 
@@ -731,33 +886,10 @@ class MultiStateLoader {
             estadosDisponiveis: this.estadosDisponiveis.length,
             usingMockData: this.dadosBrasil && this.dadosBrasil.features.length < 100,
             cacheSize: this.polygonCache.size,
-            indexedStates: this.indicesPorEstado ? this.indicesPorEstado.size : 0,
-            simplifiedGeometries: this.geometriasSimplificadas ? this.geometriasSimplificadas.size : 0
+            indexedStates: this.indicesPorEstado ? this.indicesPorEstado.size : 0
         };
 
-        console.log('📊 Estatísticas atuais:', stats);
         return stats;
-    }
-
-    // Método para limpar caches quando necessário
-    limparCaches() {
-        this.polygonCache.clear();
-        this.processedDataCache.clear();
-        this.electoralLookup = null;
-        console.log('🧹 Caches limpos');
-    }
-
-    // Método para otimizar após carregamento
-    otimizarPosCarregamento() {
-        // Sugerir garbage collection se disponível
-        if (window.gc && typeof window.gc === 'function') {
-            window.gc();
-        }
-        
-        // Limpar caches antigos
-        this.limparCaches();
-        
-        console.log('⚡ Otimização pós-carregamento concluída');
     }
 }
 

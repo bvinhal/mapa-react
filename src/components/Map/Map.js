@@ -4,6 +4,7 @@ import L from 'leaflet';
 import './Map.css'; 
 import MultiStateLoader from './MultiStateLoader'; 
 import { useElectoralData } from '../../hooks/useElectoralData'; 
+import { useFiscalData } from '../../hooks/useFiscalData';
 
 // Importações condicionais dos componentes de debug
 const DebugComponent = React.lazy(() => import('./DebugComponent'));
@@ -39,9 +40,12 @@ const Map = () => {
     const [multiLoader, setMultiLoader] = useState(null); 
     const [mapReady, setMapReady] = useState(false);
     const [dadosCarregados, setDadosCarregados] = useState(false);
-    const [showDebug, setShowDebug] = useState(false); // Alterado para false por padrão
-    const [showElectoralDebug, setShowElectoralDebug] = useState(false); // Alterado para false por padrão
+    const [showDebug, setShowDebug] = useState(false);
+    const [showElectoralDebug, setShowElectoralDebug] = useState(false);
     const [renderStats, setRenderStats] = useState({ totalMunicipios: 0, municipiosComDados: 0 });
+    
+    // Novo estado para controlar o modo de visualização
+    const [viewMode, setViewMode] = useState('eleitoral'); // 'eleitoral' ou 'fiscal'
     
     // Estados para progresso de carregamento
     const [loadingProgress, setLoadingProgress] = useState(null);
@@ -50,6 +54,9 @@ const Map = () => {
     
     // Hook personalizado para dados eleitorais 
     const { electoralData, loading: electoralLoading, error: electoralError } = useElectoralData(); 
+    
+    // Hook personalizado para dados fiscais
+    const { fiscalData, loading: fiscalLoading, error: fiscalError } = useFiscalData();
 
     // Lista de estados organizados por região
     const estadosPorRegiao = {
@@ -142,194 +149,162 @@ const Map = () => {
         }
     }, [mapReady, multiLoader, dadosCarregados]);
 
-    // Renderizar estados ativos quando dados eleitorais mudarem
+    // Atualizar renderização quando mudança de modo ou dados
     useEffect(() => {
-        if (dadosCarregados && multiLoader && !electoralLoading && electoralData) {
-            console.log('🎨 Atualizando renderização com dados eleitorais...');
-            console.log(`📊 Dados eleitorais carregados: ${electoralData.length} registros`);
-            updateRender();
+        if (dadosCarregados && multiLoader) {
+            console.log(`🎨 Atualizando renderização para modo: ${viewMode}`);
+            
+            if (viewMode === 'eleitoral' && !electoralLoading && electoralData) {
+                console.log('📊 Renderizando com dados eleitorais...');
+                console.log(`📊 Total de dados eleitorais: ${electoralData.length}`);
+                renderActiveStates();
+            } else if (viewMode === 'fiscal' && !fiscalLoading && fiscalData) {
+                console.log('💰 Renderizando com dados fiscais...');
+                console.log(`💰 Total de dados fiscais: ${fiscalData.length}`);
+                renderActiveStates();
+            }
         }
-    }, [dadosCarregados, electoralData, electoralLoading]);
+    }, [dadosCarregados, multiLoader, viewMode, electoralLoading, electoralData, fiscalLoading, fiscalData, activeStates]);
 
     const loadBrazilData = async () => {
+        if (!multiLoader) {
+            console.error('❌ MultiStateLoader não inicializado');
+            return;
+        }
+
+        setLoading(true);
+        setLoadingStage('loading');
+        setLoadingDetails('Carregando dados geográficos do Brasil...');
+
         try {
-            setLoading(true);
-            setLoadingStage('loading');
-            setLoadingDetails('Iniciando carregamento...');
+            console.log('🌍 Iniciando carregamento dos dados do Brasil...');
             
-            console.log('📍 Carregando dados do Brasil com otimizações...');
-            
-            // Callback de progresso
             const progressCallback = (progress) => {
                 setLoadingProgress(progress);
-                setLoadingDetails(`${(progress.loaded / 1024 / 1024).toFixed(1)} MB de ${(progress.total / 1024 / 1024).toFixed(1)} MB`);
+                setLoadingDetails(`Carregando: ${Math.round(progress)}%`);
             };
-            
-            // Carregar dados do Brasil
-            setLoadingStage('loading');
-            const dadosGeo = await multiLoader.carregarDadosBrasil(progressCallback);
-            console.log('📊 Dados GeoJSON carregados:', dadosGeo);
-            
-            setLoadingStage('processing');
-            setLoadingProgress({ percentage: 100 });
-            setLoadingDetails('Processando dados...');
-            
-            // Aguardar um momento para mostrar a conclusão
-            await new Promise(resolve => setTimeout(resolve, 500));
-            
-            setDadosCarregados(true);
-            
-            setLoadingStage('rendering');
-            setLoadingDetails('Renderizando estados iniciais...');
-            
-            // Renderizar estados ativos iniciais
-            for (const estado of activeStates) {
-                await multiLoader.mostrarEstado(estado, true);
-                console.log(`✅ Estado ${estado.toUpperCase()} mostrado`);
+
+            const sucesso = await multiLoader.carregarDadosBrasil({
+                onProgress: progressCallback
+            });
+
+            if (sucesso) {
+                setDadosCarregados(true);
+                setLoadingStage('success');
+                console.log('✅ Dados do Brasil carregados com sucesso');
+                
+                // Renderizar estados ativos iniciais
+                setTimeout(() => {
+                    renderActiveStates();
+                }, 100);
+            } else {
+                throw new Error('Falha no carregamento dos dados geográficos');
             }
-            
-            // Renderizar com dados eleitorais se disponível
-            await updateRender();
-            
-            setLoadingStage('complete');
-            setLoadingDetails('Carregamento concluído!');
-            
-            // Otimizar após carregamento
-            multiLoader.otimizarPosCarregamento();
-            
-            // Aguardar um momento antes de ocultar o progresso
-            setTimeout(() => {
-                setLoadingProgress(null);
-                setLoadingStage('loading');
-                setLoadingDetails('');
-            }, 1500);
-            
-            console.log('✅ Carregamento inicial concluído com otimizações');
         } catch (error) {
             console.error('❌ Erro ao carregar dados do Brasil:', error);
-            setLoadingProgress(null);
-            setLoadingStage('loading');
-            setLoadingDetails('');
+            setLoadingStage('error');
+            setLoadingDetails(`Erro: ${error.message}`);
         } finally {
             setLoading(false);
+            setTimeout(() => {
+                setLoadingProgress(null);
+            }, 2000);
         }
     };
 
-    const updateRender = async () => {
-        if (!multiLoader) {
-            console.warn('⚠️ MultiStateLoader não disponível para renderização');
+    const renderActiveStates = async () => {
+        if (!multiLoader || !dadosCarregados) {
+            console.warn('⚠️ Não é possível renderizar: loader ou dados não prontos');
             return;
         }
-        
+
+        setLoading(true);
+        console.log(`🎨 Renderizando estados ativos no modo: ${viewMode}`);
+
         try {
-            console.log('🎨 Iniciando renderização com dados eleitorais...');
-            console.log('📊 Dados eleitorais para renderização:', electoralData?.length || 0);
-            const stats = await multiLoader.renderizarTodos(electoralData);
+            // Atualizar estados ativos no loader
+            multiLoader.atualizarEstadosAtivos(activeStates);
+
+            // Escolher dados baseado no modo
+            let dadosParaRenderizar = null;
+            if (viewMode === 'eleitoral' && electoralData) {
+                dadosParaRenderizar = electoralData;
+                console.log(`📊 Usando dados eleitorais: ${electoralData.length} registros`);
+            } else if (viewMode === 'fiscal' && fiscalData) {
+                dadosParaRenderizar = fiscalData;
+                console.log(`💰 Usando dados fiscais: ${fiscalData.length} registros`);
+            }
+
+            // Renderizar com os dados apropriados
+            const stats = await multiLoader.renderizarTodos(dadosParaRenderizar, viewMode);
             setRenderStats(stats);
-            console.log('📊 Estatísticas de renderização:', stats);
+
+            console.log(`✅ Estados renderizados com sucesso no modo ${viewMode}:`, stats);
         } catch (error) {
-            console.error('❌ Erro na renderização:', error);
+            console.error('❌ Erro ao renderizar estados:', error);
+        } finally {
+            setLoading(false);
         }
     };
 
     const handleStateToggle = async (stateCode) => {
-        if (!multiLoader || loading || !dadosCarregados) {
-            console.log('⚠️ Toggle bloqueado:', { multiLoader: !!multiLoader, loading, dadosCarregados });
-            return;
-        }
-        
+        if (loading || !dadosCarregados) return;
+
         const isActive = activeStates.includes(stateCode);
-        
-        try {
-            setLoading(true);
-            console.log(`🔄 Toggling estado ${stateCode.toUpperCase()}, ativo: ${isActive}`);
-            
-            if (isActive) {
-                // Remover estado
+        let newActiveStates;
+
+        if (isActive) {
+            newActiveStates = activeStates.filter(code => code !== stateCode);
+            if (multiLoader) {
                 await multiLoader.mostrarEstado(stateCode, false);
-                setActiveStates(prev => prev.filter(s => s !== stateCode));
-                console.log(`➖ Estado ${stateCode.toUpperCase()} removido`);
-            } else {
-                // Adicionar estado
-                await multiLoader.mostrarEstado(stateCode, true);
-                setActiveStates(prev => [...prev, stateCode]);
-                console.log(`➕ Estado ${stateCode.toUpperCase()} adicionado`);
-                
-                // Renderizar o estado com dados eleitorais
-                const stats = await multiLoader.renderizarEstado(stateCode, electoralData);
-                console.log(`🎨 Estado ${stateCode.toUpperCase()} renderizado:`, stats);
             }
-            
-            // Atualizar estatísticas gerais
-            await updateRender();
-            
-        } catch (error) {
-            console.error(`❌ Erro ao alternar ${stateCode}:`, error);
-        } finally {
-            setLoading(false);
+        } else {
+            newActiveStates = [...activeStates, stateCode];
+            if (multiLoader) {
+                await multiLoader.mostrarEstado(stateCode, true);
+                // Renderizar apenas este estado
+                const dadosParaRenderizar = viewMode === 'eleitoral' ? electoralData : fiscalData;
+                await multiLoader.renderizarEstado(stateCode, dadosParaRenderizar, viewMode);
+            }
         }
+
+        setActiveStates(newActiveStates);
+        console.log(`🔄 Estado ${stateCode.toUpperCase()} ${isActive ? 'desativado' : 'ativado'}`);
     };
 
     const handleSelectAll = async () => {
-        if (!dadosCarregados || loading) return;
-        
-        try {
-            setLoading(true);
-            const todosEstadosCodes = todosEstados.map(e => e.code);
-            
-            console.log('🚀 Selecionando todos os estados...');
-            
-            // Adicionar estados que não estão ativos
-            for (const estado of todosEstadosCodes) {
-                if (!activeStates.includes(estado)) {
-                    await multiLoader.mostrarEstado(estado, true);
-                    console.log(`➕ Adicionado: ${estado.toUpperCase()}`);
-                }
-            }
-            
-            setActiveStates(todosEstadosCodes);
-            await updateRender();
-            
-            console.log('✅ Todos os estados selecionados');
-        } catch (error) {
-            console.error('❌ Erro ao selecionar todos os estados:', error);
-        } finally {
-            setLoading(false);
+        if (loading || !dadosCarregados) return;
+
+        console.log('📍 Selecionando todos os estados...');
+        const allStateCodes = todosEstados.map(estado => estado.code);
+        setActiveStates(allStateCodes);
+
+        if (multiLoader) {
+            multiLoader.atualizarEstadosAtivos(allStateCodes);
+            await renderActiveStates();
         }
     };
 
     const handleClearAll = async () => {
-        if (!dadosCarregados || loading || activeStates.length === 0) return;
-        
-        try {
-            setLoading(true);
-            
-            console.log('🧹 Removendo todos os estados...');
-            
-            // Remover todos os estados ativos
-            for (const estado of activeStates) {
-                await multiLoader.mostrarEstado(estado, false);
-                console.log(`➖ Removido: ${estado.toUpperCase()}`);
-            }
-            
-            setActiveStates([]);
-            setRenderStats({ totalMunicipios: 0, municipiosComDados: 0 });
-            
-            console.log('✅ Todos os estados removidos');
-        } catch (error) {
-            console.error('❌ Erro ao limpar todos os estados:', error);
-        } finally {
-            setLoading(false);
+        if (loading || !dadosCarregados) return;
+
+        console.log('🗑️ Limpando todos os estados...');
+        setActiveStates([]);
+
+        if (multiLoader) {
+            multiLoader.atualizarEstadosAtivos([]);
+            await multiLoader.renderizarTodos(null, viewMode);
         }
+
+        setRenderStats({ totalMunicipios: 0, municipiosComDados: 0 });
     };
 
-    const getStatusMessage = () => {
-        if (!mapReady) return '🔄 Inicializando mapa...';
-        if (!multiLoader) return '🔄 Preparando loader...';
-        if (!dadosCarregados) return '📊 Carregando municípios do Brasil...';
-        if (electoralLoading) return '📊 Carregando dados eleitorais...';
-        if (loading) return '🎨 Atualizando visualização...';
-        return '✅ Pronto!';
+    // Função para alternar entre modos eleitoral e fiscal
+    const handleViewModeChange = (mode) => {
+        if (mode === viewMode || loading) return;
+        
+        console.log(`🔄 Alterando modo de visualização para: ${mode}`);
+        setViewMode(mode);
     };
 
     const toggleDebug = () => {
@@ -340,11 +315,229 @@ const Map = () => {
         setShowElectoralDebug(!showElectoralDebug);
     };
 
+    const getStatusMessage = () => {
+        if (loading) {
+            return `⏳ Carregando${loadingDetails ? ': ' + loadingDetails : '...'}`;
+        }
+        
+        if (!dadosCarregados) {
+            return '🔄 Inicializando...';
+        }
+
+        const { totalMunicipios, municipiosComDados } = renderStats;
+        const currentData = viewMode === 'eleitoral' ? electoralData : fiscalData;
+        const isDataLoading = viewMode === 'eleitoral' ? electoralLoading : fiscalLoading;
+        
+        if (isDataLoading) {
+            return `⏳ Carregando dados ${viewMode === 'eleitoral' ? 'eleitorais' : 'fiscais'}...`;
+        }
+        
+        if (!currentData) {
+            return `⚠️ Dados ${viewMode === 'eleitoral' ? 'eleitorais' : 'fiscais'} não disponíveis`;
+        }
+
+        if (totalMunicipios === 0) {
+            return '📍 Selecione estados para visualizar';
+        }
+
+        const porcentagem = totalMunicipios > 0 ? Math.round((municipiosComDados / totalMunicipios) * 100) : 0;
+        return `📊 ${totalMunicipios} municípios • ${municipiosComDados} com dados ${viewMode === 'eleitoral' ? 'eleitorais' : 'fiscais'} (${porcentagem}%)`;
+    };
+
+    // Função para renderizar a legenda
+    const renderLegend = () => {
+        if (!dadosCarregados) return null;
+
+        if (viewMode === 'eleitoral') {
+            return (
+                <div className="map-legend">
+                    <div className="legend-title">
+                        📊 Legenda Eleitoral
+                    </div>
+                    <div className="legend-items">
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#4575b4' }}></div>
+                            <span className="legend-label">Direita</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#74add1' }}></div>
+                            <span className="legend-label">Centro-direita</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#fee08b' }}></div>
+                            <span className="legend-label">Centro</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#f46d43' }}></div>
+                            <span className="legend-label">Centro-esquerda</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#d73027' }}></div>
+                            <span className="legend-label">Esquerda</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#6b7280' }}></div>
+                            <span className="legend-label">Sem dados</span>
+                        </div>
+                    </div>
+                    <div className="legend-note">
+                        As cores refletem a ideologia do partido do prefeito eleito
+                    </div>
+                </div>
+            );
+        } else if (viewMode === 'fiscal') {
+            return (
+                <div className="map-legend">
+                    <div className="legend-title">
+                        💰 Legenda Fiscal
+                    </div>
+                    <div className="legend-items">
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#22c55e' }}></div>
+                            <span className="legend-label">Excelente/Ótima</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#3b82f6' }}></div>
+                            <span className="legend-label">Boa/Bom</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#eab308' }}></div>
+                            <span className="legend-label">Regular</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#ef4444' }}></div>
+                            <span className="legend-label">Ruim</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#8b5cf6' }}></div>
+                            <span className="legend-label">Péssima</span>
+                        </div>
+                        <div className="legend-item">
+                            <div className="legend-color" style={{ backgroundColor: '#6b7280' }}></div>
+                            <span className="legend-label">Sem dados</span>
+                        </div>
+                    </div>
+                    <div className="legend-note">
+                        As cores refletem a classificação fiscal dos municípios
+                    </div>
+                </div>
+            );
+        }
+
+        return null;
+    };
+
     return (
         <div className="map-container">
-            {/* Componente de progresso otimizado */}
-            {loadingProgress && (
-                <React.Suspense fallback={null}>
+            <MapContainer
+                center={[-15.7942, -47.8822]}
+                zoom={5}
+                style={{ height: '100vh', width: '100%' }}
+                zoomControl={true}
+                scrollWheelZoom={true}
+                doubleClickZoom={true}
+                touchZoom={true}
+                dragging={true}
+            >
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                
+                <MapInstance onMapReady={handleMapReady} />
+            </MapContainer>
+
+            {/* Painel de Controles */}
+            <div className="map-controls">
+                {/* Botões de Debug */}
+                <div className="debug-controls">
+                    <button
+                        onClick={toggleDebug}
+                        className={`debug-button ${showDebug ? 'active' : ''}`}
+                        title="Debug Geográfico"
+                    >
+                        🗺️
+                    </button>
+                    
+                    <button
+                        onClick={toggleElectoralDebug}
+                        className={`debug-button ${showElectoralDebug ? 'active' : ''}`}
+                        title="Debug Eleitoral"
+                    >
+                        📊
+                    </button>
+                </div>
+                
+                {/* Controles dos Estados */}
+                <div className="state-controls">
+                    <h4>🗺️ Estados do Brasil</h4>
+                    
+                    {/* Botões de seleção de modo de visualização */}
+                    <div className="view-mode-controls">
+                        <button
+                            className={`mode-button ${viewMode === 'eleitoral' ? 'active' : ''}`}
+                            onClick={() => handleViewModeChange('eleitoral')}
+                            disabled={loading}
+                        >
+                            📊 Eleitoral
+                        </button>
+                        <button
+                            className={`mode-button ${viewMode === 'fiscal' ? 'active' : ''}`}
+                            onClick={() => handleViewModeChange('fiscal')}
+                            disabled={loading}
+                        >
+                            💰 Fiscal
+                        </button>
+                    </div>
+                    
+                    {/* Status */}
+                    <div className="status-info">
+                        <small>{getStatusMessage()}</small>
+                    </div>
+
+                    {/* Controles de ação */}
+                    <div className="action-controls">
+                        <button
+                            className="action-button select-all"
+                            onClick={handleSelectAll}
+                            disabled={!dadosCarregados || loading}
+                        >
+                            Todos
+                        </button>
+                        <button
+                            className="action-button clear-all"
+                            onClick={handleClearAll}
+                            disabled={!dadosCarregados || loading || activeStates.length === 0}
+                        >
+                            Limpar
+                        </button>
+                    </div>
+                    
+                    {/* Grid de Estados por Região */}
+                    {Object.entries(estadosPorRegiao).map(([regiao, estados]) => (
+                        <div key={regiao} className="region-section">
+                            <h5 className="region-title">{regiao}</h5>
+                            <div className="states-grid">
+                                {estados.map(estado => (
+                                    <button
+                                        key={estado.code}
+                                        className={`state-button ${activeStates.includes(estado.code) ? 'active' : ''}`}
+                                        onClick={() => handleStateToggle(estado.code)}
+                                        disabled={!dadosCarregados || loading}
+                                        title={estado.name}
+                                    >
+                                        {estado.code.toUpperCase()}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Componente de Progresso */}
+            {loadingProgress !== null && (
+                <React.Suspense fallback={<div>Carregando...</div>}>
                     <ProgressComponent 
                         progress={loadingProgress}
                         stage={loadingStage}
@@ -353,178 +546,31 @@ const Map = () => {
                 </React.Suspense>
             )}
 
-            {/* Loading tradicional para outras operações */}
-            {loading && !loadingProgress && (
-                <div className="map-loading">
-                    <div className="loading-spinner"></div>
-                    <p>Processando...</p>
-                    <small>{getStatusMessage()}</small>
-                </div>
-            )}
-            
-            <MapContainer
-                center={[-15.7942, -47.8822]}
-                zoom={5}
-                style={{ height: '100%', width: '100%' }}
-                className="map"
-            >
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
-                <MapInstance onMapReady={handleMapReady} />
-            </MapContainer>
-            
-            {/* Debug Components - Carregamento condicional */}
+            {/* Componentes de Debug */}
             {showDebug && (
                 <React.Suspense fallback={<div>Carregando debug...</div>}>
-                    <DebugComponent />
+                    <DebugComponent 
+                        multiLoader={multiLoader}
+                        activeStates={activeStates}
+                        renderStats={renderStats}
+                    />
                 </React.Suspense>
             )}
+
             {showElectoralDebug && (
                 <React.Suspense fallback={<div>Carregando debug eleitoral...</div>}>
                     <ElectoralDebugComponent 
                         electoralData={electoralData}
-                        geoData={multiLoader?.dadosBrasil}
-                        renderStats={renderStats}
-                        multiLoader={multiLoader}
+                        fiscalData={fiscalData}
+                        loading={viewMode === 'eleitoral' ? electoralLoading : fiscalLoading}
+                        error={viewMode === 'eleitoral' ? electoralError : fiscalError}
+                        viewMode={viewMode}
                     />
                 </React.Suspense>
             )}
-            
-            {/* Controles de Debug - Movidos para o canto inferior esquerdo */}
-            <div className="debug-controls">
-                <button
-                    onClick={toggleDebug}
-                    className={`debug-button ${showDebug ? 'active' : ''}`}
-                    title="Debug Geográfico"
-                >
-                    🗺️
-                </button>
-                
-                <button
-                    onClick={toggleElectoralDebug}
-                    className={`debug-button ${showElectoralDebug ? 'active' : ''}`}
-                    title="Debug Eleitoral"
-                >
-                    📊
-                </button>
-            </div>
-            
-            {/* Controles dos Estados */}
-            <div className="state-controls">
-                <h4>🗺️ Estados do Brasil</h4>
-                
-                {/* Status */}
-                <div className="status-info">
-                    <small>{getStatusMessage()}</small>
-                </div>
 
-                {/* Controles de ação */}
-                <div className="action-controls">
-                    <button
-                        className="action-button select-all"
-                        onClick={handleSelectAll}
-                        disabled={!dadosCarregados || loading}
-                    >
-                        Todos
-                    </button>
-                    <button
-                        className="action-button clear-all"
-                        onClick={handleClearAll}
-                        disabled={!dadosCarregados || loading || activeStates.length === 0}
-                    >
-                        Limpar
-                    </button>
-                </div>
-                
-                {/* Grid de Estados por Região */}
-                {Object.entries(estadosPorRegiao).map(([regiao, estados]) => (
-                    <div key={regiao} className="region-section">
-                        <h5 className="region-title">{regiao}</h5>
-                        <div className="states-grid">
-                            {estados.map(estado => (
-                                <button
-                                    key={estado.code}
-                                    className={`state-button ${activeStates.includes(estado.code) ? 'active' : ''}`}
-                                    onClick={() => handleStateToggle(estado.code)}
-                                    disabled={!dadosCarregados || loading}
-                                    title={estado.name}
-                                >
-                                    {estado.code.toUpperCase()}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-                
-                {/* Estatísticas Simplificadas */}
-                {multiLoader && dadosCarregados && (
-                    <div className="state-stats">
-                        <small>
-                            Estados ativos: {activeStates.length}
-                            {renderStats.municipiosComDados > 0 && (
-                                <>
-                                    <br/>
-                                    <span style={{color: '#16a34a', fontWeight: 'bold'}}>
-                                        ✅ Dados carregados com sucesso
-                                    </span>
-                                </>
-                            )}
-                        </small>
-                    </div>
-                )}
-                
-                {/* Erros */}
-                {electoralError && (
-                    <div className="error-stats">
-                        <small style={{color: '#dc2626'}}>
-                            ❌ Erro: {electoralError}
-                        </small>
-                    </div>
-                )}
-            </div>
-            
-            {/* Legenda Atualizada por Ideologia */}
-            <div className="info legend">
-                <h4>Legenda por Ideologia Política</h4>
-                <div className="legend-item">
-                    <i style={{background: '#043267'}}></i> 
-                    <span>Extrema-direita</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#2D09DB'}}></i> 
-                    <span>Direita</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#0B5EDA'}}></i> 
-                    <span>Centro-direita</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#f7dc6f'}}></i> 
-                    <span>Centro</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#F94200'}}></i> 
-                    <span>Centro-esquerda</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#C11000'}}></i> 
-                    <span>Esquerda</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#6E0251'}}></i> 
-                    <span>Extrema-esquerda</span>
-                </div>
-                <div className="legend-item">
-                    <i style={{background: '#6b7280'}}></i> 
-                    <span>Sem dados</span>
-                </div>
-                
-                <div className="legend-note">
-                    <small>As cores refletem a ideologia do partido do prefeito eleito</small>
-                </div>
-            </div>
+            {/* Legenda */}
+            {renderLegend()}
         </div>
     );
 };
