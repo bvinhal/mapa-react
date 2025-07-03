@@ -19,7 +19,7 @@ export const useElectoralData = () => {
                 let data;
                 
                 try {
-                    response = await fetch('/data/electoral/eleicoes_prefeitos_go_2024.json');
+                    response = await fetch('/data/electoral/2024_prefeito.json');
                     if (response.ok) {
                         data = await response.json();
                         console.log('✅ Dados eleitorais GO 2024 carregados com sucesso');

@@ -179,9 +179,9 @@ class MultiStateLoader {
         const codigo = props.CD_MUN || props.codigo_ibge || props.codigo || props.id || null;
         
         // Debug para códigos específicos
-        if (props.NM_MUN === 'Goiânia' || props.NM_MUN === 'Anápolis' || props.NM_MUN === 'Morrinhos' || props.NM_MUN === 'Faina') {
-            console.log(`🔍 Código municipal para ${props.NM_MUN}:`, codigo, 'Propriedades:', props);
-        }
+        //if (props.NM_MUN === 'Goiânia' || props.NM_MUN === 'Anápolis' || props.NM_MUN === 'Morrinhos' || props.NM_MUN === 'Faina') {
+        //    console.log(`🔍 Código municipal para ${props.NM_MUN}:`, codigo, 'Propriedades:', props);
+       // }
         
         return codigo;
     }
