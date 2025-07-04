@@ -1,5 +1,6 @@
 // src/hooks/useFiscalData.js
 import { useState, useEffect } from 'react';
+import { findWorkingPath, DATA_PATHS } from '../utils/paths';
 
 export const useFiscalData = () => {
     const [fiscalData, setFiscalData] = useState(null);
@@ -14,7 +15,11 @@ export const useFiscalData = () => {
                 
                 console.log('💰 Carregando dados fiscais...');
                 
-                const response = await fetch('/data/fiscal/situacao_fiscal.json');
+                // Tenta encontrar o caminho correto para o arquivo
+                const workingPath = await findWorkingPath(DATA_PATHS.fiscal);
+                console.log(`💰 Usando caminho: ${workingPath}`);
+                
+                const response = await fetch(workingPath);
                 
                 if (!response.ok) {
                     throw new Error(`Erro HTTP: ${response.status}`);
@@ -80,6 +85,12 @@ export const useFiscalData = () => {
             } catch (err) {
                 console.error('❌ Erro ao carregar dados fiscais:', err);
                 setError(err.message);
+                
+                // Informações adicionais para debug
+                console.error('🔍 Informações de debug:');
+                console.error('- URL atual:', window.location.href);
+                console.error('- NODE_ENV:', process.env.NODE_ENV);
+                console.error('- Hostname:', window.location.hostname);
             } finally {
                 setLoading(false);
             }

@@ -16,6 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:prod": "PUBLIC_URL=https://datasapiens.com.br/DataUrbis react-scripts build && npm run rename:daturbis",
+    "rename:daturbis": "node -e \"const fs = require('fs'); if(fs.existsSync('build')) { if(fs.existsSync('DataUrbis')) fs.rmSync('DataUrbis', {recursive: true}); fs.renameSync('build', 'DataUrbis'); console.log('✅ Pasta renomeada para DataUrbis'); }\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -10,6 +10,7 @@
 
 # production
 /build
+/DataUrbis
 
 # misc
 .DS_Store
@@ -26,3 +27,4 @@ public/data/electoral/2024_prefeito.json
 public/data/electoral/2024_municipal/votacao_candidato_munzona_2024_GO.csv
 public/data/fiscal/municipios_goias_completo.json
 public/data/geo/
+build.zip

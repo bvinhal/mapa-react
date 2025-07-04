@@ -1,4 +1,5 @@
 import L from 'leaflet';
+import { findWorkingPath, DATA_PATHS } from '../../utils/paths';
 
 class MultiStateLoader {
     constructor() {
@@ -65,7 +66,8 @@ class MultiStateLoader {
             let dados = null;
             try {
                 console.log('📁 Tentando carregar dados reais...');
-                const response = await fetch('/data/geo/brazil-municipalities.geojson');
+                const workingPath = await findWorkingPath(DATA_PATHS.geo);
+                const response = await fetch(workingPath);
                 
                 if (response.ok) {
                     dados = await response.json();

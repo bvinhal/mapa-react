@@ -1,5 +1,6 @@
 // src/hooks/useElectoralData.js
 import { useState, useEffect } from 'react';
+import { findWorkingPath, DATA_PATHS } from '../utils/paths';
 
 export const useElectoralData = () => {
     const [electoralData, setElectoralData] = useState(null);
@@ -14,26 +15,17 @@ export const useElectoralData = () => {
                 
                 console.log('📊 Carregando dados eleitorais...');
                 
-                // Tentar carregar o arquivo correto primeiro
-                let response;
-                let data;
+                // Tenta encontrar o caminho correto para o arquivo
+                const workingPath = await findWorkingPath(DATA_PATHS.electoral);
+                console.log(`📊 Usando caminho: ${workingPath}`);
                 
-                try {
-                    response = await fetch('/data/electoral/2024_prefeito.json');
-                    if (response.ok) {
-                        data = await response.json();
-                        console.log('✅ Dados eleitorais GO 2024 carregados com sucesso');
-                    } else {
-                        throw new Error(`HTTP ${response.status}`);
-                    }
-                } catch (err) {
-                    console.warn('⚠️ Falha ao carregar dados GO 2024, tentando arquivo genérico...');
-                    response = await fetch('/data/electoral/2024_prefeito.json');
-                    if (!response.ok) {
-                        throw new Error(`Erro HTTP: ${response.status}`);
-                    }
-                    data = await response.json();
+                const response = await fetch(workingPath);
+                
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
                 }
+                
+                const data = await response.json();
                 
                 if (!data || !Array.isArray(data)) {
                     throw new Error('Dados eleitorais inválidos');
@@ -63,6 +55,12 @@ export const useElectoralData = () => {
             } catch (err) {
                 console.error('❌ Erro ao carregar dados eleitorais:', err);
                 setError(err.message);
+                
+                // Informações adicionais para debug
+                console.error('🔍 Informações de debug:');
+                console.error('- URL atual:', window.location.href);
+                console.error('- NODE_ENV:', process.env.NODE_ENV);
+                console.error('- Hostname:', window.location.hostname);
             } finally {
                 setLoading(false);
             }
